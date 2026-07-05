@@ -1,0 +1,83 @@
+# ============================================
+# PYTHON
+# ============================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# ============================================
+# DJANGO
+# ============================================
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+*.sqlite3
+
+# ============================================
+# ENVIRONMENT
+# ============================================
+venv/
+env/
+ENV/
+.env
+.env.local
+.env.*.local
+
+# ============================================
+# IDE
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ============================================
+# OS
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+
+# ============================================
+# PROJECT SPECIFIC
+# ============================================
+static/bower_components/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ============================================
+# MIGRATIONS (Optional - Uncomment if needed)
+# ============================================
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# ============================================
+# DATABASE
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
