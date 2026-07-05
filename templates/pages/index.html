@@ -1,0 +1,3032 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پلنت کد - آموزش برنامه‌نویسی</title>
+    
+    <!-- bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" data-no-menu>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style css/header.css">
+    <link rel="stylesheet" href="style css/min-content.css">
+    <link rel="stylesheet" href="style css/footer.css">
+</head>
+<body class="dark-theme">
+    
+    <!-- the header is main -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="site-info">
+                    <span class="site-name">پلنت کد</span>
+                    <span class="site-domain">plantcode.ir</span>
+                </div>
+                <div class="top-actions">
+                    <button class="support-btn">
+                        <i class="fas fa-headset"></i>
+                        پشتیبانی
+                    </button>
+                    <div class="auth-buttons">
+                        <button class="login-btn"><a href="regester/login/login.html" style="text-decoration: none; color: var(--text);">ورود</a></button>
+                        <span>/</span>
+                        <button class="register-btn"><a href="regester/signup/signup.html" style="text-decoration: none; color: var(--text);">عضویت</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <!-- logo and name -->
+                <div class="brand">
+                    <div class="logo-container">
+                        <img src="img/-2147483648_-210431.png" alt="پلنت کد" class="site-logo">
+                    </div>
+                    <div class="brand-name">
+                        <span class="name">پلنت کد</span>
+                        <span class="slogan">آموزش برنامه‌نویسی و توسعه وب</span>
+                    </div>
+                </div>
+
+                <!-- mine meno  -->
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        خانه
+                    </a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            آموزش‌های تخصصی
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <!-- فرانت‌اند -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fas fa-palette"></i>
+                                    فرانت‌اند
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مباحث فرانت‌اند</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-html5"></i>
+                                            HTML
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-css3-alt"></i>
+                                            CSS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-bootstrap"></i>
+                                            Bootstrap (بوت استرپ)
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-layer-group"></i>
+                                            Tailwind CSS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-cube"></i>
+                                            Flex-Grid (فلکس و گرید)
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- پایتون -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-python"></i>
+                                    پایتون
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مباحث پایتون</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            دوره هیولای پایتون
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-cube"></i>
+                                            جنگو (Django)
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-project-diagram"></i>
+                                            پروژه های کاربردی پایتون
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-bolt"></i>
+                                            بهینه سازی کد ها در پایتون
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-chart-bar"></i>
+                                            مصور سازی داده ها با پایتون
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- جاوااسکریپت -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-js-square"></i>
+                                    جاوااسکریپت
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مباحث جاوااسکریپت</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            دوره صفر تا صد جاوااسکریپت
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-react"></i>
+                                            آموزش React (ری‌اکت)
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-node-js"></i>
+                                            آموزش Node.js
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-vuejs"></i>
+                                            Vue.js (ویو جی اس)
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-angular"></i>
+                                            Angular (انگولار)
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- PHP -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-php"></i>
+                                    PHP
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مباحث PHP</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-php"></i>
+                                            دوره هیولا PHP
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-database"></i>
+                                            درک API
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-project-diagram"></i>
+                                            API نویسی با PHP
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-robot"></i>
+                                            ربات تلگرام با PHP
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-project-diagram"></i>
+                                            پروژه های کاربردی با PHP
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- ارتقاع مهارت ها -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fas fa-chart-line"></i>
+                                    ارتقاع مهارت ها
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مهارت‌های پیشرفته</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            الگوریتم و ساختمان داده
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-bolt"></i>
+                                            آموزش WebSocket
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-git-alt"></i>
+                                            گیت و گیتهاب
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-cube"></i>
+                                            آموزش GraphQL
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            توسعه کتابخانه با JS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-puzzle-piece"></i>
+                                            افزونه نویسی با JS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-broom"></i>
+                                            Clean Code برای JS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-rocket"></i>
+                                            دیپلوی پروژه های JS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-database"></i>
+                                            آموزش Redis
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            آموزش Regex
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-npm"></i>
+                                            NPM برای جاوااسکریپت کارها
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- مهارت های نرم -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fas fa-users"></i>
+                                    مهارت های نرم
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مهارت‌های فردی</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-language"></i>
+                                            آموزش جامع زبان انگلیسی
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-handshake"></i>
+                                            مستر فریلنس
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-file-contract"></i>
+                                            تکنیک های قرارداد نویسی
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-users"></i>
+                                            تسلط به کار تیمی
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-business-time"></i>
+                                            کسب و کار برای برنامه نویسان
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-tags"></i>
+                                            تکنیک های قیمت گذاری پروژه
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- امنیت -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fas fa-shield-alt"></i>
+                                    امنیت
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>امنیت سایبری</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-user-secret"></i>
+                                            ورود به دنیای امنیت
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-shield-alt"></i>
+                                            دوره هکر قانونمند
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-bug"></i>
+                                            آموزش تست نفوذ با کالی لینوکس
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-python"></i>
+                                            آموزش تست نفوذ با پایتون
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-globe"></i>
+                                            آموزش جامع تست نفوذ وب
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- سیستم عامل -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-linux"></i>
+                                    سیستم عامل
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>سیستم‌عامل و DevOps</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-linux"></i>
+                                            لینوکس برای برنامه نویسان
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-docker"></i>
+                                            آموزش جامع داکر
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- وردپرس -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-wordpress"></i>
+                                    وردپرس
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>وردپرس</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-wordpress"></i>
+                                            آموزش جامع وردپرس
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- rayegan amozesh -->
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-book"></i>
+                            آموزش‌های رایگان
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-file-word"></i>
+                                ورد (Word)
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-file-excel"></i>
+                                اکسل (Excel)
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-database"></i>
+                                اکسس (Access)
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-powerpoint"></i>
+                                پاورپوینت
+                            </a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="pages/every-course.html" class="nav-link">
+                        <i class="fas fa-blog"></i>
+                         تمامی دورها
+                    </a></li>
+                    
+                    <li><a href="#" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        درباره ما
+                    </a></li>
+                </ul>
+
+                <!-- بخش جستجو و اقدامات -->
+                <div class="nav-actions">
+                    <!-- دکمه تغییر تم -->
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+
+                    <!-- جستجو -->
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="جستجو...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- سبد خرید -->
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+
+                    <!-- منوی همبرگر -->
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- moboile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-brand">
+                <img src="img/-2147483648_-210431.png" alt="پلنت کد" class="site-logo">
+                <span>پلنت کد</span>
+            </div>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <!-- جستجو در منوی موبایل -->
+            <div class="mobile-search">
+                <input type="text" placeholder="جستجو..." class="mobile-search-input">
+                <button class="mobile-search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+    
+            <!-- دکمه تغییر تم در منوی موبایل -->
+            <div class="mobile-theme-toggle">
+                <button class="theme-toggle-btn" id="mobileThemeToggle">
+                    <i class="fas fa-moon"></i>
+                    تغییر به تم روشن
+                </button>
+            </div>
+    
+            <a href="#" class="mobile-nav-link active">
+                <i class="fas fa-home"></i>
+                خانه
+            </a>
+            
+            <!-- فرانت‌اند -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fas fa-palette"></i>
+                    فرانت‌اند
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-html5"></i>
+                        HTML
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-css3-alt"></i>
+                        CSS
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-bootstrap"></i>
+                        Bootstrap
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-layer-group"></i>
+                        Tailwind CSS
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-cube"></i>
+                        Flex-Grid
+                    </a>
+                </div>
+            </div>
+    
+            <!-- پایتون -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-python"></i>
+                    پایتون
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        دوره هیولای پایتون
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-cube"></i>
+                        جنگو (Django)
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-project-diagram"></i>
+                        پروژه های کاربردی پایتون
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-bolt"></i>
+                        بهینه سازی کد ها در پایتون
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-chart-bar"></i>
+                        مصور سازی داده ها با پایتون
+                    </a>
+                </div>
+            </div>
+    
+            <!-- جاوااسکریپت -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-js-square"></i>
+                    جاوااسکریپت
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        دوره صفر تا صد جاوااسکریپت
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-react"></i>
+                        آموزش React
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-node-js"></i>
+                        آموزش Node.js
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-vuejs"></i>
+                        Vue.js
+                    </a>
+                </div>
+            </div>
+    
+            <!-- PHP -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-php"></i>
+                    PHP
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        دوره هیولا PHP
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-database"></i>
+                        درک API
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        API نویسی با PHP
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-robot"></i>
+                        ربات تلگرام با PHP
+                    </a>
+                </div>
+            </div>
+    
+            <!-- ارتقاع مهارت ها -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fas fa-chart-line"></i>
+                    ارتقاع مهارت ها
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        الگوریتم و ساختمان داده
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-bolt"></i>
+                        آموزش WebSocket
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-git-alt"></i>
+                        گیت و گیتهاب
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-cube"></i>
+                        آموزش GraphQL
+                    </a>
+                </div>
+            </div>
+    
+            <!-- مهارت های نرم -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fas fa-users"></i>
+                    مهارت های نرم
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-language"></i>
+                        آموزش زبان انگلیسی
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-handshake"></i>
+                        مستر فریلنس
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-file-contract"></i>
+                        قرارداد نویسی
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-business-time"></i>
+                        کسب و کار
+                    </a>
+                </div>
+            </div>
+    
+            <!-- امنیت -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fas fa-shield-alt"></i>
+                    امنیت
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-user-secret"></i>
+                        ورود به دنیای امنیت
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-shield-alt"></i>
+                        هکر قانونمند
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-bug"></i>
+                        تست نفوذ با کالی
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-python"></i>
+                        تست نفوذ با پایتون
+                    </a>
+                </div>
+            </div>
+    
+            <!-- سیستم عامل -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-linux"></i>
+                    سیستم عامل
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-linux"></i>
+                        لینوکس
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-docker"></i>
+                        داکر
+                    </a>
+                </div>
+            </div>
+    
+            <!-- وردپرس -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-wordpress"></i>
+                    وردپرس
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-wordpress"></i>
+                        آموزش جامع وردپرس
+                    </a>
+                </div>
+            </div>
+    
+            <!-- سایر لینک‌ها -->
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-book"></i>
+                آموزش‌های رایگان
+            </a>
+            
+            <a href="pages/every-course.html" class="mobile-nav-link">
+                <i class="fas fa-blog"></i>
+                 تمامی دوره ها
+            </a>
+            
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-info-circle"></i>
+                درباره ما
+            </a>
+            
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-headset"></i>
+                پشتیبانی
+            </a>
+            
+            <!-- دکمه‌های ورود و ثبت نام در منوی موبایل -->
+            <div class="mobile-auth-in-menu">
+                <button class="mobile-login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    ورود به حساب
+                </button>
+                <button class="mobile-register-btn">
+                    <i class="fas fa-user-plus"></i>
+                    ثبت نام
+                </button>
+            </div>
+            
+            <!-- شبکه‌های اجتماعی -->
+            <div class="mobile-social">
+                <span>ما را دنبال کنید:</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- shoping cart -->
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3>سبد خرید شما</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items">
+                 <!-- adding dainamic course it's in -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>مجموع:</span>
+                    <span class="total-price">۰ تومان</span>
+                </div>
+                <div class="cart-actions">
+                    <button class="clear-cart" id="clearCart">
+                        <i class="fas fa-trash"></i>
+                        پاک کردن همه
+                    </button>
+                    <button class="checkout-btn">
+                        <i class="fas fa-credit-card"></i>
+                        پرداخت نهایی
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!--  main content -->
+    <main class="main-content">
+        <div class="container">
+            <!--  the hero bachsh -->
+            <section class="hero">
+                <h1>به پلنت کد خوش آمدید</h1>
+                <p>مرجع تخصصی آموزش برنامه‌نویسی و توسعه وب</p>
+            </section>
+
+            <!-- بخش آخرین دوره‌ها -->
+            <section class="courses-section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="header-content">
+                            <h2 class="section-title">آخرین دوره‌های ما</h2>
+                            <p class="section-subtitle">سکوی پرتاب شما به سمت موفقیت</p>
+                        </div>
+                        <button class="view-all-btn">
+                            <i class="fas fa-list"></i>
+                            <a href="pages/every-course.html" style="text-decoration: none; color: var(--text);">مشاهده همه دوره‌ها
+                            </a>
+                        </button>
+                    </div>
+
+                    <div class="courses-grid">
+                        <!-- دوره ۱ -->
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="img/Nestjs.jpeg" alt="NestJS">
+                                <div class="course-badge">پروژه‌محور</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">آموزش پروژه محور NestJS از صفر</h3>
+                                <p class="course-description">فریمورک توسعه سمت سرور با TypeScript برای ساخت برنامه‌های مبتنی بر معماری Enterprise-level</p>
+                                
+                                <div class="course-instructor">
+                                    <i class="fas fa-user"></i>
+                                    <span>مدرس: محمدرضا ضیایی</span>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۱,۱۷۰ دانشجو</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <span class="final-price">۴,۰۰۰,۰۰۰ تومان</span>
+                                        <span class="original-price">۵,۰۰۰,۰۰۰ تومان</span>
+                                        <span class="discount">۲۰٪</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره ۲ -->
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="img/php.jpeg" alt="PHP">
+                                <div class="course-badge">تخصصی</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">دوره متخصص PHP</h3>
+                                <p class="course-description">آموزش جامع PHP از صفر تا سطح حرفه‌ای با پروژه‌های واقعی و بازار کار</p>
+                                
+                                <div class="course-instructor">
+                                    <i class="fas fa-user"></i>
+                                    <span>مدرس: محمدرضا ضیایی</span>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۷۰۷ دانشجو</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <span class="final-price">۳,۲۰۰,۰۰۰ تومان</span>
+                                        <span class="original-price">۴,۰۰۰,۰۰۰ تومان</span>
+                                        <span class="discount">۲۰٪</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره ۳ -->
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="img/javascript.jpeg" alt="JavaScript">
+                                <div class="course-badge">تخصصی</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">دوره متخصص JavaScript</h3>
+                                <p class="course-description">آموزش جامع JavaScript از صفر تا سطح حرفه‌ای با پروژه‌های واقعی و بازار کار</p>
+                                
+                                <div class="course-instructor">
+                                    <i class="fas fa-user"></i>
+                                    <span>مدرس: محمدرضا ضیایی</span>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۷۰۷ دانشجو</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <span class="final-price">۳,۲۰۰,۰۰۰ تومان</span>
+                                        <span class="original-price">۴,۰۰۰,۰۰۰ تومان</span>
+                                        <span class="discount">۲۰٪</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره ۴ -->
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="img/React.jpeg" alt="React">
+                                <div class="course-badge">تخصصی</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">دوره متخصص React</h3>
+                                <p class="course-description">آموزش جامع React از صفر تا سطح حرفه‌ای با پروژه‌های واقعی و بازار کار</p>
+                                
+                                <div class="course-instructor">
+                                    <i class="fas fa-user"></i>
+                                    <span>مدرس: محمدرضا ضیایی</span>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۷۰۷ دانشجو</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <span class="final-price">۳,۲۰۰,۰۰۰ تومان</span>
+                                        <span class="original-price">۴,۰۰۰,۰۰۰ تومان</span>
+                                        <span class="discount">۲۰٪</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره ۵ -->
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="img/next.jpeg" alt="NextJS">
+                                <div class="course-badge">تخصصی</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">دوره متخصص NextJS</h3>
+                                <p class="course-description">آموزش جامع NextJS از صفر تا سطح حرفه‌ای با پروژه‌های واقعی و بازار کار</p>
+                                
+                                <div class="course-instructor">
+                                    <i class="fas fa-user"></i>
+                                    <span>مدرس: محمدرضا ضیایی</span>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۷۰۷ دانشجو</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <span class="final-price">۳,۲۰۰,۰۰۰ تومان</span>
+                                        <span class="original-price">۴,۰۰۰,۰۰۰ تومان</span>
+                                        <span class="discount">۲۰٪</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- دوره 6 -->
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="img/python.jpeg" alt="PYTHON">
+                                <div class="course-badge">تخصصی</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">دوره هیولا Python</h3>
+                                <p class="course-description">آموزش جامع Python از صفر تا سطح حرفه‌ای با پروژه‌های واقعی و بازار کار</p>
+                                
+                                <div class="course-instructor">
+                                    <i class="fas fa-user"></i>
+                                    <span>مدرس: محمدرضا ضیایی</span>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                    <div class="rating-line"></div>
+                                </div>
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۷۰۷ دانشجو</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <span class="final-price">۳,۲۰۰,۰۰۰ تومان</span>
+                                        <span class="original-price">۴,۰۰۰,۰۰۰ تومان</span>
+                                        <span class="discount">۲۰٪</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره ۷ -->
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="img/kaliLinux.jpeg" alt="Kali Linux">
+                                <div class="course-badge">تخصصی</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">دوره متخصص Kali Linux</h3>
+                                <p class="course-description">آموزش جامع Kali Linux از صفر تا سطح حرفه‌ای با پروژه‌های واقعی و بازار کار</p>
+                                
+                                <div class="course-instructor">
+                                    <i class="fas fa-user"></i>
+                                    <span>مدرس: محمدرضا ضیایی</span>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۷۰۷ دانشجو</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <span class="final-price">۳,۲۰۰,۰۰۰ تومان</span>
+                                        <span class="original-price">۴,۰۰۰,۰۰۰ تومان</span>
+                                        <span class="discount">۲۰٪</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره ۸ -->
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="img/hacker.jpg" alt="هکر اخلاقی">
+                                <div class="course-badge">تخصصی</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">دوره متخصص هکر اخلاقی</h3>
+                                <p class="course-description">آموزش جامع هکر اخلاقی از صفر تا سطح حرفه‌ای با پروژه‌های واقعی و بازار کار</p>
+                                
+                                <div class="course-instructor">
+                                    <i class="fas fa-user"></i>
+                                    <span>مدرس: محمدرضا ضیایی</span>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۷۰۷ دانشجو</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <span class="final-price">۳,۲۰۰,۰۰۰ تومان</span>
+                                        <span class="original-price">۴,۰۰۰,۰۰۰ تومان</span>
+                                        <span class="discount">۲۰٪</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش نقشه راه یادگیری -->
+            <section class="roadmap-section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="header-content">
+                            <h2 class="section-title">نقشه راه یادگیری برنامه‌نویسی</h2>
+                            <p class="section-subtitle">مسیر درست رو انتخاب کن، سریع‌تر پیش بری</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-grid">
+                        <!-- کارت ۱: مهارت‌های نرم -->
+                        <div class="roadmap-card soft-skills-card">
+                            <div class="card-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="card-title">مهارت‌های نرم</h3>
+                            <p class="card-description">پایه‌های موفقیت در برنامه‌نویسی</p>
+                            <ul class="skills-list">
+                                <li><i class="fas fa-check"></i> حل مسئله</li>
+                                <li><i class="fas fa-check"></i> تفکر تحلیلی</li>
+                                <li><i class="fas fa-check"></i> کار تیمی</li>
+                                <li><i class="fas fa-check"></i> مدیریت زمان</li>
+                                <li><i class="fas fa-check"></i> یادگیری مستمر</li>
+                            </ul>
+                            <div class="card-stats">
+                                <span class="stat">۵ دوره</span>
+                                <span class="stat">۹۰+ ساعت</span>
+                            </div>
+                        </div>
+
+                        <!-- کارت ۲: فرانت‌اند -->
+                        <div class="roadmap-card frontend-card">
+                            <div class="card-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3 class="card-title">توسعه فرانت‌اند</h3>
+                            <p class="card-description">ساخت رابط‌های کاربری جذاب</p>
+                            <ul class="skills-list">
+                                <li><i class="fas fa-check"></i> HTML & CSS</li>
+                                <li><i class="fas fa-check"></i> JavaScript</li>
+                                <li><i class="fas fa-check"></i> React.js</li>
+                                <li><i class="fas fa-check"></i> TypeScript</li>
+                                <li><i class="fas fa-check"></i> Tailwind CSS</li>
+                            </ul>
+                            <div class="card-stats">
+                                <span class="stat">۶ دوره</span>
+                                <span class="stat">۱۱۰+ ساعت</span>
+                            </div>
+                        </div>
+
+                        <!-- کارت ۳: بک‌اند -->
+                        <div class="roadmap-card backend-card">
+                            <div class="card-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3 class="card-title">توسعه بک‌اند</h3>
+                            <p class="card-description">قدرت پشت صحنه اپلیکیشن‌ها</p>
+                            <ul class="skills-list">
+                                <li><i class="fas fa-check"></i> Node.js</li>
+                                <li><i class="fas fa-check"></i> Python & Django</li>
+                                <li><i class="fas fa-check"></i> Databases</li>
+                                <li><i class="fas fa-check"></i> API Development</li>
+                                <li><i class="fas fa-check"></i> Authentication</li>
+                            </ul>
+                            <div class="card-stats">
+                                <span class="stat">۸ دوره</span>
+                                <span class="stat">۱۵۰+ ساعت</span>
+                            </div>
+                        </div>
+
+                        <!-- کارت ۴: امنیت -->
+                        <div class="roadmap-card security-card">
+                            <div class="card-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="card-title">امنیت سایبری</h3>
+                            <p class="card-description">حفاظت از دنیای دیجیتال</p>
+                            <ul class="skills-list">
+                                <li><i class="fas fa-check"></i> تست نفوذ</li>
+                                <li><i class="fas fa-check"></i> هک اخلاقی</li>
+                                <li><i class="fas fa-check"></i> شبکه‌های امن</li>
+                                <li><i class="fas fa-check"></i> Kali Linux</li>
+                                <li><i class="fas fa-check"></i> Cryptography</li>
+                            </ul>
+                            <div class="card-stats">
+                                <span class="stat">۷ دوره</span>
+                                <span class="stat">۱۳۰+ ساعت</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Moust popular courses section -->
+            <section class="popular-courses py-5">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <h2 class="section-title mb-2">پرطرفدارترین دوره‌ها</h2>
+                            <p class="text-light">دوره‌های محبوب و پروژه‌محور پلنت کد</p>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4">مشاهده همه</a>
+                    </div>
+
+                    <!-- Desktop Slider (large screens only) -->
+                    <div id="popularCoursesDesktop" class="carousel slide d-none d-lg-block" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div class="carousel-inner">
+                            <!-- Desktop Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="row g-3 g-md-4">
+                                    <!-- cart 1 -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/React.jpeg" alt="React" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص React</h3>
+                                                <p class="course-description small">آموزش جامع React از صفر تا حرفه‌ای</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 2 -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/javascript.jpeg" alt="JavaScript" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص JavaScript</h3>
+                                                <p class="course-description small">آموزش جامع JS از صفر تا حرفه‌ای</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 3 -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/next.jpeg" alt="NextJS" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص NextJS</h3>
+                                                <p class="course-description small">آموزش NextJS از صفر تا حرفه‌ای</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 4 -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/python.jpeg" alt="Python" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره هیولا Python</h3>
+                                                <p class="course-description small">آموزش جامع Python از صفر</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Desktop Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="row g-3 g-md-4">
+                                    <!-- cart5 -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/php.jpeg" alt="PHP" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص PHP</h3>
+                                                <p class="course-description small">آموزش جامع PHP با پروژه واقعی</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 6 -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/Nestjs.jpeg" alt="NestJS" class="img-fluid rounded-top">
+                                                <span class="badge bg-danger">پروژه‌محور</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">NestJS از صفر</h3>
+                                                <p class="course-description small">فریمورک حرفه‌ای با TypeScript</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">1170 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۴,۰۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 7 -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/kaliLinux.jpeg" alt="Kali Linux" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص Kali Linux</h3>
+                                                <p class="course-description small">آموزش امنیت و تست نفوذ</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 8 -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/hacker.jpg" alt="هکر اخلاقی" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">هکر اخلاقی</h3>
+                                                <p class="course-description small">آموزش امنیت سایبری پیشرفته</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- Desktop navigation buttons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#popularCoursesDesktop" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">قبلی</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#popularCoursesDesktop" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">بعدی</span>
+                        </button>
+
+                        <!-- Desktop marker dots -->
+                        <div class="carousel-indicators custom-indicators mt-4">
+                            <button type="button" data-bs-target="#popularCoursesDesktop" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#popularCoursesDesktop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Slider (for small screens only) -->
+                    <div id="popularCoursesMobile" class="carousel slide d-lg-none" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 Mobile -->
+                            <div class="carousel-item active">
+                                <div class="row g-3 g-md-4">
+                                    <!-- cart 1 -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/React.jpeg" alt="React" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص React</h3>
+                                                <p class="course-description small">آموزش جامع React از صفر تا حرفه‌ای</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 2 -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/javascript.jpeg" alt="JavaScript" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص JavaScript</h3>
+                                                <p class="course-description small">آموزش جامع JS از صفر تا حرفه‌ای</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                           <!-- Slide 2 Mobile -->
+                            <div class="carousel-item">
+                                <div class="row g-3 g-md-4">
+                                    <!-- cart 3 -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/next.jpeg" alt="NextJS" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص NextJS</h3>
+                                                <p class="course-description small">آموزش NextJS از صفر تا حرفه‌ای</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 4 -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/python.jpeg" alt="Python" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره هیولا Python</h3>
+                                                <p class="course-description small">آموزش جامع Python از صفر</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                           <!-- Slide 3 Mobile -->
+                            <div class="carousel-item">
+                                <div class="row g-3 g-md-4">
+                                    <!-- cart 5 -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/php.jpeg" alt="PHP" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص PHP</h3>
+                                                <p class="course-description small">آموزش جامع PHP با پروژه واقعی</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 6 -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/Nestjs.jpeg" alt="NestJS" class="img-fluid rounded-top">
+                                                <span class="badge bg-danger">پروژه‌محور</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">NestJS از صفر</h3>
+                                                <p class="course-description small">فریمورک حرفه‌ای با TypeScript</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">1170 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۴,۰۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 Mobile -->
+                            <div class="carousel-item">
+                                <div class="row g-3 g-md-4">
+                                    <!-- cart 7 -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/kaliLinux.jpeg" alt="Kali Linux" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص Kali Linux</h3>
+                                                <p class="course-description small">آموزش امنیت و تست نفوذ</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- cart 8 -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/hacker.jpg" alt="هکر اخلاقی" class="img-fluid rounded-top">
+                                                <span class="badge bg-primary">تخصصی</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">هکر اخلاقی</h3>
+                                                <p class="course-description small">آموزش امنیت سایبری پیشرفته</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">707 دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile navigation buttons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#popularCoursesMobile" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">قبلی</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#popularCoursesMobile" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">بعدی</span>
+                        </button>
+
+                        <!-- Mobile indicator dots -->
+                        <div class="carousel-indicators custom-indicators mt-4">
+                            <button type="button" data-bs-target="#popularCoursesMobile" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#popularCoursesMobile" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#popularCoursesMobile" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#popularCoursesMobile" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- علت انتخواب پلنت کد -->
+            <section class="why-choose-us">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="header-content">
+                            <h2 class="section-title">چرا پلنت کد را انتخاب کنید؟</h2>
+                            <p class="section-subtitle">همراهی شما از شروع مسیر تا حرفه‌ای شدن</p>
+                        </div>
+                    </div>
+            
+                    <div class="features-grid">
+                        <!-- ردیف اول -->
+                        <div class="feature-row">
+                            <!-- ویژگی ۱ -->
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">پشتیبانی همیشگی</h3>
+                                    <p class="feature-description">
+                                        از شروع مسیر کنارتیم. نگران نباش، پشتیبان‌های ما آماده‌اند تا هر سوالی داری جواب بدن و مشکلاتت رو حل کنن.
+                                    </p>
+                                </div>
+                            </div>
+            
+                            <!-- ویژگی ۲ -->
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">تضمین کیفیت محتوا</h3>
+                                    <p class="feature-description">
+                                        با خیال راحت یاد بگیر! ما به ریزترین موارد پرداختیم و بعد از این دوره نیاز به هیچ آموزش دیگه‌ای ندارید.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- ردیف دوم -->
+                        <div class="feature-row">
+                            <!-- ویژگی ۳ -->
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">اساتید حرفه‌ای</h3>
+                                    <p class="feature-description">
+                                        با سخت‌گیرترین شرایط، بهترین اساتید رو انتخاب کردیم تا محتوا رو ساده و روان بیان کنند و در یادگیری مشکلی نداشته باشید.
+                                    </p>
+                                </div>
+                            </div>
+            
+                            <!-- ویژگی ۴ -->
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">پروژه‌محور و بازارکار</h3>
+                                    <p class="feature-description">
+                                        کل تمرکز ما اینه که بعد از دوره، با اعتماد به نفس کامل بتونید پروژه‌های واقعی رو انجام بدید و درآمدزایی کنید.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- بخش جدیدترین دوره‌ها -->
+            <section class="new-courses py-5">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <h2 class="section-title mb-2">جدیدترین دوره‌ها</h2>
+                            <p class="text-light">تازه‌ترین دوره‌های آموزشی با بروزترین تکنولوژی‌ها</p>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4">مشاهده همه</a>
+                    </div>
+
+                    <!-- اسلایدر دسکتاپ جدیدترین دوره‌ها -->
+                    <div id="newCoursesDesktop" class="carousel slide d-none d-lg-block" data-bs-ride="carousel" data-bs-interval="4000">
+                        <div class="carousel-inner">
+                            <!-- اسلاید ۱ دسکتاپ -->
+                            <div class="carousel-item active">
+                                <div class="row g-3 g-md-4">
+                                    <!-- کارت ۱ -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/next.jpeg" alt="NextJS" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص NextJS 14</h3>
+                                                <p class="course-description small">آموزش کامل NextJS با App Router و جدیدترین ویژگی‌ها</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                        <span class="ms-1">4.5</span>
+                                                    </div>
+                                                    <div class="text-light small">۳۲۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۵۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ۲ -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/python.jpeg" alt="Python" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">هوش مصنوعی با Python</h3>
+                                                <p class="course-description small">یادگیری ماشین و هوش مصنوعی کاربردی</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <span class="ms-1">5.0</span>
+                                                    </div>
+                                                    <div class="text-light small">۱۸۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۴,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ۳ -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/React.jpeg" alt="React" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">React Native حرفه‌ای</h3>
+                                                <p class="course-description small">توسعه اپلیکیشن موبایل با React Native</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <span class="ms-1">5.0</span>
+                                                    </div>
+                                                    <div class="text-light small">۲۵۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۸۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ۴ -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/Nestjs.jpeg" alt="NestJS" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">NestJS پیشرفته</h3>
+                                                <p class="course-description small">میکروسرویس و معماری Enterprise</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                        <span class="ms-1">4.5</span>
+                                                    </div>
+                                                    <div class="text-light small">۱۹۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۴,۵۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- اسلاید ۲ دسکتاپ -->
+                            <div class="carousel-item">
+                                <div class="row g-3 g-md-4">
+                                    <!-- کارت ۵ -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/javascript.jpeg" alt="JavaScript" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">TypeScript پیشرفته</h3>
+                                                <p class="course-description small">برنامه‌نویسی نوع‌ایمن و حرفه‌ای</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <span class="ms-1">5.0</span>
+                                                    </div>
+                                                    <div class="text-light small">۲۱۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ۶ -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/php.jpeg" alt="PHP" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">Laravel 11 کامل</h3>
+                                                <p class="course-description small">آموزش کامل فریمورک Laravel نسخه 11</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <span class="ms-1">5.0</span>
+                                                    </div>
+                                                    <div class="text-light small">۱۷۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۶۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ۷ -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/kaliLinux.jpeg" alt="Kali Linux" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">امنیت وب پیشرفته</h3>
+                                                <p class="course-description small">تست نفوذ و امنیت اپلیکیشن‌های وب</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                        <span class="ms-1">4.5</span>
+                                                    </div>
+                                                    <div class="text-light small">۱۴۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۴,۰۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ۸ -->
+                                    <div class="col-6 col-lg-3">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/hacker.jpg" alt="هکر اخلاقی" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">SOC Analyst</h3>
+                                                <p class="course-description small">مرکز عملیات امنیت و مانیتورینگ</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <span class="ms-1">5.0</span>
+                                                    </div>
+                                                    <div class="text-light small">۱۲۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۴,۸۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دکمه‌های ناوبری دسکتاپ -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#newCoursesDesktop" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">قبلی</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#newCoursesDesktop" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">بعدی</span>
+                        </button>
+
+                        <!-- نقاط نشانگر دسکتاپ -->
+                        <div class="carousel-indicators custom-indicators mt-4">
+                            <button type="button" data-bs-target="#newCoursesDesktop" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#newCoursesDesktop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                    </div>
+
+                    <!-- اسلایدر موبایل جدیدترین دوره‌ها -->
+                    <div id="newCoursesMobile" class="carousel slide d-lg-none" data-bs-ride="carousel" data-bs-interval="4000">
+                        <div class="carousel-inner">
+                            <!-- اسلاید ۱ موبایل -->
+                            <div class="carousel-item active">
+                                <div class="row g-3 g-md-4">
+                                    <!-- کارت ۱ -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/next.jpeg" alt="NextJS" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">دوره متخصص NextJS 14</h3>
+                                                <p class="course-description small">آموزش کامل NextJS با App Router</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">4.5</div>
+                                                    <div class="text-light small">۳۲۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۵۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ۲ -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/python.jpeg" alt="Python" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">هوش مصنوعی با Python</h3>
+                                                <p class="course-description small">یادگیری ماشین و هوش مصنوعی</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">۱۸۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۴,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- اسلاید ۲ موبایل -->
+                            <div class="carousel-item">
+                                <div class="row g-3 g-md-4">
+                                    <!-- کارت ۳ -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/React.jpeg" alt="React" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">React Native حرفه‌ای</h3>
+                                                <p class="course-description small">توسعه اپلیکیشن موبایل</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">۲۵۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۸۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ۴ -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/Nestjs.jpeg" alt="NestJS" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">NestJS پیشرفته</h3>
+                                                <p class="course-description small">میکروسرویس و معماری Enterprise</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">4.5</div>
+                                                    <div class="text-light small">۱۹۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۴,۵۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- اسلاید ۳ موبایل -->
+                            <div class="carousel-item">
+                                <div class="row g-3 g-md-4">
+                                    <!-- کارت ۵ -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/javascript.jpeg" alt="JavaScript" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">TypeScript پیشرفته</h3>
+                                                <p class="course-description small">برنامه‌نویسی نوع‌ایمن</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">۲۱۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۲۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- کارت ۶ -->
+                                    <div class="col-6">
+                                        <div class="course-card h-100">
+                                            <div class="course-image">
+                                                <img src="img/php.jpeg" alt="PHP" class="img-fluid rounded-top">
+                                                <span class="badge bg-success">جدید</span>
+                                            </div>
+                                            <div class="course-content p-3">
+                                                <h3 class="course-title">Laravel 11 کامل</h3>
+                                                <p class="course-description small">آموزش کامل Laravel نسخه 11</p>
+                                                <div class="instructor mb-2 small">محمدرضا ضیایی</div>
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <div class="stars text-warning">5.0</div>
+                                                    <div class="text-light small">۱۷۰ دانشجو</div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price fw-bold text-primary">۳,۶۰۰,۰۰۰ تومان</div>
+                                                    <button class="btn btn-primary rounded-circle p-2 add-to-cart">
+                                                        <i class="fas fa-shopping-basket"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دکمه‌های ناوبری موبایل -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#newCoursesMobile" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">قبلی</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#newCoursesMobile" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">بعدی</span>
+                        </button>
+
+                        <!-- نقاط نشانگر موبایل -->
+                        <div class="carousel-indicators custom-indicators mt-4">
+                            <button type="button" data-bs-target="#newCoursesMobile" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#newCoursesMobile" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#newCoursesMobile" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+           <!-- بخش مقالات تخصصی -->
+            <section class="articles-section py-5">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="header-content">
+                            <h2 class="section-title">مقالات و آموزش‌های رایگان</h2>
+                            <p class="section-subtitle">آخرین مطالب آموزشی در حوزه برنامه‌نویسی و تکنولوژی</p>
+                        </div>
+                        <button class="view-all-btn">
+                            <i class="fas fa-newspaper"></i>
+                            مشاهده همه مقالات
+                        </button>
+                    </div>
+
+                    <div class="articles-grid">
+                        <!-- مقاله ۱ -->
+                        <div class="article-card">
+                            <div class="article-image">
+                                <img src="img/machingLearning.jpeg" alt="هوش مصنوعی در ریاضی" class="img-fluid">
+                                <div class="article-badge bg-primary">هوش مصنوعی</div>
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">هوش مصنوعی و حل مسائل پیچیده ریاضی</h3>
+                                <p class="article-description">
+                                    چگونه هوش مصنوعی می‌تواند مسائل ریاضی پیچیده را حل کند و تحولی در دنیای محاسبات ایجاد کند...
+                                </p>
+                                <div class="article-meta">
+                                    <div class="article-author">
+                                        <i class="fas fa-user"></i>
+                                        <span>محمدرضا ضیایی</span>
+                                    </div>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>2 روز پیش</span>
+                                    </div>
+                                </div>
+                                <div class="article-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-eye"></i>
+                                        <span>۱,۲۴۵ بازدید</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>۸ دقیقه</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="article-read-btn">
+                                    <i class="fas fa-book-open"></i>
+                                    مطالعه مقاله
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- مقاله ۲ -->
+                        <div class="article-card">
+                            <div class="article-image">
+                                <img src="img/kaggle.jpeg" alt="مسابقات Kaggle" class="img-fluid">
+                                <div class="article-badge bg-success">مسابقه</div>
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">راهنمای جامع مسابقات Kaggle برای مبتدیان</h3>
+                                <p class="article-description">
+                                    چگونه در مسابقات Kaggle شرکت کنید و مهارت‌های داده‌کاوی و یادگیری ماشین خود را تقویت کنید...
+                                </p>
+                                <div class="article-meta">
+                                    <div class="article-author">
+                                        <i class="fas fa-user"></i>
+                                        <span>محمدرضا ضیایی</span>
+                                    </div>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>1 هفته پیش</span>
+                                    </div>
+                                </div>
+                                <div class="article-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-eye"></i>
+                                        <span>۲,۸۹۰ بازدید</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>۱۲ دقیقه</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="article-read-btn">
+                                    <i class="fas fa-book-open"></i>
+                                    مطالعه مقاله
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- مقاله ۳ -->
+                        <div class="article-card">
+                            <div class="article-image">
+                                <img src="img/free-ai.jpeg" alt="ابزارهای هوش مصنوعی" class="img-fluid">
+                                <div class="article-badge bg-warning">رایگان</div>
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">۱۰ ابزار هوش مصنوعی رایگان برای برنامه‌نویسان</h3>
+                                <p class="article-description">
+                                    معرفی بهترین ابزارهای هوش مصنوعی رایگان که می‌توانند workflow برنامه‌نویسی شما را متحول کنند...
+                                </p>
+                                <div class="article-meta">
+                                    <div class="article-author">
+                                        <i class="fas fa-user"></i>
+                                        <span>محمدرضا ضیایی</span>
+                                    </div>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>3 روز پیش</span>
+                                    </div>
+                                </div>
+                                <div class="article-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-eye"></i>
+                                        <span>۳,۴۵۶ بازدید</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>۶ دقیقه</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="article-read-btn">
+                                    <i class="fas fa-book-open"></i>
+                                    مطالعه مقاله
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- مقاله ۴ -->
+                        <div class="article-card">
+                            <div class="article-image">
+                                <img src="img/nextjs-ai.jpeg" alt="NextJS و هوش مصنوعی" class="img-fluid">
+                                <div class="article-badge bg-info">NextJS</div>
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">ادغام هوش مصنوعی در اپلیکیشن‌های NextJS</h3>
+                                <p class="article-description">
+                                    چگونه قابلیت‌های هوش مصنوعی را در اپلیکیشن‌های NextJS خود پیاده‌سازی و استفاده کنید...
+                                </p>
+                                <div class="article-meta">
+                                    <div class="article-author">
+                                        <i class="fas fa-user"></i>
+                                        <span>محمدرضا ضیایی</span>
+                                    </div>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>5 روز پیش</span>
+                                    </div>
+                                </div>
+                                <div class="article-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-eye"></i>
+                                        <span>۱,۹۸۷ بازدید</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>۱۰ دقیقه</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="article-read-btn">
+                                    <i class="fas fa-book-open"></i>
+                                    مطالعه مقاله
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- مقاله ۵ -->
+                        <div class="article-card">
+                            <div class="article-image">
+                                <img src="img/react-performance.jpeg" alt="بهینه‌سازی React" class="img-fluid">
+                                <div class="article-badge bg-danger">React</div>
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">۷ تکنیک طلایی برای بهینه‌سازی عملکرد React</h3>
+                                <p class="article-description">
+                                    چگونه اپلیکیشن‌های React خود را بهینه کنید و سرعت لود را تا ۷۰٪ افزایش دهید...
+                                </p>
+                                <div class="article-meta">
+                                    <div class="article-author">
+                                        <i class="fas fa-user"></i>
+                                        <span>محمدرضا ضیایی</span>
+                                    </div>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>4 روز پیش</span>
+                                    </div>
+                                </div>
+                                <div class="article-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-eye"></i>
+                                        <span>۲,۱۲۰ بازدید</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>۱۱ دقیقه</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="article-read-btn">
+                                    <i class="fas fa-book-open"></i>
+                                    مطالعه مقاله
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- مقاله ۶ -->
+                        <div class="article-card">
+                            <div class="article-image">
+                                <img src="img/docker-microservices.jpeg" alt="Docker و میکروسرویس" class="img-fluid">
+                                <div class="article-badge bg-secondary">DevOps</div>
+                            </div>
+                            <div class="article-content">
+                                <h3 class="article-title">راهنمای کامل Docker برای توسعه میکروسرویس‌ها</h3>
+                                <p class="article-description">
+                                    چگونه با Docker معماری میکروسرویس بسازید و اپلیکیشن‌های scalable توسعه دهید...
+                                </p>
+                                <div class="article-meta">
+                                    <div class="article-author">
+                                        <i class="fas fa-user"></i>
+                                        <span>محمدرضا ضیایی</span>
+                                    </div>
+                                    <div class="article-date">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>6 روز پیش</span>
+                                    </div>
+                                </div>
+                                <div class="article-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-eye"></i>
+                                        <span>۱,۷۸۰ بازدید</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>۱۵ دقیقه</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="article-read-btn">
+                                    <i class="fas fa-book-open"></i>
+                                    مطالعه مقاله
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- -------------------------------------------------------- -->
+            <!-- بخش درباره مدرس -->
+            <!-- <section class="instructor-section py-5">
+                <div class="container">
+                    <div class="instructor-card">
+                        <div class="instructor-image">
+                            <img src="img/instructor.jpg" alt="محمدرضا ضیایی" class="img-fluid">
+                        </div>
+                        <div class="instructor-content">
+                            <h2 class="section-title">محمدرضا ضیایی</h2>
+                            <p class="instructor-bio">
+                                با بیش از ۱۰ سال تجربه در زمینه برنامه‌نویسی و توسعه وب، تخصص اصلی من در حوزه‌های 
+                                <span class="highlight">JavaScript</span>, 
+                                <span class="highlight">React</span>, 
+                                <span class="highlight">Node.js</span> و 
+                                <span class="highlight">هوش مصنوعی</span> است.
+                            </p>
+                            <p class="instructor-bio">
+                                هدف من در پلنت کد، آموزش مفاهیم پیچیده به زبان ساده و همراهی شما از سطح مبتدی تا حرفه‌ای است.
+                            </p>
+                            <div class="instructor-stats">
+                                <div class="stat">
+                                    <span class="number">۵۰+</span>
+                                    <span class="label">دوره آموزشی</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">۱۰,۰۰۰+</span>
+                                    <span class="label">دانشجو</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">۸ سال</span>
+                                    <span class="label">تجربه تدریس</span>
+                                </div>
+                            </div>
+                            <div class="instructor-social">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+
+
+           <!-- بخش مسیرهای یادگیری AI -->
+            <section class="ai-learning-paths py-5">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="header-content">
+                            <h2 class="section-title">مسیرهای تخصصی هوش مصنوعی</h2>
+                            <p class="section-subtitle">از صفر تا متخصص در حوزه‌های مختلف AI</p>
+                        </div>
+                        <button class="view-all-btn">
+                            <i class="fas fa-robot"></i>
+                            مشاهده همه مسیرها
+                        </button>
+                    </div>
+
+                    <div class="learning-paths-grid">
+                        <!-- مسیر ۱ -->
+                        <div class="path-card">
+                            <div class="path-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="path-title">مسیر یادگیری ماشین</h3>
+                            <p class="path-description">
+                                از Python پایه تا مدل‌های پیشرفته Machine Learning
+                            </p>
+                            <div class="path-stats">
+                                <span class="stat">۶ دوره</span>
+                                <span class="stat">۸۰+ ساعت</span>
+                            </div>
+                            <ul class="path-courses">
+                                <li>✅ Python برای داده‌کاوی</li>
+                                <li>✅ مبانی یادگیری ماشین</li>
+                                <li>✅ مدل‌های پیشرفته ML</li>
+                                <li>✅ پروژه‌های عملی</li>
+                            </ul>
+                            <a href="#" class="path-start-btn">
+                                شروع مسیر یادگیری
+                            </a>
+                        </div>
+
+                        <!-- مسیر ۲ -->
+                        <div class="path-card">
+                            <div class="path-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="path-title">مسیر بینایی کامپیوتر</h3>
+                            <p class="path-description">
+                                پردازش تصویر و ویدیو با Deep Learning
+                            </p>
+                            <div class="path-stats">
+                                <span class="stat">۵ دوره</span>
+                                <span class="stat">۷۰+ ساعت</span>
+                            </div>
+                            <ul class="path-courses">
+                                <li>✅ مبانی بینایی کامپیوتر</li>
+                                <li>✅ شبکه‌های کانولوشنی</li>
+                                <li>✅ پردازش تصویر پیشرفته</li>
+                                <li>✅ تشخیص اشیا</li>
+                            </ul>
+                            <a href="#" class="path-start-btn">
+                                شروع مسیر یادگیری
+                            </a>
+                        </div>
+
+                        <!-- مسیر ۳ -->
+                        <div class="path-card">
+                            <div class="path-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3 class="path-title">مسیر پردازش زبان طبیعی</h3>
+                            <p class="path-description">
+                                کار با متن و زبان‌های طبیعی با NLP
+                            </p>
+                            <div class="path-stats">
+                                <span class="stat">۴ دوره</span>
+                                <span class="stat">۶۰+ ساعت</span>
+                            </div>
+                            <ul class="path-courses">
+                                <li>✅ مبانی NLP</li>
+                                <li>✅ مدل‌های زبانی</li>
+                                <li>✅ تحلیل احساسات</li>
+                                <li>✅ چت‌بات‌های هوشمند</li>
+                            </ul>
+                            <a href="#" class="path-start-btn">
+                                شروع مسیر یادگیری
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- بخش ابزارهای رایگان -->
+            <section class="free-tools py-5">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="header-content">
+                            <h2 class="section-title">ابزارهای رایگان برنامه‌نویسی</h2>
+                            <p class="section-subtitle">دانلود رایگان ابزارها، تمپلیت‌ها و کتابخانه‌ها</p>
+                        </div>
+                        <button class="view-all-btn">
+                            <i class="fas fa-download"></i>
+                            مشاهده همه ابزارها
+                        </button>
+                    </div>
+
+                    <div class="tools-grid">
+                        <!-- ابزار ۱ -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h3 class="tool-title">کامپوننت‌های React رایگان</h3>
+                            <p class="tool-description">
+                                ۲۰+ کامپوننت آماده React با Tailwind CSS
+                            </p>
+                            <div class="tool-meta">
+                                <span class="tool-size">۲.۵ MB</span>
+                                <span class="tool-downloads">۱,۲۴۵ دانلود</span>
+                            </div>
+                            <a href="#" class="tool-download-btn">
+                                <i class="fas fa-download"></i>
+                                دانلود رایگان
+                            </a>
+                        </div>
+
+                        <!-- ابزار ۲ -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3 class="tool-title">تمپلیت Figma UI Kit</h3>
+                            <p class="tool-description">
+                                طراحی کامل UI برای اپلیکیشن‌های وب
+                            </p>
+                            <div class="tool-meta">
+                                <span class="tool-size">۵.۲ MB</span>
+                                <span class="tool-downloads">۸۹۰ دانلود</span>
+                            </div>
+                            <a href="#" class="tool-download-btn">
+                                <i class="fas fa-download"></i>
+                                دانلود رایگان
+                            </a>
+                        </div>
+
+                        <!-- ابزار ۳ -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="tool-title">API Mock داده‌های تست</h3>
+                            <p class="tool-description">
+                                مجموعه کامل API برای تست اپلیکیشن‌ها
+                            </p>
+                            <div class="tool-meta">
+                                <span class="tool-size">۱.۸ MB</span>
+                                <span class="tool-downloads">۲,۳۴۰ دانلود</span>
+                            </div>
+                            <a href="#" class="tool-download-btn">
+                                <i class="fas fa-download"></i>
+                                دانلود رایگان
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- بخش معرفی و مزایا -->
+            <section class="about-platform py-5">
+                <div class="container">
+                    <div class="platform-header text-center mb-5">
+                        <h2 class="section-title">با پلنت کد برنامه‌نویس حرفه‌ای شوید!</h2>
+                        <p class="section-subtitle">مسیر یادگیری برنامه‌نویسی را با اطمینان طی کنید</p>
+                    </div>
+
+                    <div class="platform-content">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="platform-text">
+                                    <p class="lead">
+                                        اگر در ابتدای مسیر یادگیری برنامه‌نویسی قرار دارید یا بعد از چند سال فعالیت حرفه‌ای 
+                                        به‌دنبال فتح قله‌های جدید در این حوزه هستید، دوره‌های <strong>پلنت کد</strong> شما را به هدفتان می‌رسانند.
+                                    </p>
+                                    
+                                    <p>
+                                        در این آکادمی همه چیز برای یادگیری برنامه‌نویسی از صفر یا دریافت آموزش‌های تکمیلی 
+                                        برای تبدیل شدن به یک برنامه‌نویس کاربلد مهیا است. در پلنت کد دوره‌های آموزشی متنوع 
+                                        با کمترین هزینه و پشتیبانی مستمر آماده شده تا بدون نیاز به کتاب یا دوره دیگر، 
+                                        بتوانید صفر تا صد برنامه‌نویسی را یاد بگیرید.
+                                    </p>
+
+                                    <div class="platform-stats">
+                                        <div class="stat-item">
+                                            <span class="number">۱۰۰+</span>
+                                            <span class="label">دوره تخصصی</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="number">۲۰,۰۰۰+</span>
+                                            <span class="label">دانشجو</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="number">۹۸%</span>
+                                            <span class="label">رضایت‌مندی</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div class="platform-features">
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>آموزش برنامه‌نویسی رایگان</h4>
+                                            <p>ورود به دنیای کدنویسی بدون ریسک با دوره‌های رایگان و پشتیبانی مادام‌العمر</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>آموزش بدون ریسک</h4>
+                                            <p>با مشاهده جلسات رایگان، با خیال راحت برای دوره‌های پیشرفته تصمیم بگیرید</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-rocket"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>آموزش صفر تا صد واقعی</h4>
+                                            <p>محتوای بومی‌سازی شده با پروژه‌های ایرانی و منطبق بر بازار کار</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-handshake"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>تضمین کیفیت</h4>
+                                            <p>دسترسی رایگان به ۲۰-۴۰٪ هر دوره قبل از خرید</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- بخش چرا پلنت کد متفاوت است -->
+                    <div class="unique-section mt-5">
+                        <div class="section-header">
+                            <h3 class="section-title">چرا پلنت کد متفاوت است؟</h3>
+                        </div>
+                        
+                        <div class="unique-content">
+                            <p>
+                                شمایی که وارد این صفحه شدید، احتمالا قبلا با چند مرکز آموزش دوره برنامه نویسی آشنا شده‌اید. 
+                                اما حالا که مهمان پلنت کد شدید، بد نیست در جریان چکیده‌ای از تجربیات و ذهنیت پلنت کد در آموزش کدنویسی قرار بگیرید.
+                            </p>
+                            
+                            <div class="unique-points">
+                                <div class="point-card">
+                                    <div class="point-number">۱</div>
+                                    <div class="point-content">
+                                        <h5>پشتیبانی تمام‌وقت و دلسوزانه</h5>
+                                        <p>پشتیبانان فنی مسلط و آشنا به شرایط بازار کار، از شروع دوره تا تدوین رزومه و مصاحبه استخدام در کنار شما هستند</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="point-card">
+                                    <div class="point-number">۲</div>
+                                    <div class="point-content">
+                                        <h5>یادگیری با چشم باز</h5>
+                                        <p>مطالعه نظرات واقعی دانشجویان و مشاهده نمونه کارهای آنان قبل از انتخاب دوره</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="point-card">
+                                    <div class="point-number">۳</div>
+                                    <div class="point-content">
+                                        <h5>تدریس با انگیزه‌بخشی</h5>
+                                        <p>سبک تدریس اساتید نه تنها آموزش استاندارد، بلکه انگیزه و اعتمادبه‌نفس لازم برای ادامه مسیر را به شما می‌دهد</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <!-- بخش بالا -->
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="brand-info">
+                            <img src="img/-2147483648_-210431.png" alt="پلنت کد" class="footer-logo">
+                            <div>
+                                <h3 class="brand-name">پلنت کد</h3>
+                                <span class="brand-domain">plantcode.ir</span>
+                            </div>
+                        </div>
+        
+                        <div class="social-links">
+                            <a href="#" aria-label="یوتیوب"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="تلگرام"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="#" aria-label="لینکدین"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="footer-divider"></div>
+        
+                <!-- بخش اصلی -->
+                <div class="footer-main">
+                    <div class="footer-columns">
+                        <!-- درباره ما -->
+                        <div class="footer-col about-col">
+                            <h4>درباره پلنت کد</h4>
+                            <p>
+                                پلنت کد جایی است که برنامه‌نویسی را از صفر تا سطح حرفه‌ای و استخدام یاد می‌گیرید. 
+                                با آموزش‌های پروژه‌محور، پشتیبانی تمام‌وقت و محتوای کاملاً بومی‌سازی‌شده، 
+                                همراه شما هستیم تا بهترین نسخه برنامه‌نویس خودتان شوید.
+                            </p>
+                        </div>
+        
+                        <!-- دوره‌های پیشنهادی -->
+                        <div class="footer-col">
+                            <h4>دوره‌های پیشنهادی</h4>
+                            <ul>
+                                <li><a href="#">جاوا اسکریپت پیشرفته</a></li>
+                                <li><a href="#">پایتون صفر تا صد</a></li>
+                                <li><a href="#">ری‌اکت و نکست جی‌اس</a></li>
+                                <li><a href="#">طراحی UI/UX حرفه‌ای</a></li>
+                                <li><a href="#">فلاتر و دارت</a></li>
+                                <li><a href="#">هوش مصنوعی با پایتون</a></li>
+                            </ul>
+                        </div>
+        
+                        <!-- دسترسی سریع -->
+                        <div class="footer-col">
+                            <h4>دسترسی سریع</h4>
+                            <ul>
+                                <li><a href="#">قوانین و مقررات</a></li>
+                                <li><a href="#">ارسال تیکت پشتیبانی</a></li>
+                                <li><a href="#">همه دوره‌ها</a></li>
+                                <li><a href="#">سوالات متداول</a></li>
+                                <li><a href="#">تماس با ما</a></li>
+                            </ul>
+                        </div>
+        
+                        <!-- نماد اعتماد -->
+                        <div class="footer-col trust-col">
+                            <h4>اعتماد و امنیت</h4>
+                            <div class="trust-badges">
+                                <img src="https://trustseal.enamad.ir/logo.aspx?id=123456&p=yourcode" 
+                                     alt="نماد اعتماد الکترونیکی" 
+                                     class="enamad">
+                                <div class="secure-payment">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>پرداخت امن</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!--  copy right -->
+                <div class="footer-bottom">
+                    <p>© ۱۴۰۴ - ۲۰۲۵ کلیه حقوق مادی و معنوی این وب‌سایت متعلق به پلنت کد می‌باشد.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+
+    <!-- it's botton for js -->
+    <script src="js/header.js"></script>
+    <script src="js/shoping-cart.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

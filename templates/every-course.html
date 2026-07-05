@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>همه دوره‌ها - پلنت کد</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" data-no-menu>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- استایل‌های سفارشی -->
+    <link rel="stylesheet" href="style css/header.css">
+    <link rel="stylesheet" href="style css/min-content.css">
+    <link rel="stylesheet" href="style css/footer.css">
+    <link rel="stylesheet" href="style css/courses_page_css/courses-page.css">
+</head>
+<body class="dark-theme">
+    
+    <!-- هدر اصلی (کپی از index.html) -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="site-info">
+                    <span class="site-name">پلنت کد</span>
+                    <span class="site-domain">plantcode.ir</span>
+                </div>
+                <div class="top-actions">
+                    <button class="support-btn">
+                        <i class="fas fa-headset"></i>
+                        پشتیبانی
+                    </button>
+                    <div class="auth-buttons">
+                        <button class="login-btn">ورود</button>
+                        <span>/</span>
+                        <button class="register-btn">عضویت</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <!-- لوگو و نام -->
+                <div class="brand">
+                    <div class="logo-container">
+                        <img src="../img/-2147483648_-210431.png" alt="پلنت کد" class="site-logo">
+                    </div>
+                    <div class="brand-name">
+                        <span class="name">پلنت کد</span>
+                        <span class="slogan">آموزش برنامه‌نویسی و توسعه وب</span>
+                    </div>
+                </div>
+
+                <!-- منوی اصلی -->
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        خانه
+                    </a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            آموزش‌های تخصصی
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <!-- فرانت‌اند -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fas fa-palette"></i>
+                                    فرانت‌اند
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مباحث فرانت‌اند</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-html5"></i>
+                                            HTML
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-css3-alt"></i>
+                                            CSS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-bootstrap"></i>
+                                            Bootstrap (بوت استرپ)
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-layer-group"></i>
+                                            Tailwind CSS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-cube"></i>
+                                            Flex-Grid (فلکس و گرید)
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- پایتون -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-python"></i>
+                                    پایتون
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مباحث پایتون</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            دوره هیولای پایتون
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-cube"></i>
+                                            جنگو (Django)
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-project-diagram"></i>
+                                            پروژه های کاربردی پایتون
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-bolt"></i>
+                                            بهینه سازی کد ها در پایتون
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-chart-bar"></i>
+                                            مصور سازی داده ها با پایتون
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- جاوااسکریپت -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-js-square"></i>
+                                    جاوااسکریپت
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مباحث جاوااسکریپت</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            دوره صفر تا صد جاوااسکریپت
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-react"></i>
+                                            آموزش React (ری‌اکت)
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-node-js"></i>
+                                            آموزش Node.js
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-vuejs"></i>
+                                            Vue.js (ویو جی اس)
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-angular"></i>
+                                            Angular (انگولار)
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- PHP -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-php"></i>
+                                    PHP
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مباحث PHP</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-php"></i>
+                                            دوره هیولا PHP
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-database"></i>
+                                            درک API
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-project-diagram"></i>
+                                            API نویسی با PHP
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-robot"></i>
+                                            ربات تلگرام با PHP
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-project-diagram"></i>
+                                            پروژه های کاربردی با PHP
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- ارتقاع مهارت ها -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fas fa-chart-line"></i>
+                                    ارتقاع مهارت ها
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مهارت‌های پیشرفته</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            الگوریتم و ساختمان داده
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-bolt"></i>
+                                            آموزش WebSocket
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-git-alt"></i>
+                                            گیت و گیتهاب
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-cube"></i>
+                                            آموزش GraphQL
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            توسعه کتابخانه با JS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-puzzle-piece"></i>
+                                            افزونه نویسی با JS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-broom"></i>
+                                            Clean Code برای JS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-rocket"></i>
+                                            دیپلوی پروژه های JS
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-database"></i>
+                                            آموزش Redis
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-code"></i>
+                                            آموزش Regex
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-npm"></i>
+                                            NPM برای جاوااسکریپت کارها
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- مهارت های نرم -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fas fa-users"></i>
+                                    مهارت های نرم
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>مهارت‌های فردی</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-language"></i>
+                                            آموزش جامع زبان انگلیسی
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-handshake"></i>
+                                            مستر فریلنس
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-file-contract"></i>
+                                            تکنیک های قرارداد نویسی
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-users"></i>
+                                            تسلط به کار تیمی
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-business-time"></i>
+                                            کسب و کار برای برنامه نویسان
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-tags"></i>
+                                            تکنیک های قیمت گذاری پروژه
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- امنیت -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fas fa-shield-alt"></i>
+                                    امنیت
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>امنیت سایبری</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-user-secret"></i>
+                                            ورود به دنیای امنیت
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-shield-alt"></i>
+                                            دوره هکر قانونمند
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-bug"></i>
+                                            آموزش تست نفوذ با کالی لینوکس
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-python"></i>
+                                            آموزش تست نفوذ با پایتون
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fas fa-globe"></i>
+                                            آموزش جامع تست نفوذ وب
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- سیستم عامل -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-linux"></i>
+                                    سیستم عامل
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>سیستم‌عامل و DevOps</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-linux"></i>
+                                            لینوکس برای برنامه نویسان
+                                        </a>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-docker"></i>
+                                            آموزش جامع داکر
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- وردپرس -->
+                            <div class="mega-menu">
+                                <a href="#" class="dropdown-item mega-trigger">
+                                    <i class="fab fa-wordpress"></i>
+                                    وردپرس
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h4>وردپرس</h4>
+                                        <a href="#" class="dropdown-item">
+                                            <i class="fab fa-wordpress"></i>
+                                            آموزش جامع وردپرس
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-book"></i>
+                            آموزش‌های رایگان
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-file-word"></i>
+                                ورد (Word)
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-file-excel"></i>
+                                اکسل (Excel)
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-database"></i>
+                                اکسس (Access)
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-powerpoint"></i>
+                                پاورپوینت
+                            </a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="#" class="nav-link active">
+                        <i class="fas fa-blog"></i>
+                         تمامی دورها
+                    </a></li>
+                    
+                    <li><a href="#" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        درباره ما
+                    </a></li>
+                </ul>
+
+                <!-- بخش جستجو و اقدامات -->
+                <div class="nav-actions">
+                    <!-- دکمه تغییر تم -->
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+
+                    <!-- جستجو -->
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="جستجو...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- سبد خرید -->
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+
+                    <!-- منوی همبرگر -->
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- منوی موبایل -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-brand">
+                <img src="../img/-2147483648_-210431.png" alt="پلنت کد" class="site-logo">
+                <span>پلنت کد</span>
+            </div>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <!-- جستجو در منوی موبایل -->
+            <div class="mobile-search">
+                <input type="text" placeholder="جستجو..." class="mobile-search-input">
+                <button class="mobile-search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+    
+            <!-- دکمه تغییر تم در منوی موبایل -->
+            <div class="mobile-theme-toggle">
+                <button class="theme-toggle-btn" id="mobileThemeToggle">
+                    <i class="fas fa-moon"></i>
+                    تغییر به تم روشن
+                </button>
+            </div>
+    
+            <a href="../index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                خانه
+            </a>
+            
+            <!-- فرانت‌اند -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fas fa-palette"></i>
+                    فرانت‌اند
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-html5"></i>
+                        HTML
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-css3-alt"></i>
+                        CSS
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-bootstrap"></i>
+                        Bootstrap
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-layer-group"></i>
+                        Tailwind CSS
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-cube"></i>
+                        Flex-Grid
+                    </a>
+                </div>
+            </div>
+    
+            <!-- پایتون -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-python"></i>
+                    پایتون
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        دوره هیولای پایتون
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-cube"></i>
+                        جنگو (Django)
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-project-diagram"></i>
+                        پروژه های کاربردی پایتون
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-bolt"></i>
+                        بهینه سازی کد ها در پایتون
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-chart-bar"></i>
+                        مصور سازی داده ها با پایتون
+                    </a>
+                </div>
+            </div>
+    
+            <!-- جاوااسکریپت -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-js-square"></i>
+                    جاوااسکریپت
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        دوره صفر تا صد جاوااسکریپت
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-react"></i>
+                        آموزش React
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-node-js"></i>
+                        آموزش Node.js
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-vuejs"></i>
+                        Vue.js
+                    </a>
+                </div>
+            </div>
+    
+            <!-- PHP -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-php"></i>
+                    PHP
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        دوره هیولا PHP
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-database"></i>
+                        درک API
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        API نویسی با PHP
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-robot"></i>
+                        ربات تلگرام با PHP
+                    </a>
+                </div>
+            </div>
+    
+            <!-- ارتقاع مهارت ها -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fas fa-chart-line"></i>
+                    ارتقاع مهارت ها
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-code"></i>
+                        الگوریتم و ساختمان داده
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-bolt"></i>
+                        آموزش WebSocket
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-git-alt"></i>
+                        گیت و گیتهاب
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-cube"></i>
+                        آموزش GraphQL
+                    </a>
+                </div>
+            </div>
+    
+            <!-- مهارت های نرم -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fas fa-users"></i>
+                    مهارت های نرم
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-language"></i>
+                        آموزش زبان انگلیسی
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-handshake"></i>
+                        مستر فریلنس
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-file-contract"></i>
+                        قرارداد نویسی
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-business-time"></i>
+                        کسب و کار
+                    </a>
+                </div>
+            </div>
+    
+            <!-- امنیت -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fas fa-shield-alt"></i>
+                    امنیت
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-user-secret"></i>
+                        ورود به دنیای امنیت
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-shield-alt"></i>
+                        هکر قانونمند
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fas fa-bug"></i>
+                        تست نفوذ با کالی
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-python"></i>
+                        تست نفوذ با پایتون
+                    </a>
+                </div>
+            </div>
+    
+            <!-- سیستم عامل -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-linux"></i>
+                    سیستم عامل
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-linux"></i>
+                        لینوکس
+                    </a>
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-docker"></i>
+                        داکر
+                    </a>
+                </div>
+            </div>
+    
+            <!-- وردپرس -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link dropdown-toggle">
+                    <i class="fab fa-wordpress"></i>
+                    وردپرس
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#" class="mobile-dropdown-item">
+                        <i class="fab fa-wordpress"></i>
+                        آموزش جامع وردپرس
+                    </a>
+                </div>
+            </div>
+    
+            <!-- سایر لینک‌ها -->
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-book"></i>
+                آموزش‌های رایگان
+            </a>
+            
+            <a href="#" class="mobile-nav-link active">
+                <i class="fas fa-blog"></i>
+                همه دوره ها
+            </a>
+            
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-info-circle"></i>
+                درباره ما
+            </a>
+            
+            <a href="#" class="mobile-nav-link">
+                <i class="fas fa-headset"></i>
+                پشتیبانی
+            </a>
+            
+            <!-- دکمه‌های ورود و ثبت نام در منوی موبایل -->
+            <div class="mobile-auth-in-menu">
+                <button class="mobile-login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    ورود به حساب
+                </button>
+                <button class="mobile-register-btn">
+                    <i class="fas fa-user-plus"></i>
+                    ثبت نام
+                </button>
+            </div>
+            
+            <!-- شبکه‌های اجتماعی -->
+            <div class="mobile-social">
+                <span>ما را دنبال کنید:</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    
+    <!-- پنل سبد خرید -->
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3>سبد خرید شما</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items">
+                <!-- آیتم‌های سبد خرید اینجا به صورت داینامیک اضافه می‌شوند -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>مجموع:</span>
+                    <span class="total-price">۰ تومان</span>
+                </div>
+                <div class="cart-actions">
+                    <button class="clear-cart" id="clearCart">
+                        <i class="fas fa-trash"></i>
+                        پاک کردن همه
+                    </button>
+                    <button class="checkout-btn">
+                        <i class="fas fa-credit-card"></i>
+                        پرداخت نهایی
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- محتوای صفحه دوره‌ها -->
+    <main class="courses-page">
+        <div class="container">
+            <div class="courses-layout">
+                
+                <!-- سایدبار فیلترها -->
+                <aside class="filters-sidebar">
+                    <div class="sidebar-header">
+                        <h3>فیلترها</h3>
+                        <button class="close-filters-mobile">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+
+                    <!-- جستجو -->
+                    <div class="filter-group">
+                        <h4>جستجو</h4>
+                        <div class="search-filter-wrapper">
+                            <input type="text" placeholder="نام دوره یا مدرس..." class="search-filter" id="searchFilter">
+                            <button type="button" class="search-filter-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- دسته‌بندی -->
+                    <div class="filter-group">
+                        <h4>دسته‌بندی</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="frontend">
+                                <span class="checkmark"></span>
+                                فرانت‌اند
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="javascript">
+                                <span class="checkmark"></span>
+                                جاوااسکریپت
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="python">
+                                <span class="checkmark"></span>
+                                پایتون
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="php">
+                                <span class="checkmark"></span>
+                                PHP
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="react">
+                                <span class="checkmark"></span>
+                                React
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="security">
+                                <span class="checkmark"></span>
+                                امنیت
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="category" value="devops">
+                                <span class="checkmark"></span>
+                                DevOps
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- سطح دوره -->
+                    <div class="filter-group">
+                        <h4>سطح دوره</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="level" value="beginner">
+                                <span class="checkmark"></span>
+                                مقدماتی
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="level" value="intermediate">
+                                <span class="checkmark"></span>
+                                متوسط
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="level" value="advanced">
+                                <span class="checkmark"></span>
+                                پیشرفته
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- قیمت -->
+                    <div class="filter-group">
+                        <h4>قیمت</h4>
+                        <div class="filter-options">
+                            <label class="filter-radio">
+                                <input type="radio" name="price" value="all" checked>
+                                <span class="radiomark"></span>
+                                همه
+                            </label>
+                            <label class="filter-radio">
+                                <input type="radio" name="price" value="paid">
+                                <span class="radiomark"></span>
+                                پولی
+                            </label>
+                            <label class="filter-radio">
+                                <input type="radio" name="price" value="free">
+                                <span class="radiomark"></span>
+                                رایگان
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button class="apply-filters-btn" id="applyFiltersBtn">اعمال فیلترها</button>
+                        <button class="reset-filters-btn" id="resetFiltersBtn">پاک کردن</button>
+                    </div>
+                </aside>
+
+                <!-- محتوای اصلی -->
+                <section class="courses-content">
+                    <div class="content-header">
+                    <h1 class="page-title">همه دوره‌ها</h1>
+
+                    <div class="courses-controls">
+                        <!-- مرتب‌سازی (همیشه نمایش داده میشه) -->
+                        <div class="sort-container">
+                            <span class="sort-label">مرتب‌سازی بر اساس:</span>
+                            <select class="sort-select" id="sortCourses">
+                                <option value="newest">جدیدترین</option>
+                                <option value="popular">محبوب‌ترین</option>
+                                <option value="price-low">ارزان‌ترین</option>
+                                <option value="price-high">گران‌ترین</option>
+                            </select>
+                        </div>
+
+                        <!-- دکمه فیلتر فقط در موبایل -->
+                        <button class="toggle-filters-mobile">
+                            <i class="fas fa-sliders-h"></i>
+                            فیلترها
+                        </button>
+                    </div>
+                </div>
+
+                    <!-- گرید دوره‌ها -->
+                    <div class="courses-grid" id="coursesGrid">
+                        <!-- دوره ۱ -->
+                        
+                        <div class="course-card" data-category="python" data-level="advanced" data-price="paid" data-rating="4.5" data-students="2500">
+                            <div class="course-image">
+                                <img src="../img/python.jpeg" alt="Python">
+                                <div class="course-badge badge-beginner">پیشرفته</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">دوره هیولای پایتون</h3>
+                                <p class="course-description">آموزش کامل پایتون از پایه تا پیشرفته با پروژه‌های واقعی</p>
+                                
+                                <div class="course-meta">
+                                    <div class="course-instructor">
+                                        <i class="fas fa-user"></i>
+                                        <span>علی رضایی</span>
+                                    </div>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        <span>۶۰ ساعت</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.5</span>
+                                        <span class="rating-count">(۸۲۰ نظر)</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۲,۵۰۰ دانشجو</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>۳۵ درس</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <div class="price-info">
+                                            <span class="final-price">۲,۵۰۰,۰۰۰ تومان</span>
+                                            <span class="original-price">۳,۰۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <span class="discount">۱۷٪ تخفیف</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="2">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره 2 -->
+                        <div class="course-card" data-category="react" data-level="advanced" data-price="paid" data-rating="5.0" data-students="1800">
+                            <div class="course-image">
+                                <img src="../img/React.jpeg" alt="React">
+                                <div class="course-badge badge-advanced">پیشرفته</div>
+                                <button class="wishlist-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">آموزش React از صفر تا صد</h3>
+                                <p class="course-description">ساخت اپلیکیشن‌های وب مدرن با React و Redux</p>
+                                
+                                <div class="course-meta">
+                                    <div class="course-instructor">
+                                        <i class="fas fa-user"></i>
+                                        <span>سارا احمدی</span>
+                                    </div>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        <span>۷۵ ساعت</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                        <span class="rating-count">(۶۳۰ نظر)</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۱,۸۰۰ دانشجو</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>۵۰ درس</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <div class="price-info">
+                                            <span class="final-price">۳,۲۰۰,۰۰۰ تومان</span>
+                                            <span class="original-price">۴,۰۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <span class="discount">۲۰٪ تخفیف</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="3">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره 3 -->
+                        <div class="course-card" data-category="python" data-level="intermediate" data-price="paid" data-rating="4.7" data-students="1200">
+                            <div class="course-image">
+                                <img src="../img/django.jpg" alt="Django">
+                                <div class="course-badge badge-project">پروژه‌محور</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">آموزش جنگو (Django)</h3>
+                                <p class="course-description">ساخت وبسایت‌های پویا با فریمورک Django پایتون</p>
+                                
+                                <div class="course-meta">
+                                    <div class="course-instructor">
+                                        <i class="fas fa-user"></i>
+                                        <span>محمد حسینی</span>
+                                    </div>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        <span>۵۵ ساعت</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.7</span>
+                                        <span class="rating-count">(۳۲۰ نظر)</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۱,۲۰۰ دانشجو</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>۴۰ درس</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <div class="price-info">
+                                            <span class="final-price">۲,۸۰۰,۰۰۰ تومان</span>
+                                            <span class="original-price">۳,۵۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <span class="discount">۲۰٪ تخفیف</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="4">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره 4 -->
+                        <div class="course-card" data-category="frontend" data-level="beginner" data-price="paid" data-rating="5.0" data-students="3000">
+                            <div class="course-image">
+                                <img src="../img/html-css.jpeg" alt="HTML CSS">
+                                <div class="course-badge badge-beginner">مقدماتی</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">آموزش HTML و CSS</h3>
+                                <p class="course-description">پایه‌های طراحی وب با HTML5 و CSS3</p>
+                                
+                                <div class="course-meta">
+                                    <div class="course-instructor">
+                                        <i class="fas fa-user"></i>
+                                        <span>فاطمه محمدی</span>
+                                    </div>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        <span>۴۰ ساعت</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                        <span class="rating-count">(۱,۲۰۰ نظر)</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۳,۰۰۰ دانشجو</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>۳۰ درس</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <div class="price-info">
+                                            <span class="final-price">۱,۵۰۰,۰۰۰ تومان</span>
+                                            <span class="original-price">۲,۰۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <span class="discount">۲۵٪ تخفیف</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="5">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                        <!-- دوره 6 -->
+                        <div class="course-card" data-category="javascript" data-level="advanced" data-price="paid" data-rating="4.9" data-students="1500">
+                            <div class="course-image">
+                                <img src="../img/javascript.jpeg" alt="JavaScript Advanced">
+                                <div class="course-badge badge-advanced">پیشرفته</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">جاوااسکریپت پیشرفته</h3>
+                                <p class="course-description">مفاهیم پیشرفته جاوااسکریپت، طراحی الگو و بهینه‌سازی</p>
+                                
+                                <div class="course-meta">
+                                    <div class="course-instructor">
+                                        <i class="fas fa-user"></i>
+                                        <span>امیرحسین نجفی</span>
+                                    </div>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        <span>۶۵ ساعت</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9</span>
+                                        <span class="rating-count">(۵۸۰ نظر)</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۱,۵۰۰ دانشجو</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>۴۵ درس</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <div class="price-info">
+                                            <span class="final-price">۲,۹۰۰,۰۰۰ تومان</span>
+                                            <span class="original-price">۳,۶۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <span class="discount">۱۹٪ تخفیف</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="7">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره 7 -->
+                        <div class="course-card" data-category="devops" data-level="intermediate" data-price="paid" data-rating="4.6" data-students="900">
+                            <div class="course-image">
+                                <img src="../img/docker-microservices.jpeg" alt="Docker">
+                                <div class="course-badge badge-professional">DevOps</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">آموزش جامع Docker</h3>
+                                <p class="course-description">کانتینری‌سازی برنامه‌ها و میکروسرویس با Docker</p>
+                                
+                                <div class="course-meta">
+                                    <div class="course-instructor">
+                                        <i class="fas fa-user"></i>
+                                        <span>مجید رحیمی</span>
+                                    </div>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        <span>۵۰ ساعت</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.6</span>
+                                        <span class="rating-count">(۲۱۰ نظر)</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۹۰۰ دانشجو</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>۳۸ درس</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <div class="price-info">
+                                            <span class="final-price">۳,۵۰۰,۰۰۰ تومان</span>
+                                            <span class="original-price">۴,۳۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <span class="discount">۱۹٪ تخفیف</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="8">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره شماره 7 -->
+                        <div class="course-card" data-category="devops" data-level="intermediate" data-price="paid" data-rating="4.6" data-students="900">
+                            <div class="course-image">
+                                <img src="../img/docker-microservices.jpeg" alt="Docker">
+                                <div class="course-badge badge-professional">DevOps</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">آموزش جامع Docker</h3>
+                                <p class="course-description">کانتینری‌سازی برنامه‌ها و میکروسرویس با Docker</p>
+                                
+                                <div class="course-meta">
+                                    <div class="course-instructor">
+                                        <i class="fas fa-user"></i>
+                                        <span>مجید رحیمی</span>
+                                    </div>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        <span>۵۰ ساعت</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.6</span>
+                                        <span class="rating-count">(۲۱۰ نظر)</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۹۰۰ دانشجو</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>۳۸ درس</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <div class="price-info">
+                                            <span class="final-price">۳,۵۰۰,۰۰۰ تومان</span>
+                                            <span class="original-price">۴,۳۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <span class="discount">۱۹٪ تخفیف</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="8">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  8 شماره  -->
+                        <div class="course-card" data-category="devops" data-level="intermediate" data-price="paid" data-rating="4.6" data-students="900">
+                            <div class="course-image">
+                                <img src="../img/docker-microservices.jpeg" alt="Docker">
+                                <div class="course-badge badge-professional">DevOps</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">آموزش جامع Docker</h3>
+                                <p class="course-description">کانتینری‌سازی برنامه‌ها و میکروسرویس با Docker</p>
+                                
+                                <div class="course-meta">
+                                    <div class="course-instructor">
+                                        <i class="fas fa-user"></i>
+                                        <span>مجید رحیمی</span>
+                                    </div>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        <span>۵۰ ساعت</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.6</span>
+                                        <span class="rating-count">(۲۱۰ نظر)</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۹۰۰ دانشجو</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>۳۸ درس</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <div class="price-info">
+                                            <span class="final-price">۳,۵۰۰,۰۰۰ تومان</span>
+                                            <span class="original-price">۴,۳۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <span class="discount">۱۹٪ تخفیف</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="8">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- دوره شناره 9 -->
+                        <div class="course-card" data-category="devops" data-level="intermediate" data-price="paid" data-rating="4.6" data-students="900">
+                            <div class="course-image">
+                                <img src="../img/docker-microservices.jpeg" alt="Docker">
+                                <div class="course-badge badge-professional">DevOps</div>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">آموزش جامع Docker</h3>
+                                <p class="course-description">کانتینری‌سازی برنامه‌ها و میکروسرویس با Docker</p>
+                                
+                                <div class="course-meta">
+                                    <div class="course-instructor">
+                                        <i class="fas fa-user"></i>
+                                        <span>مجید رحیمی</span>
+                                    </div>
+                                    <div class="course-duration">
+                                        <i class="far fa-clock"></i>
+                                        <span>۵۰ ساعت</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.6</span>
+                                        <span class="rating-count">(۲۱۰ نظر)</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-stats">
+                                    <div class="stat-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>۹۰۰ دانشجو</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        <span>۳۸ درس</span>
+                                    </div>
+                                </div>
+
+                                <div class="course-footer">
+                                    <div class="price-section">
+                                        <div class="price-info">
+                                            <span class="final-price">۳,۵۰۰,۰۰۰ تومان</span>
+                                            <span class="original-price">۴,۳۰۰,۰۰۰ تومان</span>
+                                        </div>
+                                        <span class="discount">۱۹٪ تخفیف</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="8">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- صفحه‌بندی -->
+                    <div class="pagination">
+                        <button class="page-btn prev-btn" disabled>
+                            <i class="fas fa-chevron-right"></i>
+                            قبلی
+                        </button>
+                        
+                        <div class="page-numbers">
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <span class="page-dots">...</span>
+                            <button class="page-btn">8</button>
+                        </div>
+                        
+                        <button class="page-btn next-btn">
+                            بعدی
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- فوتر (کپی از index.html) -->
+    <footer class="site-footer">
+        <div class="container">
+            <!-- بخش بالا -->
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand-info">
+                        <img src="../img/-2147483648_-210431.png" alt="پلنت کد" class="footer-logo">
+                        <div>
+                            <h3 class="brand-name">پلنت کد</h3>
+                            <span class="brand-domain">plantcode.ir</span>
+                        </div>
+                    </div>
+    
+                    <div class="social-links">
+                        <a href="#" aria-label="یوتیوب"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="تلگرام"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" aria-label="لینکدین"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-divider"></div>
+    
+            <!-- بخش اصلی -->
+            <div class="footer-main">
+                <div class="footer-columns">
+                    <!-- درباره ما -->
+                    <div class="footer-col about-col">
+                        <h4>درباره پلنت کد</h4>
+                        <p>
+                            پلنت کد جایی است که برنامه‌نویسی را از صفر تا سطح حرفه‌ای و استخدام یاد می‌گیرید. 
+                            با آموزش‌های پروژه‌محور، پشتیبانی تمام‌وقت و محتوای کاملاً بومی‌سازی‌شده، 
+                            همراه شما هستیم تا بهترین نسخه برنامه‌نویس خودتان شوید.
+                        </p>
+                    </div>
+    
+                    <!-- دوره‌های پیشنهادی -->
+                    <div class="footer-col">
+                        <h4>دوره‌های پیشنهادی</h4>
+                        <ul>
+                            <li><a href="#">جاوا اسکریپت پیشرفته</a></li>
+                            <li><a href="#">پایتون صفر تا صد</a></li>
+                            <li><a href="#">ری‌اکت و نکست جی‌اس</a></li>
+                            <li><a href="#">طراحی UI/UX حرفه‌ای</a></li>
+                            <li><a href="#">فلاتر و دارت</a></li>
+                            <li><a href="#">هوش مصنوعی با پایتون</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- دسترسی سریع -->
+                    <div class="footer-col">
+                        <h4>دسترسی سریع</h4>
+                        <ul>
+                            <li><a href="#">قوانین و مقررات</a></li>
+                            <li><a href="#">ارسال تیکت پشتیبانی</a></li>
+                            <li><a href="#">همه دوره‌ها</a></li>
+                            <li><a href="#">سوالات متداول</a></li>
+                            <li><a href="#">تماس با ما</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- نماد اعتماد -->
+                    <div class="footer-col trust-col">
+                        <h4>اعتماد و امنیت</h4>
+                        <div class="trust-badges">
+                            <img src="https://trustseal.enamad.ir/logo.aspx?id=123456&p=yourcode" 
+                                 alt="نماد اعتماد الکترونیکی" 
+                                 class="enamad">
+                            <div class="secure-payment">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>پرداخت امن</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- پایین‌ترین بخش -->
+            <div class="footer-bottom">
+                <p>© ۱۴۰۴ - ۲۰۲۵ کلیه حقوق مادی و معنوی این وب‌سایت متعلق به پلنت کد می‌باشد.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- اسکریپت‌ها -->
+    <script src="js/header.js"></script>
+    <script src="js/shoping-cart.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/course-page.js"></script>
+</body>
+</html>

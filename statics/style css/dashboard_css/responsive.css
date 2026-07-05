@@ -1,0 +1,555 @@
+/* ============================================
+   RESPONSIVE STYLES - FIXED
+   ============================================ */
+
+/* 📱 موبایل کوچک (تا 575px) */
+@media (max-width: 575.98px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    /* FIX 1: دکمه منو ثابت در بالا سمت راست */
+    .mobile-toggle {
+        display: flex;
+        position: relative;
+        top: 15px;
+        right: 15px;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        min-width: auto;
+        padding: 0;
+        justify-content: center;
+        z-index: 1;
+        background: var(--primary-color);
+        color: white;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+    }
+    
+    .mobile-toggle.active {
+        background: var(--primary-dark);
+    }
+    
+    .menu-text {
+        display: none;
+    }
+    
+    /* FIX 2: پاپ‌آپ منوی سریع */
+    .quick-menu-popup {
+        width: 280px;
+        right: 15px;
+        top: 80px;
+        position: fixed;
+        z-index: 1003;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        background: var(--bg-card);
+        animation: slideDown 0.3s ease;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        z-index: 1001;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        box-shadow: 5px 0 30px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+    }
+    
+    .sidebar.active {
+        right: 0;
+    }
+    
+    .sidebar-close {
+        display: flex;
+    }
+    
+    .main-content {
+        margin-right: 0;
+        padding: 80px 15px 15px 15px; /* FIX: فاصله برای دکمه منو */
+        width: 100%;
+    }
+    
+    .sidebar-overlay {
+        display: block;
+        z-index: 1000;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    /* FIX 3: هدر محتوا - کنار هم قرار دادن آیکون‌ها */
+    .content-header {
+        margin-bottom: 25px;
+    }
+    
+    .header-top {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .search-box {
+        order: 1;
+        min-width: 100%;
+        grid-column: 1 / -1;
+    }
+    
+    .date-display {
+        order: 2;
+        grid-column: 1 / -1;
+        justify-content: center;
+        padding: 12px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    /* FIX 4: کنار هم قرار دادن آیکون‌ها */
+    .header-top-icons {
+        order: 3;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .notification-btn,
+    .cart-btn,
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        border-radius: 50% !important; /* FIX: گرد بودن */
+        border: 2px solid var(--border-color);
+        background: var(--bg-card);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+    }
+    
+    .notification-btn:hover,
+    .cart-btn:hover,
+    .theme-toggle:hover {
+        transform: scale(1.05);
+    }
+    
+    /* FIX 5: منوی اعلان‌ها */
+    .notification-dropdown {
+        position: fixed;
+        top: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 350px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+    }
+    
+    /* FIX 6: کارت‌های آماری */
+    .stats-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .stat-card {
+        padding: 20px;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .stat-info h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* 📱 موبایل افقی (576px تا 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .mobile-toggle {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 10px;
+        height: 60px;
+        border-radius: 50%;
+        z-index: 1;
+        position: relative;
+    }
+    
+    .menu-text {
+        display: none;
+    }
+    
+    .quick-menu-popup {
+        width: 300px;
+        right: 20px;
+        top: 90px;
+        position: fixed;
+        z-index: 1003;
+    }
+    
+    .sidebar {
+        width: 320px;
+        transform: translateX(100%);
+        position: fixed;
+        z-index: 1001;
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-right: 0;
+        padding: 90px 20px 20px 20px;
+        width: 100%;
+    }
+    
+    .sidebar-close {
+        display: flex;
+    }
+    
+    /* FIX 7: هدر - چیدمان بهتر */
+    .header-top {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .search-box {
+        grid-column: 1 / 3;
+        min-width: auto;
+    }
+    
+    .date-display {
+        grid-column: 3 / 5;
+        justify-content: center;
+    }
+    
+    .header-top-icons {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px 0;
+    }
+    
+    .notification-btn,
+    .cart-btn,
+    .theme-toggle {
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+        border-radius: 50% !important;
+    }
+    
+    /* کارت‌های آماری */
+    .stats-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    /* دوره‌ها */
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .course-card {
+        margin-bottom: 0;
+    }
+}
+
+/* 📱 تبلت کوچک (768px تا 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .dashboard-container {
+        flex-wrap: nowrap;
+    }
+    
+    .mobile-toggle {
+        display: none; /* در تبلت مخفی */
+    }
+    
+    .quick-menu-popup {
+        display: none !important; /* در تبلت مخفی */
+    }
+    
+    .sidebar {
+        width: 240px;
+        position: fixed;
+        z-index: 100;
+    }
+    
+    .main-content {
+        margin-right: 240px;
+        padding: 25px;
+    }
+    
+    /* FIX 8: هدر تبلت */
+    .header-top {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .search-box {
+        flex: 1;
+        min-width: 250px;
+    }
+    
+    .date-display {
+        font-size: 0.95rem;
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+    
+    .notification-btn,
+    .cart-btn,
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50% !important;
+        font-size: 1.3rem;
+    }
+    
+    /* کارت‌های آماری */
+    .stats-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* دوره‌ها */
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+
+/* 🖥️ دسکتاپ بزرگ (1400px به بالا) */
+@media (min-width: 1400px) {
+    .mobile-toggle {
+        display: none;
+    }
+    
+    .quick-menu-popup {
+        display: none !important;
+    }
+    
+    .sidebar {
+        width: 300px;
+    }
+    
+    .main-content {
+        margin-right: 300px;
+        padding: 35px;
+        max-width: calc(100% - 300px);
+    }
+    
+    .courses-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    
+    .stats-cards {
+        gap: 25px;
+    }
+    
+    .stat-card {
+        padding: 30px 25px;
+    }
+}
+
+/* 🎯 بهبود‌های خاص برای موبایل */
+@media (hover: none) and (pointer: coarse) {
+    /* دستگاه‌های تاچ‌اسکرین */
+    .quick-links a,
+    .upgrade-btn,
+    .continue-btn,
+    .certificate-btn,
+    .notification-btn,
+    .cart-btn,
+    .theme-toggle,
+    .checkout-btn,
+    .quick-menu-item,
+    .full-sidebar-btn {
+        min-height: 44px;
+    }
+    
+    .search-box input {
+        font-size: 16px;
+    }
+    
+    /* بهبود فاصله‌های تاچ */
+    .quick-links li {
+        margin-bottom: 8px;
+    }
+    
+    .course-card {
+        margin-bottom: 15px;
+    }
+}
+
+/* 📐 حالت افقی موبایل */
+@media (orientation: landscape) and (max-height: 500px) {
+    .mobile-toggle {
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        min-width: auto;
+        position: relative;
+    }
+    
+    .menu-text {
+        display: none;
+    }
+    
+    .quick-menu-popup {
+        top: 70px;
+        right: 10px;
+        width: 250px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .sidebar {
+        width: 250px;
+        padding: 15px;
+    }
+    
+    .main-content {
+        padding: 15px;
+        margin-top: 60px;
+    }
+    
+    .header-top {
+        margin-bottom: 15px;
+    }
+    
+    .stats-cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .purchased-courses {
+        padding: 15px;
+    }
+}
+
+/* 🚫 غیرفعال کردن pull-to-refresh در موبایل */
+@media (max-width: 768px) {
+    body {
+        overscroll-behavior-y: contain;
+    }
+}
+
+/* 📊 بهبود تایپوگرافی در موبایل */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    h1, h2, h3 {
+        line-height: 1.3;
+    }
+    
+    .section-header h2 {
+        font-size: 1.25rem;
+    }
+    
+    .user-name {
+        font-size: 1.1rem;
+    }
+}
+
+/* 🎨 بهبود انیمیشن‌ها */
+@media (prefers-reduced-motion: no-preference) {
+    .course-card,
+    .stat-card,
+    .quick-links a,
+    .quick-menu-item {
+        transition: 
+            transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .sidebar {
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    .quick-menu-popup {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+}
+
+/* 🎮 بهبود برای بازی‌ها و ویدیوها */
+@media (max-width: 768px) {
+    .course-image {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* 🔄 حالت پرینت */
+@media print {
+    .sidebar,
+    .mobile-toggle,
+    .quick-menu-popup,
+    .notification-btn,
+    .cart-btn,
+    .theme-toggle,
+    .continue-btn,
+    .certificate-btn,
+    .upgrade-btn {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .dashboard-container {
+        display: block;
+    }
+    
+    .course-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* 🖥️ پشتیبانی از مرورگرهای قدیمی */
+@supports not (backdrop-filter: blur(10px)) {
+    .sidebar-overlay {
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .premium-plan {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+}
+
+

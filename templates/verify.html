@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأیید کد | آموزش آنلاین</title>
+    <link rel="stylesheet" href="style css/css-for-both.css">
+    <link rel="stylesheet" href="style css/regester_css/verify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="verify-container">
+        <div class="verify-card">
+            <!-- هدر -->
+            <div class="verify-header">
+                <div class="back-btn" id="backBtn">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="verify-logo">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <h1 class="verify-title">تأیید شماره تلفن</h1>
+                <p class="verify-subtitle" id="phoneInfo">
+                    کد تأیید ۶ رقمی به شماره
+                    <span class="phone-number" id="phoneNumber">۰۹۱۲ ۳۴۵ ۶۷۸۹</span>
+                    ارسال شد
+                </p>
+                <div class="timer-info">
+                    <i class="fas fa-clock"></i>
+                    <span>کد شما تا <span id="timer">۰۲:۰۰</span> دیگر منقضی می‌شود</span>
+                </div>
+            </div>
+
+            <!-- فرم کد تأیید -->
+            <form class="verify-form" id="verifyForm">
+                <div class="otp-section">
+                    <div class="otp-label">
+                        <label for="otp-code">کد تأیید</label>
+                        <button type="button" id="editPhone" class="edit-btn">
+                            <i class="fas fa-edit"></i>
+                            تغییر شماره
+                        </button>
+                    </div>
+                    
+                    <!-- تغییر جهت به LTR -->
+                    <div class="otp-inputs" id="otpContainer" dir="ltr">
+                        <input type="text" class="otp-digit" maxlength="1" data-index="0" autocomplete="off" inputmode="numeric">
+                        <input type="text" class="otp-digit" maxlength="1" data-index="1" autocomplete="off" inputmode="numeric">
+                        <input type="text" class="otp-digit" maxlength="1" data-index="2" autocomplete="off" inputmode="numeric">
+                        <span class="otp-separator">-</span>
+                        <input type="text" class="otp-digit" maxlength="1" data-index="3" autocomplete="off" inputmode="numeric">
+                        <input type="text" class="otp-digit" maxlength="1" data-index="4" autocomplete="off" inputmode="numeric">
+                        <input type="text" class="otp-digit" maxlength="1" data-index="5" autocomplete="off" inputmode="numeric">
+                    </div>
+                    
+                    <div class="otp-hint">
+                        <i class="fas fa-info-circle"></i>
+                        برای تأیید، ۶ رقم کد ارسالی را وارد کنید
+                    </div>
+                    
+                    <!-- پیام خطا -->
+                    <div class="error-message" id="otpError">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>کد وارد شده صحیح نیست</span>
+                    </div>
+                    
+                    <!-- پیام موفقیت -->
+                    <div class="success-message" id="otpSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <span>کد صحیح است! در حال انتقال...</span>
+                    </div>
+                </div>
+
+                <!-- دکمه ارسال مجدد -->
+                <div class="resend-section">
+                    <p>کد را دریافت نکردید؟</p>
+                    <div class="resend-buttons">
+                        <button type="button" id="resendSMS" class="resend-btn" disabled>
+                            <i class="fas fa-redo"></i>
+                            ارسال مجدد پیامک (<span id="resendTimer">۶۰</span> ثانیه)
+                        </button>
+                        <button type="button" id="voiceCall" class="voice-btn">
+                            <i class="fas fa-phone-alt"></i>
+                            تماس صوتی
+                        </button>
+                    </div>
+                </div>
+
+                <!-- دکمه‌های عمل -->
+                <div class="action-buttons">
+                    <button type="submit" class="verify-btn" id="verifyBtn">
+                        <i class="fas fa-check"></i>
+                        تأیید و ادامه
+                    </button>
+                    
+                    <button type="button" class="cancel-btn" id="cancelBtn">
+                        <i class="fas fa-times"></i>
+                        انصراف
+                    </button>
+                </div>
+
+                <!-- بارگذاری -->
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="spinner"></div>
+                    <p>در حال تأیید کد...</p>
+                </div>
+            </form>
+
+            <!-- راهنمایی -->
+            <div class="help-section">
+                <div class="help-item">
+                    <i class="fas fa-question-circle"></i>
+                    <div class="help-content">
+                        <h4>کد را دریافت نکرده‌ام</h4>
+                        <p>• اتصال اینترنت خود را بررسی کنید</p>
+                        <p>• صندوق پیامک خود را چک کنید</p>
+                        <p>• از گزینه "ارسال مجدد" استفاده کنید</p>
+                    </div>
+                </div>
+                
+                <div class="help-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="help-content">
+                        <h4>شماره اشتباه وارد کرده‌ام</h4>
+                        <p>با کلیک روی دکمه "تغییر شماره" می‌توانید شماره تلفن خود را اصلاح کنید</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- فوتر -->
+            <div class="verify-footer">
+                <p>در صورت بروز مشکل با پشتیبانی تماس بگیرید</p>
+                <a href="tel:02112345678" class="support-link">
+                    <i class="fas fa-phone"></i>
+                    ۰۲۱-۱۲۳۴۵۶۷۸
+                </a>
+            </div>
+        </div>
+
+        <!-- صفحه تغییر شماره (Modal) -->
+        <div class="modal-overlay" id="changePhoneModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>تغییر شماره تلفن</h3>
+                    <button class="modal-close" id="closeModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>شماره موبایل جدید</label>
+                        <div class="phone-input-wrapper">
+                            <div class="country-selector">
+                                <span class="flag">🇮🇷</span>
+                                <span class="code">+98</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <input type="tel" id="newPhone" class="phone-input" placeholder="۹۱۲۳۴۵۶۷۸۹">
+                        </div>
+                        <div class="input-note">
+                            شماره باید با ۰۹ شروع شود و ۱۱ رقم باشد
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-btn secondary" id="cancelChange">
+                        انصراف
+                    </button>
+                    <button class="modal-btn primary" id="confirmChange">
+                        تغییر شماره
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/verify.js"></script>
+</body>
+</html>

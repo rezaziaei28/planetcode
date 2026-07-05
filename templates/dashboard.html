@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل کاربری | آموزش آنلاین</title>
+    <link rel="stylesheet" href="style css/dashboard_css/dashboard.css">
+    <link rel="stylesheet" href="style css/dashboard_css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/vazirmatn@33.003/font.css" rel="stylesheet">
+    
+    <!-- متا تگ‌های ریسپانسیو -->
+    <meta name="theme-color" content="#ff6b35">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <style>
+        @font-face {
+            font-family: 'Vazirmatn';
+            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+            font-display: swap;
+        }
+        
+        /* بهبود رندر فونت در موبایل */
+        @media (max-width: 768px) {
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-rendering: optimizeLegibility;
+            }
+        }
+
+        body { opacity: 0; animation: fadeIn 0.3s ease forwards; } @keyframes fadeIn { to { opacity: 1; }}
+    </style>
+</head>
+<body class="light-theme">
+ 
+    <!-- Overlay برای موبایل -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <!-- ========== دکمه منوی همبرگر ========== -->
+    <button class="mobile-toggle" id="mobileToggle">
+        <span class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </span>
+        <span class="menu-text">منو</span>
+    </button>
+
+    <!-- ========== پاپ‌آپ منوی سریع (3 گزینه) ========== -->
+    <div class="quick-menu-popup" id="quickMenuPopup">
+        <div class="quick-menu-header">
+            <h3>منوی سریع</h3>
+            <button class="close-quick-menu" id="closeQuickMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="quick-menu-items">
+            <a href="#dashboard" class="quick-menu-item" data-target="home">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>داشبورد</span>
+            </a>
+            <a href="#courses" class="quick-menu-item" data-target="courses">
+                <i class="fas fa-book"></i>
+                <span>دوره‌های من</span>
+            </a>
+            <a href="#profile" class="quick-menu-item" data-target="profile">
+                <i class="fas fa-user"></i>
+                <span>پروفایل</span>
+            </a>
+        </div>
+        <button class="full-sidebar-btn" id="fullSidebarBtn">
+            <i class="fas fa-bars"></i>
+            نمایش کامل منو
+        </button>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- ========== سایدبار سمت راست ========== -->
+        <aside class="sidebar" id="sidebar">
+            <!-- دکمه بستن در موبایل -->
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- پروفایل کاربر -->
+            <div class="user-profile">
+                <div class="avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-info">
+                    <h3 class="user-name" id="userName">علی محمدی</h3>
+                    <p class="user-phone" id="userPhone">۰۹۱۲۳۴۵۶۷۸۹</p>
+                </div>
+                <button class="edit-profile">
+                    <i class="fas fa-edit"></i>
+                </button>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- دسترسی سریع -->
+            <div class="sidebar-section">
+                <h4 class="section-title">
+                    <i class="fas fa-bolt"></i>
+                    دسترسی سریع
+                </h4>
+                <ul class="quick-links">
+                    <li>
+                        <a href="#home" class="active" data-section="home">
+                            <i class="fas fa-home"></i>
+                            خانه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#courses" data-section="courses">
+                            <i class="fas fa-book-open"></i>
+                            دوره‌های من
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#subscription" data-section="subscription">
+                            <i class="fas fa-crown"></i>
+                            اشتراک
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#transactions" data-section="transactions">
+                            <i class="fas fa-exchange-alt"></i>
+                            تراکنش‌ها
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tickets" data-section="tickets">
+                            <i class="fas fa-ticket-alt"></i>
+                            تیکت‌ها
+                            <span class="badge">۲</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#qa" data-section="qa">
+                            <i class="fas fa-question-circle"></i>
+                            پرسش و پاسخ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#consultation" data-section="consultation">
+                            <i class="fas fa-headset"></i>
+                            مشاوره من
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- پلن پرمیوم -->
+            <div class="premium-plan">
+                <div class="plan-header">
+                    <i class="fas fa-gem"></i>
+                    <h4>پلن پرمیوم</h4>
+                </div>
+                <ul class="plan-features">
+                    <li>
+                        <i class="fas fa-star"></i>
+                        دوره‌های ویژه
+                    </li>
+                    <li>
+                        <i class="fas fa-dumbbell"></i>
+                        برنامه تمرینی
+                    </li>
+                    <li>
+                        <i class="fas fa-shield-alt"></i>
+                        پشتیبانی اختصاصی
+                    </li>
+                    <li>
+                        <i class="fas fa-file-certificate"></i>
+                        گواهینامه معتبر
+                    </li>
+                    <li>
+                        <i class="fas fa-video"></i>
+                        ویدیوهای HD
+                    </li>
+                </ul>
+                <button class="upgrade-btn">
+                    <i class="fas fa-rocket"></i>
+                    ارتقاء به پرمیوم
+                </button>
+            </div>
+        </aside>
+
+        <!-- ========== محتوای اصلی ========== -->
+        <main class="main-content">
+            <!-- هدر محتوا -->
+            <div class="content-header">
+                <!-- بخش اول: جستجو، تاریخ، اعلان‌ها، سبد خرید، تغییر تم -->
+                <div class="header-top">
+                    <!-- جستجو -->
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="جستجو در دوره‌های من..." id="courseSearch">
+                    </div>
+
+                    <!-- تاریخ -->
+                    <div class="date-display">
+                        <i class="far fa-calendar-alt"></i>
+                        <span id="currentDate">سه‌شنبه ۱۵ دی ۱۴۰۳</span>
+                    </div>
+
+                    <!-- FIX: wrapper برای آیکون‌ها -->
+                    <div class="header-top-icons">
+                        <!-- اعلان‌ها -->
+                        <div class="notifications" style="margin-top: 10px;">
+                            <button class="notification-btn" id="notificationBtn">
+                                <i class="far fa-bell"></i>
+                                <span class="notification-count">۳</span>
+                            </button>
+                            <div class="notification-dropdown">
+                                <div class="notification-item">
+                                    <i class="fas fa-gift text-primary"></i>
+                                    <div>
+                                        <p>تخفیف ۳۰٪ برای خرید بعدی</p>
+                                        <small>۲ ساعت پیش</small>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <i class="fas fa-video text-success"></i>
+                                    <div>
+                                        <p>جلسه جدید دوره اضافه شد</p>
+                                        <small>دیروز</small>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <i class="fas fa-comment-dots text-warning"></i>
+                                    <div>
+                                        <p>پاسخ جدید به سوال شما</p>
+                                        <small>۲ روز پیش</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- سبد خرید -->
+                        <button class="cart-btn" id="cartBtn" style="margin-top: 10px;">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">۲</span>
+                        </button>
+
+                        <!-- تغییر تم -->
+                        <button class="theme-toggle" id="themeToggle" style="margin-top: 10px;">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- بخش دوم: کارت‌های آماری -->
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="courseCount">۳</h3>
+                            <p>دوره‌های فعال</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="qaCount">۰</h3>
+                            <p>پرسش‌ها</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="ticketCount">۰</h3>
+                            <p>تیکت‌ها</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="walletBalance">۰</h3>
+                            <p>تومان موجودی</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بخش سوم: دوره‌های خریداری شده -->
+            <div class="purchased-courses">
+                <div class="section-header">
+                    <h2>
+                        <i class="fas fa-shopping-bag"></i>
+                        دوره‌های خریداری شده
+                    </h2>
+                    <a href="#all-courses" class="view-all">
+                        مشاهده همه
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- دوره ۱ -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="طراحی وب">
+                            <div class="course-badge">در حال یادگیری</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>طراحی وب پیشرفته</h3>
+                            <p>آموزش کامل HTML5، CSS3 و JavaScript</p>
+                            <div class="course-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <span>۶۵٪ تکمیل شده</span>
+                            </div>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> ۴۸ ساعت</span>
+                                <span><i class="fas fa-play-circle"></i> ۲۴ جلسه</span>
+                            </div>
+                        </div>
+                        <button class="continue-btn">
+                            <i class="fas fa-play"></i>
+                            ادامه یادگیری
+                        </button>
+                    </div>
+
+                    <!-- دوره ۲ -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="پایتون">
+                            <div class="course-badge premium">پرمیوم</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>پایتون از صفر تا صد</h3>
+                            <p>برنامه‌نویسی Python برای مبتدیان و حرفه‌ای‌ها</p>
+                            <div class="course-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 30%"></div>
+                                </div>
+                                <span>۳۰٪ تکمیل شده</span>
+                            </div>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> ۶۰ ساعت</span>
+                                <span><i class="fas fa-play-circle"></i> ۳۶ جلسه</span>
+                            </div>
+                        </div>
+                        <button class="continue-btn">
+                            <i class="fas fa-play"></i>
+                            ادامه یادگیری
+                        </button>
+                    </div>
+
+                    <!-- دوره ۳ -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="تحلیل داده">
+                            <div class="course-badge">تکمیل شده</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>تحلیل داده با Python</h3>
+                            <p>آموزش Pandas، NumPy و Visualization</p>
+                            <div class="course-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <span>۱۰۰٪ تکمیل شده</span>
+                            </div>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> ۴۰ ساعت</span>
+                                <span><i class="fas fa-play-circle"></i> ۲۰ جلسه</span>
+                            </div>
+                        </div>
+                        <button class="certificate-btn">
+                            <i class="fas fa-certificate"></i>
+                            مشاهده گواهینامه
+                        </button>
+                    </div>
+
+                    <!-- دوره ۴ -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="هوش مصنوعی">
+                            <div class="course-badge">جدید</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>مقدمات هوش مصنوعی</h3>
+                            <p>آشنایی با مفاهیم پایه AI و ML</p>
+                            <div class="course-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 10%"></div>
+                                </div>
+                                <span>۱۰٪ تکمیل شده</span>
+                            </div>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i> ۳۵ ساعت</span>
+                                <span><i class="fas fa-play-circle"></i> ۱۸ جلسه</span>
+                            </div>
+                        </div>
+                        <button class="continue-btn">
+                            <i class="fas fa-play"></i>
+                            شروع یادگیری
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- پاپ‌آپ سبد خرید -->
+            <div class="cart-popup" id="cartPopup">
+                <div class="cart-header">
+                    <h3>
+                        <i class="fas fa-shopping-cart"></i>
+                        سبد خرید
+                    </h3>
+                    <button class="close-cart" id="closeCart">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="دوره">
+                        <div class="item-info">
+                            <h4>طراحی وب پیشرفته</h4>
+                            <p>۲۹۰,۰۰۰ تومان</p>
+                        </div>
+                        <button class="remove-item">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="cart-item">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="دوره">
+                        <div class="item-info">
+                            <h4>پایتون از صفر تا صد</h4>
+                            <p>۴۵۰,۰۰۰ تومان</p>
+                        </div>
+                        <button class="remove-item">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <span>جمع کل:</span>
+                        <strong>۷۴۰,۰۰۰ تومان</strong>
+                    </div>
+                    <button class="checkout-btn" id="checkoutBtn">
+                        <i class="fas fa-credit-card"></i>
+                        پرداخت نهایی
+                    </button>
+                </div>
+            </div>
+
+            <!-- پاپ‌آپ اعلان‌ها -->
+            <div class="notifications-popup" id="notificationsPopup">
+                <div class="notifications-header">
+                    <h3>
+                        <i class="far fa-bell"></i>
+                        اعلان‌ها
+                    </h3>
+                    <button class="mark-all-read">
+                        <i class="fas fa-check-double"></i>
+                        خواندن همه
+                    </button>
+                </div>
+                <div class="notifications-list">
+                    <!-- لیست اعلان‌ها اینجا نمایش داده می‌شود -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

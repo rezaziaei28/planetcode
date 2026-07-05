@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود با شماره تلفن | آموزش آنلاین</title>
+    <link rel="stylesheet" href="style css/css-for-both.css">
+    <link rel="stylesheet" href="style css/regester_css/login-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.16/build/css/intlTelInput.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h1 class="auth-title">ورود با شماره تلفن</h1>
+                <p class="auth-subtitle">کد تأیید برای شما پیامک خواهد شد</p>
+            </div>
+
+            <!-- مرحله ۱: وارد کردن شماره تلفن -->
+            <form class="auth-form" id="phoneForm" style="display: block;">
+                <div class="form-group">
+                    <label class="form-label" for="phone">شماره موبایل</label>
+                    <div class="phone-input-wrapper">
+                        <input type="tel" id="phone" class="form-control phone-input" placeholder="09xxxxxxxxx" required>
+                        <div class="country-code">+98</div>
+                    </div>
+                    <div class="error-message" id="phoneError">لطفا شماره موبایل معتبر وارد کنید</div>
+                </div>
+
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    دریافت کد تأیید
+                </button>
+
+                <div class="auth-divider">
+                    <span>یا ورود با</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn email-login">
+                        <i class="fas fa-envelope"></i>
+                        ورود با ایمیل
+                    </button>
+                </div>
+            </form>
+
+            <!-- مرحله ۲: وارد کردن کد تأیید -->
+            <form class="auth-form" id="verifyForm" style="display: none;">
+                <div class="verification-info">
+                    <i class="fas fa-sms"></i>
+                    <p>کد تأیید ۶ رقمی به شماره <span id="phoneNumberDisplay"></span> ارسال شد</p>
+                    <small>کد شما تا ۲ دقیقه دیگر منقضی می‌شود</small>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">کد تأیید</label>
+                    <div class="otp-container">
+                        <input type="text" class="otp-input" maxlength="1" data-index="1" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="2" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="3" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="4" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="5" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="6" autocomplete="off">
+                    </div>
+                    <input type="hidden" id="verificationCode">
+                    <div class="error-message" id="codeError">کد وارد شده صحیح نیست</div>
+                </div>
+
+                <div class="resend-code">
+                    <span>کد را دریافت نکردید؟</span>
+                    <button type="button" id="resendBtn" class="resend-btn" disabled>
+                        ارسال مجدد (<span id="countdown">120</span>)
+                    </button>
+                </div>
+
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-check-circle"></i>
+                    تأیید و ورود
+                </button>
+
+                <button type="button" id="backToPhone" class="auth-btn secondary">
+                    <i class="fas fa-arrow-right"></i>
+                    تغییر شماره تلفن
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                حساب کاربری ندارید؟
+                <a href="signup.html">ثبت‌نام کنید</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.16/build/js/intlTelInput.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

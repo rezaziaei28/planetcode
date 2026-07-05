@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت‌نام | آموزش آنلاین</title>
+    <link rel="stylesheet" href="style css/css-for-both.css">
+    <link rel="stylesheet" href="style css/regester_css/signup-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h1 class="auth-title">ثبت‌نام در آموزش آنلاین</h1>
+                <p class="auth-subtitle">ایجاد حساب کاربری جدید</p>
+            </div>
+
+            <!-- مرحله ۱: شماره تلفن -->
+            <form class="auth-form" id="signupPhoneForm" style="display: block;">
+                <div class="form-group">
+                    <label class="form-label" for="signupPhone">شماره موبایل</label>
+                    <div class="phone-input-wrapper">
+                        <input type="tel" id="signupPhone" class="form-control phone-input" placeholder="09xxxxxxxxx" required>
+                        <div class="country-code">+98</div>
+                    </div>
+                    <div class="error-message" id="phoneError">لطفا شماره موبایل معتبر وارد کنید</div>
+                    <div class="info-text">
+                        <i class="fas fa-info-circle"></i>
+                        کد تأیید به این شماره ارسال خواهد شد
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    ادامه ثبت‌نام
+                </button>
+
+                <div class="auth-footer">
+                    قبلا حساب دارید؟
+                    <a href="login.html">وارد شوید</a>
+                </div>
+            </form>
+
+            <!-- مرحله ۲: کد تأیید -->
+            <form class="auth-form" id="signupVerifyForm" style="display: none;">
+                <div class="verification-info">
+                    <i class="fas fa-sms"></i>
+                    <p>کد تأیید به شماره <span id="signupPhoneDisplay"></span> ارسال شد</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">کد تأیید ۶ رقمی</label>
+                    <div class="otp-container">
+                        <input type="text" class="otp-input" maxlength="1" data-index="1" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="2" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="3" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="4" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="5" autocomplete="off">
+                        <input type="text" class="otp-input" maxlength="1" data-index="6" autocomplete="off">
+                    </div>
+                    <input type="hidden" id="signupVerificationCode">
+                    <div class="error-message" id="signupCodeError">کد وارد شده صحیح نیست</div>
+                </div>
+
+                <div class="resend-code">
+                    <span>کد را دریافت نکردید؟</span>
+                    <button type="button" id="signupResendBtn" class="resend-btn" disabled>
+                        ارسال مجدد (<span id="signupCountdown">120</span>)
+                    </button>
+                </div>
+
+                <button type="submit" class="auth-btn">
+                    <i class="fas fa-check"></i>
+                    تأیید کد
+                </button>
+
+                <button type="button" id="signupBackToPhone" class="auth-btn secondary">
+                    <i class="fas fa-mobile-alt"></i>
+                    تغییر شماره
+                </button>
+            </form>
+
+            <!-- مرحله ۳: اطلاعات کاربری -->
+            <form class="auth-form" id="signupInfoForm" style="display: none;">
+                <div class="form-group">
+                    <label class="form-label" for="fullName">نام و نام خانوادگی</label>
+                    <input type="text" id="fullName" class="form-control" placeholder="مثال: علی محمدی" required>
+                    <div class="error-message" id="nameError">لطفا نام کامل خود را وارد کنید</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="signupPassword">رمز عبور</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="signupPassword" class="form-control password-input" placeholder="حداقل ۶ کاراکتر" required>
+                        <button type="button" class="password-toggle" id="togglePassword">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-meter"></div>
+                        <div class="strength-text"></div>
+                    </div>
+                    <div class="error-message" id="passwordError">رمز عبور باید حداقل ۶ کاراکتر باشد</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <span class="checkmark"></span>
+                        <span>با <a href="terms.html" target="_blank">قوانین و مقررات</a> موافقم</span>
+                    </label>
+                    <div class="error-message" id="termsError">لطفا قوانین را بپذیرید</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox" id="newsletter" checked>
+                        <span class="checkmark"></span>
+                        <span>مایل به دریافت اخبار و تخفیف‌ها هستم</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="auth-btn success">
+                    <i class="fas fa-user-check"></i>
+                    تکمیل ثبت‌نام
+                </button>
+
+                <div class="progress-steps">
+                    <div class="step active"><span>1</span></div>
+                    <div class="step active"><span>2</span></div>
+                    <div class="step active"><span>3</span></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/signup.js"></script>
+</body>
+</html>

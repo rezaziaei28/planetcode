@@ -1,0 +1,801 @@
+/* ============================================
+   AUTHENTICATION SHARED STYLES
+   ============================================ */
+
+   :root {
+    --auth-primary: #ff6b35;
+    --auth-primary-dark: #e55a2b;
+    --auth-secondary: #3498db;
+    --auth-dark: #121212;
+    --auth-dark-light: #1e1e1e;
+    --auth-light: #2d2d2d;
+    --auth-text: #e0e0e0;
+    --auth-text-light: #b0b0b0;
+    --auth-text-lighter: #888;
+    --auth-border: #333;
+    --auth-border-light: #444;
+    --auth-error: #ff4757;
+    --auth-success: #2ed573;
+    --auth-warning: #ffa502;
+    --auth-info: #3498db;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 30px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: var(--auth-text);
+    line-height: 1.6;
+}
+
+/* حذف اسکرول‌بار در موبایل */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.auth-card {
+    background: var(--auth-dark-light);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--auth-border);
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.5s ease;
+}
+
+.auth-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--auth-primary), var(--auth-secondary));
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.auth-logo {
+    font-size: 3rem;
+    color: var(--auth-primary);
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.auth-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--auth-text);
+    margin-bottom: 10px;
+}
+
+.auth-subtitle {
+    color: var(--auth-text-light);
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* ---------- فرم‌ها ---------- */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--auth-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* ورودی شماره تلفن */
+.phone-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.phone-input {
+    flex: 1;
+    padding: 16px 16px 16px 70px;
+    background: var(--auth-dark);
+    border: 2px solid var(--auth-border);
+    border-radius: var(--radius-sm);
+    color: var(--auth-text);
+    font-size: 1rem;
+    transition: var(--transition);
+    font-family: inherit;
+    direction: ltr !important; /* اصلاح جهت */
+    text-align: left !important; /* اصلاح تراز */
+    font-family: 'Courier New', monospace !important; /* فونت مخصوص اعداد */
+}
+
+.phone-input::placeholder {
+    direction: ltr;
+    text-align: left;
+}
+
+.country-code {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--auth-light);
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--auth-text);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid var(--auth-border);
+    direction: ltr;
+    font-family: 'Courier New', monospace;
+}
+
+/* ورودی رمز عبور */
+.password-wrapper {
+    position: relative;
+}
+
+.password-input {
+    width: 100%;
+    padding: 16px 50px 16px 16px;
+    background: var(--auth-dark);
+    border: 2px solid var(--auth-border);
+    border-radius: var(--radius-sm);
+    color: var(--auth-text);
+    font-size: 1rem;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.password-toggle {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--auth-text-light);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.password-toggle:hover {
+    color: var(--auth-primary);
+    background: rgba(255, 107, 53, 0.1);
+}
+
+/* کد تأیید OTP - اصلاح شده برای نمایش صحیح اعداد */
+.otp-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 15px 0;
+    direction: ltr !important; /* جهت چپ به راست */
+    unicode-bidi: isolate;
+}
+
+.otp-input {
+    width: 55px;
+    height: 65px;
+    text-align: center !important;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: var(--auth-dark);
+    border: 2px solid var(--auth-border);
+    border-radius: var(--radius-sm);
+    color: var(--auth-primary);
+    transition: var(--transition);
+    caret-color: var(--auth-primary);
+    direction: ltr !important; /* جهت چپ به راست */
+    text-align: center !important;
+    unicode-bidi: isolate;
+    font-family: 'Courier New', monospace !important; /* فونت مخصوص اعداد */
+}
+
+.otp-input:focus {
+    outline: none;
+    border-color: var(--auth-primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+    transform: translateY(-2px);
+}
+
+.otp-input.filled {
+    border-color: var(--auth-success);
+    background: rgba(46, 213, 115, 0.05);
+}
+
+/* اطلاعات تأیید */
+.verification-info {
+    background: rgba(52, 152, 219, 0.1);
+    border: 1px solid var(--auth-info);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.verification-info i {
+    font-size: 2.5rem;
+    color: var(--auth-info);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.verification-info p {
+    color: var(--auth-text);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.verification-info small {
+    color: var(--auth-text-light);
+    font-size: 0.85rem;
+}
+
+/* نمایش شماره تلفن در پیام تأیید */
+#signupPhoneDisplay {
+    direction: ltr !important;
+    display: inline-block;
+    font-family: 'Courier New', monospace !important;
+    font-weight: bold;
+    color: var(--auth-primary);
+    unicode-bidi: isolate;
+}
+
+/* ارسال مجدد کد */
+.resend-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    color: var(--auth-text-light);
+    font-size: 0.9rem;
+}
+
+.resend-btn {
+    background: none;
+    border: none;
+    color: var(--auth-primary);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.resend-btn:hover:not(:disabled) {
+    background: rgba(255, 107, 53, 0.1);
+}
+
+.resend-btn:disabled {
+    color: var(--auth-text-lighter);
+    cursor: not-allowed;
+}
+
+/* اطلاعات کمکی */
+.info-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    color: var(--auth-info);
+    font-size: 0.85rem;
+}
+
+.info-text i {
+    font-size: 1rem;
+}
+
+/* چک‌باکس */
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    color: var(--auth-text-light);
+    font-size: 0.9rem;
+    user-select: none;
+    padding: 8px 0;
+}
+
+.form-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.form-checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--auth-border);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.form-checkbox input:checked + .checkmark {
+    background: var(--auth-primary);
+    border-color: var(--auth-primary);
+}
+
+.form-checkbox input:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-checkbox a {
+    color: var(--auth-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.form-checkbox a:hover {
+    text-decoration: underline;
+}
+
+/* قدرت رمز عبور */
+.password-strength {
+    margin-top: 10px;
+}
+
+.strength-meter {
+    height: 6px;
+    background: var(--auth-border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.strength-meter::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+.strength-meter.weak::after {
+    width: 33%;
+    background: var(--auth-error);
+}
+
+.strength-meter.medium::after {
+    width: 66%;
+    background: var(--auth-warning);
+}
+
+.strength-meter.strong::after {
+    width: 100%;
+    background: var(--auth-success);
+}
+
+.strength-text {
+    font-size: 0.8rem;
+    color: var(--auth-text-light);
+}
+
+/* مراحل پیشرفت */
+.progress-steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--auth-border);
+}
+
+.step {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--auth-dark);
+    border: 2px solid var(--auth-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--auth-text-light);
+    transition: var(--transition);
+}
+
+.step.active {
+    background: var(--auth-primary);
+    border-color: var(--auth-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.step span {
+    font-weight: 600;
+}
+
+/* ---------- دکمه‌ها ---------- */
+.auth-btn {
+    background: var(--auth-primary);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-btn:hover {
+    background: var(--auth-primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+}
+
+.auth-btn:active {
+    transform: translateY(-1px);
+}
+
+.auth-btn i {
+    font-size: 1.2rem;
+}
+
+.auth-btn.secondary {
+    background: var(--auth-light);
+    color: var(--auth-text);
+    margin-top: 15px;
+}
+
+.auth-btn.secondary:hover {
+    background: var(--auth-border);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.auth-btn.success {
+    background: var(--auth-success);
+}
+
+.auth-btn.success:hover {
+    background: #26c465;
+    box-shadow: 0 10px 25px rgba(46, 213, 115, 0.3);
+}
+
+.auth-btn:disabled {
+    background: var(--auth-border);
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* انیمیشن کلیک */
+.auth-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.auth-btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(30, 30);
+        opacity: 0;
+    }
+}
+
+/* دکمه بارگذاری */
+.auth-btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.auth-btn.loading::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* دکمه‌های شبکه‌های اجتماعی */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-btn {
+    padding: 16px;
+    border: 2px solid var(--auth-border);
+    background: var(--auth-dark);
+    border-radius: var(--radius-md);
+    color: var(--auth-text);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.social-btn:hover {
+    border-color: var(--auth-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn i {
+    font-size: 1.3rem;
+}
+
+.social-btn.email-login {
+    color: var(--auth-primary);
+}
+
+.social-btn.email-login:hover {
+    background: rgba(255, 107, 53, 0.1);
+}
+
+/* ---------- خطاها ---------- */
+.error-message {
+    color: var(--auth-error);
+    font-size: 0.85rem;
+    margin-top: 8px;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    animation: shake 0.5s ease;
+}
+
+.error-message.show {
+    display: flex;
+}
+
+.error-message::before {
+    content: '⚠';
+    font-size: 0.9rem;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.form-control.error {
+    border-color: var(--auth-error);
+    animation: errorShake 0.5s ease;
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* ---------- پیام‌های موفقیت ---------- */
+.success-message {
+    background: rgba(46, 213, 115, 0.1);
+    border: 1px solid var(--auth-success);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-bottom: 25px;
+    color: var(--auth-success);
+    display: none;
+    align-items: center;
+    gap: 15px;
+    animation: slideIn 0.5s ease;
+}
+
+.success-message.show {
+    display: flex;
+}
+
+.success-message i {
+    font-size: 1.8rem;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ---------- فوتر ---------- */
+.auth-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--auth-border);
+    color: var(--auth-text-light);
+    font-size: 0.95rem;
+}
+
+.auth-footer a {
+    color: var(--auth-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-right: 5px;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* جداکننده */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    color: var(--auth-text-light);
+    font-size: 0.9rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--auth-border);
+}
+
+.auth-divider span {
+    padding: 0 20px;
+}
+
+/* ---------- رسپانسیو ---------- */
+@media (max-width: 768px) {
+    .auth-card {
+        padding: 30px 25px;
+    }
+    
+    .auth-title {
+        font-size: 1.6rem;
+    }
+    
+    .auth-logo {
+        font-size: 2.5rem;
+    }
+    
+    .otp-input {
+        width: 45px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+    
+    .auth-btn {
+        padding: 16px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 25px 20px;
+    }
+    
+    .otp-container {
+        gap: 8px;
+    }
+    
+    .otp-input {
+        width: 40px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .verification-info {
+        padding: 15px;
+    }
+    
+    .verification-info i {
+        font-size: 2rem;
+    }
+}
+
+/* برای نمایش صحیح اعداد در تمام مرورگرها */
+input[type="tel"],
+input[type="number"],
+.otp-input {
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+}

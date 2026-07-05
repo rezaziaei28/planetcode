@@ -1,0 +1,181 @@
+/* ============================================
+   SIGNUP PAGE SPECIFIC STYLES
+   ============================================ */
+
+/* ---------- تنظیمات خاص صفحه ثبت‌نام ---------- */
+.auth-card.signup-card {
+    max-width: 480px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* ---------- چک‌باکس سفارشی ---------- */
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--auth-text-light);
+    font-size: 0.9rem;
+    user-select: none;
+    margin-top: 10px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.form-checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--auth-border);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.form-checkbox input:checked + .checkmark {
+    background: var(--auth-primary);
+    border-color: var(--auth-primary);
+}
+
+.form-checkbox input:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-checkbox a {
+    color: var(--auth-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.form-checkbox a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- قدرت رمز عبور ---------- */
+.password-strength {
+    margin-top: 8px;
+    height: 4px;
+    background: var(--auth-border);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.strength-meter {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.strength-meter.weak {
+    width: 33%;
+    background: var(--auth-error);
+}
+
+.strength-meter.medium {
+    width: 66%;
+    background: #ffa502;
+}
+
+.strength-meter.strong {
+    width: 100%;
+    background: var(--auth-success);
+}
+
+.strength-text {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: var(--auth-text-light);
+}
+
+/* ---------- انیمیشن‌های ثبت‌نام ---------- */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.auth-btn:disabled {
+    background: var(--auth-border);
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.auth-btn:disabled:hover {
+    background: var(--auth-border);
+    box-shadow: none;
+}
+
+/* ---------- پیام موفقیت ---------- */
+.success-message {
+    background: rgba(46, 213, 115, 0.1);
+    border: 1px solid rgba(46, 213, 115, 0.3);
+    border-radius: var(--radius-sm);
+    padding: 15px;
+    margin-bottom: 20px;
+    color: var(--auth-success);
+    display: none;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.5s ease;
+}
+
+.success-message.show {
+    display: flex;
+}
+
+.success-message i {
+    font-size: 1.2rem;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ---------- بهبود نمایش OTP در موبایل ---------- */
+@media (max-width: 360px) {
+    .otp-input {
+        width: 35px !important;
+        height: 45px !important;
+        font-size: 1.2rem !important;
+    }
+}
+
+/* ---------- نمایش بهتر اعداد ---------- */
+.phone-input, .otp-input, #signupPhoneDisplay {
+    font-feature-settings: "tnum" !important;
+    font-variant-numeric: tabular-nums !important;
+}
+
+/* ---------- استایل برای نمایش شماره تلفن ---------- */
+.phone-display {
+    font-family: 'Courier New', monospace !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
