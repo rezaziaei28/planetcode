@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -6,14 +7,14 @@
     <title>پلنت کد - آموزش برنامه‌نویسی</title>
     
     <!-- bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" data-no-menu>
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" data-no-menu>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="style css/header.css">
-    <link rel="stylesheet" href="style css/min-content.css">
-    <link rel="stylesheet" href="style css/footer.css">
+    <link rel="stylesheet" href="{% static 'style css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'style css/min-content.css' %}">
+    <link rel="stylesheet" href="{% static 'style css/footer.css' %}">
 </head>
 <body class="dark-theme">
     
@@ -44,7 +45,7 @@
                 <!-- logo and name -->
                 <div class="brand">
                     <div class="logo-container">
-                        <img src="img/-2147483648_-210431.png" alt="پلنت کد" class="site-logo">
+                        <img src="{% static 'img/-2147483648_-210431.png' %}" alt="پلنت کد" class="site-logo">
                     </div>
                     <div class="brand-name">
                         <span class="name">پلنت کد</span>
@@ -3025,8 +3026,8 @@
 
 
     <!-- it's botton for js -->
-    <script src="js/header.js"></script>
-    <script src="js/shoping-cart.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/header.js' %}"></script>
+    <script src="{% static 'js/shoping-cart.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

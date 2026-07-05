@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ورود با شماره تلفن | آموزش آنلاین</title>
-    <link rel="stylesheet" href="style css/css-for-both.css">
-    <link rel="stylesheet" href="style css/regester_css/login-style.css">
+    <link rel="stylesheet" href="{% static 'style css/css-for-both.css' %}">
+    <link rel="stylesheet" href="{% static 'style css/regester_css/login-style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.16/build/css/intlTelInput.css">
 </head>
@@ -96,6 +97,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.16/build/js/intlTelInput.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="{% static 'js/login.js' %}"></script>
 </body>
 </html>

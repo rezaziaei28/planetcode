@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -6,16 +7,16 @@
     <title>همه دوره‌ها - پلنت کد</title>
     
     <!-- Bootstrap 5 CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" data-no-menu>
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" data-no-menu>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- استایل‌های سفارشی -->
-    <link rel="stylesheet" href="style css/header.css">
-    <link rel="stylesheet" href="style css/min-content.css">
-    <link rel="stylesheet" href="style css/footer.css">
-    <link rel="stylesheet" href="style css/courses_page_css/courses-page.css">
+    <link rel="stylesheet" href="{% static 'style css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'style css/min-content.css' %}">
+    <link rel="stylesheet" href="{% static 'style css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'style css/courses_page_css/courses-page.css' %}">
 </head>
 <body class="dark-theme">
     
@@ -46,7 +47,7 @@
                 <!-- لوگو و نام -->
                 <div class="brand">
                     <div class="logo-container">
-                        <img src="../img/-2147483648_-210431.png" alt="پلنت کد" class="site-logo">
+                        <img src="{% static 'img/-2147483648_-210431.png' %}" alt="پلنت کد" class="site-logo">
                     </div>
                     <div class="brand-name">
                         <span class="name">پلنت کد</span>
@@ -449,7 +450,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <div class="mobile-brand">
-                <img src="../img/-2147483648_-210431.png" alt="پلنت کد" class="site-logo">
+                <img src="{% static 'img/-2147483648_-210431.png' %}" alt="پلنت کد" class="site-logo">
                 <span>پلنت کد</span>
             </div>
             <button class="close-menu" id="closeMenu">
@@ -940,7 +941,7 @@
                         
                         <div class="course-card" data-category="python" data-level="advanced" data-price="paid" data-rating="4.5" data-students="2500">
                             <div class="course-image">
-                                <img src="../img/python.jpeg" alt="Python">
+                                <img src="{% static 'img/python.jpeg' %}" alt="Python">
                                 <div class="course-badge badge-beginner">پیشرفته</div>
                                 <button class="wishlist-btn">
                                     <i class="far fa-heart"></i>
@@ -1002,7 +1003,7 @@
                         <!-- دوره 2 -->
                         <div class="course-card" data-category="react" data-level="advanced" data-price="paid" data-rating="5.0" data-students="1800">
                             <div class="course-image">
-                                <img src="../img/React.jpeg" alt="React">
+                                <img src="{% static 'img/React.jpeg' %}" alt="React">
                                 <div class="course-badge badge-advanced">پیشرفته</div>
                                 <button class="wishlist-btn">
                                     <i class="fas fa-heart"></i>
@@ -1064,7 +1065,7 @@
                         <!-- دوره 3 -->
                         <div class="course-card" data-category="python" data-level="intermediate" data-price="paid" data-rating="4.7" data-students="1200">
                             <div class="course-image">
-                                <img src="../img/django.jpg" alt="Django">
+                                <img src="{% static 'img/django.jpg' %}" alt="Django">
                                 <div class="course-badge badge-project">پروژه‌محور</div>
                                 <button class="wishlist-btn">
                                     <i class="far fa-heart"></i>
@@ -1126,7 +1127,7 @@
                         <!-- دوره 4 -->
                         <div class="course-card" data-category="frontend" data-level="beginner" data-price="paid" data-rating="5.0" data-students="3000">
                             <div class="course-image">
-                                <img src="../img/html-css.jpeg" alt="HTML CSS">
+                                <img src="{% static 'img/html-css.jpeg' %}" alt="HTML CSS">
                                 <div class="course-badge badge-beginner">مقدماتی</div>
                                 <button class="wishlist-btn">
                                     <i class="far fa-heart"></i>
@@ -1189,7 +1190,7 @@
                         <!-- دوره 6 -->
                         <div class="course-card" data-category="javascript" data-level="advanced" data-price="paid" data-rating="4.9" data-students="1500">
                             <div class="course-image">
-                                <img src="../img/javascript.jpeg" alt="JavaScript Advanced">
+                                <img src="{% static 'img/javascript.jpeg' %}" alt="JavaScript Advanced">
                                 <div class="course-badge badge-advanced">پیشرفته</div>
                                 <button class="wishlist-btn">
                                     <i class="far fa-heart"></i>
@@ -1251,7 +1252,7 @@
                         <!-- دوره 7 -->
                         <div class="course-card" data-category="devops" data-level="intermediate" data-price="paid" data-rating="4.6" data-students="900">
                             <div class="course-image">
-                                <img src="../img/docker-microservices.jpeg" alt="Docker">
+                                <img src="{% static 'img/docker-microservices.jpeg' %}" alt="Docker">
                                 <div class="course-badge badge-professional">DevOps</div>
                                 <button class="wishlist-btn">
                                     <i class="far fa-heart"></i>
@@ -1313,7 +1314,7 @@
                         <!-- دوره شماره 7 -->
                         <div class="course-card" data-category="devops" data-level="intermediate" data-price="paid" data-rating="4.6" data-students="900">
                             <div class="course-image">
-                                <img src="../img/docker-microservices.jpeg" alt="Docker">
+                                <img src="{% static 'img/docker-microservices.jpeg' %}" alt="Docker">
                                 <div class="course-badge badge-professional">DevOps</div>
                                 <button class="wishlist-btn">
                                     <i class="far fa-heart"></i>
@@ -1375,7 +1376,7 @@
                         <!--  8 شماره  -->
                         <div class="course-card" data-category="devops" data-level="intermediate" data-price="paid" data-rating="4.6" data-students="900">
                             <div class="course-image">
-                                <img src="../img/docker-microservices.jpeg" alt="Docker">
+                                <img src="{% static 'img/docker-microservices.jpeg' %}" alt="Docker">
                                 <div class="course-badge badge-professional">DevOps</div>
                                 <button class="wishlist-btn">
                                     <i class="far fa-heart"></i>
@@ -1437,7 +1438,7 @@
                         <!-- دوره شناره 9 -->
                         <div class="course-card" data-category="devops" data-level="intermediate" data-price="paid" data-rating="4.6" data-students="900">
                             <div class="course-image">
-                                <img src="../img/docker-microservices.jpeg" alt="Docker">
+                                <img src="{% static 'img/docker-microservices.jpeg' %}" alt="Docker">
                                 <div class="course-badge badge-professional">DevOps</div>
                                 <button class="wishlist-btn">
                                     <i class="far fa-heart"></i>
@@ -1530,7 +1531,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="brand-info">
-                        <img src="../img/-2147483648_-210431.png" alt="پلنت کد" class="footer-logo">
+                        <img src="{% static 'img/-2147483648_-210431.png' %}" alt="پلنت کد" class="footer-logo">
                         <div>
                             <h3 class="brand-name">پلنت کد</h3>
                             <span class="brand-domain">plantcode.ir</span>
@@ -1610,9 +1611,9 @@
     </footer>
 
     <!-- اسکریپت‌ها -->
-    <script src="js/header.js"></script>
-    <script src="js/shoping-cart.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/course-page.js"></script>
+    <script src="{% static 'js/header.js' %}"></script>
+    <script src="{% static 'js/shoping-cart.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/course-page.js' %}"></script>
 </body>
 </html>

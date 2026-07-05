@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -6,15 +7,15 @@
     <title>پلنت کد - تایید نهایی خرید و پرداخت</title>
     
     <!-- Bootstrap 5 -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- استایل‌های سفارشی -->
-    <link rel="stylesheet" href="style css/header.css">
-    <link rel="stylesheet" href="style css/footer.css">
-    <link rel="stylesheet" href="style css/checkout_css/checkout.css">
+    <link rel="stylesheet" href="{% static 'style css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'style css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'style css/checkout_css/checkout.css' %}">
     
     <!-- Swiper.js for carousel -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -51,7 +52,7 @@
                 <!-- لوگو و نام -->
                 <div class="brand">
                     <div class="logo-container">
-                        <img src="img/-2147483648_-210431.png" alt="پلنت کد" class="site-logo">
+                        <img src="{% static 'img/-2147483648_-210431.png' %}" alt="پلنت کد" class="site-logo">
                     </div>
                     <div class="brand-name">
                         <span class="name">پلنت کد</span>
@@ -454,7 +455,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <div class="mobile-brand">
-                <img src="img/-2147483648_-210431.png" alt="پلنت کد" class="site-logo">
+                <img src="{% static 'img/-2147483648_-210431.png' %}" alt="پلنت کد" class="site-logo">
                 <span>پلنت کد</span>
             </div>
             <button class="close-menu" id="closeMenu">
@@ -1065,7 +1066,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="brand-info">
-                        <img src="img/-2147483648_-210431.png" alt="پلنت کد" class="footer-logo">
+                        <img src="{% static 'img/-2147483648_-210431.png' %}" alt="پلنت کد" class="footer-logo">
                         <div>
                             <h3 class="brand-name">پلنت کد</h3>
                             <span class="brand-domain">plantcode.ir</span>
@@ -1146,9 +1147,9 @@
 
 
     <!-- اسکریپت‌ها -->
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/checkout-main.js"></script>
-    <script src="js/header.js"></script>
+    <script src="{% static 'js/checkout-main.js' %}"></script>
+    <script src="{% static 'js/header.js' %}"></script>
 </body>
 </html>
