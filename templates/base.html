@@ -60,7 +60,7 @@
 
                 <!-- Desktop Navigation Menu -->
                 <ul class="nav-menu">
-                    <li><a href="#" class="nav-link active">
+                    <li><a href="{% url 'pages:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
                         <i class="fas fa-home"></i>
                         خانه
                     </a></li>
@@ -407,7 +407,7 @@
                         </div>
                     </li>
                     
-                    <li><a href="pages/every-course.html" class="nav-link">
+                    <li><a href="{% url 'courses:all_courses' %}" class="nav-link {% if request.resolver_match.url_name == 'all_courses' %}active{% endif %}">
                         <i class="fas fa-blog"></i>
                          تمامی دورها
                     </a></li>
@@ -478,7 +478,7 @@
                 </button>
             </div>
     
-            <a href="#" class="mobile-nav-link active">
+            <a href="{% url 'pages:home' %}" class="mobile-nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
                 <i class="fas fa-home"></i>
                 خانه
             </a>
@@ -720,7 +720,7 @@
                 آموزش‌های رایگان
             </a>
             
-            <a href="pages/every-course.html" class="mobile-nav-link">
+            <a href="{% url 'courses:all_courses' %}" class="mobile-nav-link {% if request.resolver_match.url_name == 'all_courses' %}active{% endif %}">
                 <i class="fas fa-blog"></i>
                  تمامی دوره ها
             </a>
