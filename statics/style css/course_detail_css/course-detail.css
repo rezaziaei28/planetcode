@@ -1,0 +1,739 @@
+/* ==========================================
+   COURSE DETAIL - PROFESSIONAL DESIGN
+   ========================================== */
+
+   .course-detail-page {
+    padding: 40px 0 60px;
+    background: var(--dark);
+    min-height: 100vh;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.course-hero {
+    background: var(--dark-light);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 50px;
+    border: 1px solid var(--border);
+}
+
+.course-image-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.course-main-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.course-image-wrapper:hover .course-main-img {
+    transform: scale(1.03);
+}
+
+.course-badges {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.badge-level {
+    background: var(--primary);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge-popular {
+    background: #ff6b6b;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Course Info */
+.course-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.course-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.course-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.meta-item i {
+    color: var(--primary);
+}
+
+.meta-item strong {
+    color: var(--text);
+}
+
+.course-desc {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.course-features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 107, 53, 0.08);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.feature-item i {
+    color: var(--success);
+}
+
+/* Price Box */
+.course-price-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 2px solid var(--border);
+}
+
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.price-current {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.price-old {
+    font-size: 1.1rem;
+    color: var(--text-lighter);
+    text-decoration: line-through;
+}
+
+.price-discount {
+    background: #ff6b6b;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.btn-add-to-cart {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    border: none;
+    padding: 14px 36px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.35);
+}
+
+/* ==========================================
+   TABS
+   ========================================== */
+.course-tabs-wrapper {
+    background: var(--dark-light);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--border);
+}
+
+.course-tabs {
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 30px;
+}
+
+.course-tabs .nav-link {
+    color: var(--text-light);
+    border: none;
+    padding: 12px 24px;
+    font-weight: 500;
+    border-radius: 0;
+    position: relative;
+}
+
+.course-tabs .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.course-tabs .nav-link.active {
+    color: var(--primary);
+    background: transparent;
+}
+
+.course-tabs .nav-link.active::after {
+    width: 80%;
+}
+
+.course-tabs .nav-link i {
+    margin-left: 8px;
+}
+
+/* ==========================================
+   SYLLABUS
+   ========================================== */
+.syllabus-item {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.syllabus-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.syllabus-header:hover {
+    background: rgba(255, 107, 53, 0.04);
+}
+
+.section-number {
+    background: var(--primary);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.section-title {
+    color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.section-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-lighter);
+    font-size: 0.85rem;
+}
+
+.section-meta i {
+    color: var(--primary);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.syllabus-item.open .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.syllabus-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.syllabus-item.open .syllabus-body {
+    max-height: 600px;
+}
+
+.lesson-list {
+    list-style: none;
+    padding: 0 24px 20px;
+    margin: 0;
+}
+
+.lesson-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-light);
+}
+
+.lesson-list li:last-child {
+    border-bottom: none;
+}
+
+.lesson-list li i {
+    color: var(--primary);
+    margin-left: 8px;
+}
+
+.lesson-time {
+    color: var(--text-lighter);
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   FREE LESSONS
+   ========================================== */
+.free-lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.free-lesson-card {
+    background: var(--dark);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.free-lesson-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.free-lesson-img {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+}
+
+.free-lesson-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.free-lesson-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-overlay i {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.free-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--success);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.lock-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.free-lesson-info {
+    padding: 16px;
+}
+
+.free-lesson-info h4 {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin: 0 0 4px 0;
+}
+
+.free-lesson-info span {
+    font-size: 0.85rem;
+    color: var(--text-lighter);
+}
+
+/* ==========================================
+   REVIEWS
+   ========================================== */
+.reviews-summary {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 24px;
+    background: var(--dark);
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.rating-big {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rating-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.rating-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.rating-stars i {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.rating-count {
+    color: var(--text-lighter);
+    font-size: 0.9rem;
+}
+
+.review-item {
+    background: var(--dark);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewer i {
+    font-size: 2.2rem;
+    color: var(--text-lighter);
+}
+
+.reviewer h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+}
+
+.reviewer span {
+    font-size: 0.85rem;
+    color: var(--text-lighter);
+}
+
+.review-stars {
+    display: flex;
+    gap: 3px;
+}
+
+.review-stars i {
+    color: #ffd700;
+    font-size: 0.9rem;
+}
+
+.review-text {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================
+   COMMENT FORM
+   ========================================== */
+.comment-section {
+    margin-top: 40px;
+    padding: 35px;
+    background: var(--dark);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.comment-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.comment-title i {
+    color: var(--primary);
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-label {
+    display: block;
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-label i {
+    color: var(--primary);
+    margin-left: 6px;
+    width: 18px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--dark-light);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.15);
+}
+
+.form-control::placeholder {
+    color: var(--text-lighter);
+}
+
+.form-control.is-invalid {
+    border-color: var(--danger);
+}
+
+.invalid-feedback {
+    display: none;
+    color: var(--danger);
+    font-size: 0.85rem;
+    margin-top: 6px;
+}
+
+.invalid-feedback.show {
+    display: block;
+}
+
+/* Rating Stars */
+.rating-stars-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 10px 0;
+}
+
+.rating-stars-input input[type="radio"] {
+    display: none;
+}
+
+.rating-stars-input label {
+    font-size: 2rem;
+    color: var(--text-lighter);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rating-stars-input label:hover,
+.rating-stars-input label:hover ~ label,
+.rating-stars-input input:checked ~ label {
+    color: #ffd700;
+}
+
+.rating-stars-input label:hover {
+    transform: scale(1.1);
+}
+
+/* Submit Button */
+.btn-submit-comment {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-submit-comment:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.35);
+}
+
+.btn-submit-comment:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.comment-success {
+    display: none;
+    background: rgba(40, 167, 69, 0.1);
+    border: 1px solid var(--success);
+    color: var(--success);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    gap: 12px;
+}
+
+.comment-success.show {
+    display: flex;
+}
+
+.comment-success i {
+    font-size: 1.5rem;
+}
+
+/* ==========================================
+   INFO TAB
+   ========================================== */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: var(--dark);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.info-label {
+    color: var(--text-lighter);
+    font-size: 0.95rem;
+}
+
+.info-value {
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 992px) {
+    .course-hero { padding: 30px; }
+    .course-main-img { height: 250px; }
+    .free-lessons-grid { grid-template-columns: repeat(2, 1fr); }
+    .info-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .course-hero { padding: 20px; }
+    .course-title { font-size: 1.8rem; }
+    .course-meta-row { gap: 12px; font-size: 0.85rem; }
+    .course-price-box { flex-direction: column; align-items: stretch; }
+    .btn-add-to-cart { width: 100%; justify-content: center; }
+    .course-tabs-wrapper { padding: 16px; }
+    .course-tabs .nav-link { padding: 10px 12px; font-size: 0.85rem; }
+    .syllabus-header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 18px; }
+    .section-meta { width: 100%; justify-content: space-between; }
+    .free-lessons-grid { grid-template-columns: 1fr; }
+    .reviews-summary { flex-direction: column; align-items: flex-start; }
+    .review-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .comment-section { padding: 20px; }
+    .comment-title { font-size: 1.2rem; }
+    .rating-stars-input label { font-size: 1.5rem; }
+    .btn-submit-comment { width: 100%; justify-content: center; }
+}

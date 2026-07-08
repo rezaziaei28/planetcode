@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}دوره هیولای پایتون | پلنت کد{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'style css/course_detail_css/course-detail.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="course-detail-page">
+    <div class="container">
+        
+        <!-- ==========================================
+        COURSE HERO - STATIC
+        ========================================== -->
+        <div class="course-hero">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <div class="course-image-wrapper">
+                        <img src="{% static 'img/python.jpeg' %}" alt="دوره هیولای پایتون" class="course-main-img">
+                        <div class="course-badges">
+                            <span class="badge-level">پیشرفته</span>
+                            <span class="badge-popular">پرفروش</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="course-info">
+                        <h1 class="course-title">دوره هیولای پایتون</h1>
+                        
+                        <div class="course-meta-row">
+                            <span class="meta-item"><i class="fas fa-chalkboard-teacher"></i> مدرس: <strong>علی رضایی</strong></span>
+                            <span class="meta-item"><i class="fas fa-star"></i> 4.8 <small>(120 نظر)</small></span>
+                            <span class="meta-item"><i class="fas fa-users"></i> 2,500 دانشجو</span>
+                            <span class="meta-item"><i class="fas fa-clock"></i> 60 ساعت</span>
+                        </div>
+                        
+                        <p class="course-desc">
+                            آموزش کامل پایتون از پایه تا پیشرفته با پروژه‌های واقعی و بازار کار. 
+                            این دوره شامل مباحث پایه، شی‌گرایی، دیتابیس، جنگو و هوش مصنوعی است.
+                        </p>
+                        
+                        <div class="course-features-grid">
+                            <span class="feature-item"><i class="fas fa-video"></i> 40 جلسه</span>
+                            <span class="feature-item"><i class="fas fa-code"></i> 10 پروژه</span>
+                            <span class="feature-item"><i class="fas fa-certificate"></i> گواهینامه</span>
+                            <span class="feature-item"><i class="fas fa-headset"></i> پشتیبانی 24/7</span>
+                        </div>
+                        
+                        <div class="course-price-box">
+                            <div class="price-wrapper">
+                                <span class="price-current">3,200,000 تومان</span>
+                                <span class="price-old">4,000,000 تومان</span>
+                                <span class="price-discount">20% تخفیف</span>
+                            </div>
+                            <button class="btn-add-to-cart" 
+                                    data-course-id="1"
+                                    data-course-title="دوره هیولای پایتون" 
+                                    data-course-price="3,200,000 تومان"
+                                    data-course-image="{% static 'img/python.jpeg' %}">
+                                <i class="fas fa-shopping-basket"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========================================
+        COURSE TABS - STATIC
+        ========================================== -->
+        <div class="course-tabs-wrapper">
+            <ul class="nav nav-tabs course-tabs" id="courseTabs" role="tablist">
+                <li class="nav-item"><button class="nav-link active" id="syllabus-tab" data-bs-toggle="tab" data-bs-target="#syllabus" type="button"><i class="fas fa-list-ul"></i> سرفصل‌ها</button></li>
+                <li class="nav-item"><button class="nav-link" id="free-tab" data-bs-toggle="tab" data-bs-target="#free" type="button"><i class="fas fa-play-circle"></i> ویدیوهای رایگان</button></li>
+                <li class="nav-item"><button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button"><i class="fas fa-star"></i> نظرات</button></li>
+                <li class="nav-item"><button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button"><i class="fas fa-info-circle"></i> اطلاعات</button></li>
+            </ul>
+            
+            <div class="tab-content">
+                
+                <!-- ====== SYLLABUS TAB ====== -->
+                <div class="tab-pane fade show active" id="syllabus">
+                    <div class="syllabus-container">
+                        
+                        <!-- Section 1 -->
+                        <div class="syllabus-item open">
+                            <div class="syllabus-header">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="section-number">01</span>
+                                    <h4 class="section-title">مبانی پایتون</h4>
+                                </div>
+                                <div class="section-meta">
+                                    <span><i class="fas fa-file-video"></i> 6 جلسه</span>
+                                    <span><i class="fas fa-clock"></i> 120 دقیقه</span>
+                                    <i class="fas fa-chevron-down toggle-icon"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus-body">
+                                <ul class="lesson-list">
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۱: معرفی و نصب</span><span class="lesson-time">15:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۲: متغیرها و انواع داده</span><span class="lesson-time">18:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۳: عملگرها</span><span class="lesson-time">12:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۴: شرط‌ها</span><span class="lesson-time">20:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۵: حلقه‌ها</span><span class="lesson-time">22:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۶: توابع</span><span class="lesson-time">25:00</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 2 -->
+                        <div class="syllabus-item">
+                            <div class="syllabus-header">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="section-number">02</span>
+                                    <h4 class="section-title">برنامه‌نویسی شی‌گرا (OOP)</h4>
+                                </div>
+                                <div class="section-meta">
+                                    <span><i class="fas fa-file-video"></i> 5 جلسه</span>
+                                    <span><i class="fas fa-clock"></i> 90 دقیقه</span>
+                                    <i class="fas fa-chevron-down toggle-icon"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus-body">
+                                <ul class="lesson-list">
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۱: کلاس و شی</span><span class="lesson-time">20:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۲: وراثت</span><span class="lesson-time">18:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۳: پلی‌مورفیسم</span><span class="lesson-time">15:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۴: اینکپسولیشن</span><span class="lesson-time">14:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۵: پروژه عملی</span><span class="lesson-time">30:00</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Section 3 -->
+                        <div class="syllabus-item">
+                            <div class="syllabus-header">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="section-number">03</span>
+                                    <h4 class="section-title">دیتابیس و جنگو</h4>
+                                </div>
+                                <div class="section-meta">
+                                    <span><i class="fas fa-file-video"></i> 4 جلسه</span>
+                                    <span><i class="fas fa-clock"></i> 120 دقیقه</span>
+                                    <i class="fas fa-chevron-down toggle-icon"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus-body">
+                                <ul class="lesson-list">
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۱: مقدمات دیتابیس</span><span class="lesson-time">25:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۲: آشنایی با جنگو</span><span class="lesson-time">30:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۳: مدل‌ها و migrations</span><span class="lesson-time">35:00</span></li>
+                                    <li><span><i class="fas fa-play-circle"></i> جلسه ۴: پروژه عملی جنگو</span><span class="lesson-time">40:00</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- ====== FREE LESSONS TAB ====== -->
+                <div class="tab-pane fade" id="free">
+                    <div class="free-lessons-grid">
+                        <div class="free-lesson-card">
+                            <div class="free-lesson-img">
+                                <img src="{% static 'img/python.jpeg' %}" alt="جلسه اول">
+                                <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                                <span class="free-badge">رایگان</span>
+                                <span class="lock-badge"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <div class="free-lesson-info">
+                                <h4>معرفی دوره و نصب</h4>
+                                <span>15 دقیقه</span>
+                            </div>
+                        </div>
+                        
+                        <div class="free-lesson-card">
+                            <div class="free-lesson-img">
+                                <img src="{% static 'img/python.jpeg' %}" alt="جلسه دوم">
+                                <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                                <span class="free-badge">رایگان</span>
+                                <span class="lock-badge"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <div class="free-lesson-info">
+                                <h4>متغیرها و انواع داده</h4>
+                                <span>18 دقیقه</span>
+                            </div>
+                        </div>
+                        
+                        <div class="free-lesson-card">
+                            <div class="free-lesson-img">
+                                <img src="{% static 'img/python.jpeg' %}" alt="جلسه سوم">
+                                <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                                <span class="free-badge">رایگان</span>
+                                <span class="lock-badge"><i class="fas fa-lock"></i></span>
+                            </div>
+                            <div class="free-lesson-info">
+                                <h4>شرط‌ها و حلقه‌ها</h4>
+                                <span>20 دقیقه</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ====== REVIEWS TAB ====== -->
+                <div class="tab-pane fade" id="reviews">
+                    <div class="reviews-section">
+                        <div class="reviews-summary">
+                            <div class="rating-big">
+                                <span class="rating-number">4.8</span>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">از 120 نظر</span>
+                            </div>
+                        </div>
+                        
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <i class="fas fa-user-circle"></i>
+                                        <div>
+                                            <h5>علی محمدی</h5>
+                                            <span>۲ هفته پیش</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-text">دوره عالی بود! از صفر شروع کردم و تونستم اولین پروژه جنگو خودم رو بسازم.</p>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <i class="fas fa-user-circle"></i>
+                                        <div>
+                                            <h5>سارا احمدی</h5>
+                                            <span>۱ ماه پیش</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-text">پشتیبانی عالی بود و به همه سوالاتم جواب دادن. دوره رو پیشنهاد میکنم.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ====== COMMENT FORM ====== -->
+                    <section class="comment-section" id="commentSection">
+                        <h3 class="comment-title">
+                            <i class="fas fa-pen-fancy"></i> 
+                            دیدگاه خود را بنویسید
+                        </h3>
+                        
+                        <div class="comment-success" id="commentSuccess">
+                            <i class="fas fa-check-circle"></i>
+                            <span>نظر شما با موفقیت ثبت شد! پس از تایید نمایش داده می‌شود.</span>
+                        </div>
+                        
+                        <form class="comment-form" id="commentForm" novalidate>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="commentName" class="form-label"><i class="fas fa-user"></i> نام کامل</label>
+                                        <input type="text" id="commentName" class="form-control" placeholder="علی رضایی" required>
+                                        <div class="invalid-feedback">لطفاً نام خود را وارد کنید</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="commentEmail" class="form-label"><i class="fas fa-envelope"></i> ایمیل</label>
+                                        <input type="email" id="commentEmail" class="form-control" placeholder="example@gmail.com" required>
+                                        <div class="invalid-feedback">لطفاً یک ایمیل معتبر وارد کنید</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="commentSubject" class="form-label"><i class="fas fa-tag"></i> موضوع</label>
+                                        <input type="text" id="commentSubject" class="form-control" placeholder="موضوع نظر خود را وارد کنید" required>
+                                        <div class="invalid-feedback">لطفاً موضوع را وارد کنید</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label"><i class="fas fa-star"></i> امتیاز شما</label>
+                                        <div class="rating-stars-input">
+                                            <input type="radio" name="rating" id="star5" value="5">
+                                            <label for="star5" title="عالی"><i class="fas fa-star"></i></label>
+                                            <input type="radio" name="rating" id="star4" value="4">
+                                            <label for="star4" title="خوب"><i class="fas fa-star"></i></label>
+                                            <input type="radio" name="rating" id="star3" value="3" checked>
+                                            <label for="star3" title="متوسط"><i class="fas fa-star"></i></label>
+                                            <input type="radio" name="rating" id="star2" value="2">
+                                            <label for="star2" title="ضعیف"><i class="fas fa-star"></i></label>
+                                            <input type="radio" name="rating" id="star1" value="1">
+                                            <label for="star1" title="خیلی ضعیف"><i class="fas fa-star"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="commentMessage" class="form-label"><i class="fas fa-comment"></i> متن پیام</label>
+                                        <textarea id="commentMessage" class="form-control" rows="5" placeholder="نظر خود را بنویسید..." required></textarea>
+                                        <div class="invalid-feedback">لطفاً متن نظر را وارد کنید</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <button type="submit" class="btn-submit-comment" id="submitCommentBtn">
+                                        <i class="fas fa-paper-plane"></i> ارسال دیدگاه
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                
+                <!-- ====== INFO TAB ====== -->
+                <div class="tab-pane fade" id="info">
+                    <div class="info-grid">
+                        <div class="info-item"><span class="info-label">سطح دوره</span><span class="info-value">پیشرفته</span></div>
+                        <div class="info-item"><span class="info-label">پیش‌نیاز</span><span class="info-value">آشنایی مقدماتی با برنامه‌نویسی</span></div>
+                        <div class="info-item"><span class="info-label">مدت زمان</span><span class="info-value">60 ساعت</span></div>
+                        <div class="info-item"><span class="info-label">تعداد جلسات</span><span class="info-value">40 جلسه</span></div>
+                        <div class="info-item"><span class="info-label">پروژه‌ها</span><span class="info-value">10 پروژه عملی</span></div>
+                        <div class="info-item"><span class="info-label">گواهینامه</span><span class="info-value">دارد</span></div>
+                        <div class="info-item"><span class="info-label">پشتیبانی</span><span class="info-value">24/7</span></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/course-detail.js' %}"></script>
+{% endblock %}
