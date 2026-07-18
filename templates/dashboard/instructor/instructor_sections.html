@@ -1,0 +1,462 @@
+{% extends "dashboard/instructor/base_instructor.html" %}
+{% load static %}
+
+{% block title %}مدیریت فصل‌ها | PlanetCode{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'style css/instructor_css/instructor_sections.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+    <div>
+        <h1>مدیریت محتوای دوره</h1>
+        <p class="breadcrumb">داشبورد / مدیریت محتوا</p>
+    </div>
+    <div class="header-actions">
+        <button class="btn-secondary" id="backToCoursesBtn">
+            <i class="fas fa-arrow-right"></i> بازگشت
+        </button>
+        <button class="btn-primary" id="addSectionBtn">
+            <i class="fas fa-plus-circle"></i> فصل جدید
+        </button>
+    </div>
+</div>
+
+<!-- ===== COURSE SELECTOR ===== -->
+<div class="course-selector">
+    <label for="courseSelect">دوره مورد نظر:</label>
+    <select id="courseSelect">
+        <option value="django">دوره جامع Django</option>
+        <option value="react">React &amp; Tailwind CSS</option>
+        <option value="arduino">رباتیک با Arduino</option>
+    </select>
+</div>
+
+<!-- ===== SECTIONS CONTAINER ===== -->
+<div class="sections-container" id="sectionsContainer">
+    
+    <!-- ===== SECTION 1 ===== -->
+    <div class="section-card" data-section-id="1">
+        <div class="section-header">
+            <div class="section-info">
+                <h3><i class="fas fa-folder-open" style="color: var(--primary);"></i> بخش اول: مقدمه</h3>
+                <span class="lesson-count">۳ درس</span>
+                <span class="section-duration">۵۲:۱۵</span>
+            </div>
+            <div class="section-actions">
+                <button class="action-btn edit-section-btn" title="ویرایش فصل">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="action-btn delete-section-btn danger" title="حذف فصل">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Lessons inside this section -->
+        <div class="lessons-list">
+            
+            <!-- ===== LESSON 1 ===== -->
+            <div class="lesson-item" data-lesson-id="1">
+                <div class="lesson-main">
+                    <div class="lesson-header-info">
+                        <div class="lesson-title-wrapper">
+                            <i class="fas fa-play-circle" style="color: var(--primary);"></i>
+                            <span class="lesson-title">مقدمه بر Django</span>
+                            <span class="lesson-duration">۱۵:۳۰</span>
+                            <span class="status-badge free">رایگان</span>
+                        </div>
+                        <div class="lesson-actions">
+                            <button class="action-btn edit-lesson-btn" title="ویرایش درس">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-btn delete-lesson-btn danger" title="حذف درس">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- ===== LESSON DETAILS (expandable) ===== -->
+                    <div class="lesson-details">
+                        <div class="lesson-description">
+                            <label>توضیحات درس:</label>
+                            <p>در این درس با مفاهیم پایه Django آشنا می‌شوید و نحوه نصب و راه‌اندازی را یاد می‌گیرید.</p>
+                        </div>
+                        
+                        <div class="lesson-file-upload">
+                            <label>فایل ویدیو:</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" accept="video/*" class="file-input" id="video1">
+                                <div class="file-upload-area">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>آپلود ویدیو</span>
+                                    <span class="file-name">django-intro.mp4</span>
+                                </div>
+                            </div>
+                            <div class="video-preview" id="videoPreview1">
+                                <video controls width="100%" style="max-height: 200px; border-radius: 8px;">
+                                    <source src="#" type="video/mp4">
+                                    مرورگر شما از نمایش ویدیو پشتیبانی نمی‌کند.
+                                </video>
+                            </div>
+                        </div>
+                        
+                        <div class="lesson-attachments">
+                            <label>فایل‌های پیوست:</label>
+                            <div class="attachment-list">
+                                <div class="attachment-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>اسلایدهای جلسه اول.pdf</span>
+                                    <button class="remove-attachment" title="حذف">×</button>
+                                </div>
+                                <div class="attachment-item">
+                                    <i class="fas fa-file-code"></i>
+                                    <span>project-starter.zip</span>
+                                    <button class="remove-attachment" title="حذف">×</button>
+                                </div>
+                            </div>
+                            <button class="add-attachment-btn">
+                                <i class="fas fa-plus"></i> افزودن فایل پیوست
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ===== LESSON 2 ===== -->
+            <div class="lesson-item" data-lesson-id="2">
+                <div class="lesson-main">
+                    <div class="lesson-header-info">
+                        <div class="lesson-title-wrapper">
+                            <i class="fas fa-play-circle" style="color: var(--primary);"></i>
+                            <span class="lesson-title">نصب و راه‌اندازی</span>
+                            <span class="lesson-duration">۲۲:۴۵</span>
+                            <span class="status-badge paid">پولی</span>
+                        </div>
+                        <div class="lesson-actions">
+                            <button class="action-btn edit-lesson-btn" title="ویرایش درس">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-btn delete-lesson-btn danger" title="حذف درس">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-details">
+                        <div class="lesson-description">
+                            <label>توضیحات درس:</label>
+                            <p>آموزش نصب Django و ابزارهای مورد نیاز برای شروع پروژه.</p>
+                        </div>
+                        
+                        <div class="lesson-file-upload">
+                            <label>فایل ویدیو:</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" accept="video/*" class="file-input" id="video2">
+                                <div class="file-upload-area">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>آپلود ویدیو</span>
+                                    <span class="file-name">django-install.mp4</span>
+                                </div>
+                            </div>
+                            <div class="video-preview" id="videoPreview2">
+                                <video controls width="100%" style="max-height: 200px; border-radius: 8px;">
+                                    <source src="#" type="video/mp4">
+                                    مرورگر شما از نمایش ویدیو پشتیبانی نمی‌کند.
+                                </video>
+                            </div>
+                        </div>
+                        
+                        <div class="lesson-attachments">
+                            <label>فایل‌های پیوست:</label>
+                            <div class="attachment-list">
+                                <div class="attachment-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>نحوه نصب Django.pdf</span>
+                                    <button class="remove-attachment" title="حذف">×</button>
+                                </div>
+                            </div>
+                            <button class="add-attachment-btn">
+                                <i class="fas fa-plus"></i> افزودن فایل پیوست
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ===== LESSON 3 ===== -->
+            <div class="lesson-item" data-lesson-id="3">
+                <div class="lesson-main">
+                    <div class="lesson-header-info">
+                        <div class="lesson-title-wrapper">
+                            <i class="fas fa-play-circle" style="color: var(--primary);"></i>
+                            <span class="lesson-title">ساخت اولین پروژه</span>
+                            <span class="lesson-duration">۱۴:۰۰</span>
+                            <span class="status-badge paid">پولی</span>
+                        </div>
+                        <div class="lesson-actions">
+                            <button class="action-btn edit-lesson-btn" title="ویرایش درس">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-btn delete-lesson-btn danger" title="حذف درس">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-details">
+                        <div class="lesson-description">
+                            <label>توضیحات درس:</label>
+                            <p>ساخت اولین پروژه Django و آشنایی با ساختار آن.</p>
+                        </div>
+                        
+                        <div class="lesson-file-upload">
+                            <label>فایل ویدیو:</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" accept="video/*" class="file-input" id="video3">
+                                <div class="file-upload-area">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>آپلود ویدیو</span>
+                                    <span class="file-name">django-first-project.mp4</span>
+                                </div>
+                            </div>
+                            <div class="video-preview" id="videoPreview3">
+                                <video controls width="100%" style="max-height: 200px; border-radius: 8px;">
+                                    <source src="#" type="video/mp4">
+                                    مرورگر شما از نمایش ویدیو پشتیبانی نمی‌کند.
+                                </video>
+                            </div>
+                        </div>
+                        
+                        <div class="lesson-attachments">
+                            <label>فایل‌های پیوست:</label>
+                            <div class="attachment-list">
+                                <div class="attachment-item">
+                                    <i class="fas fa-file-code"></i>
+                                    <span>first-project-code.zip</span>
+                                    <button class="remove-attachment" title="حذف">×</button>
+                                </div>
+                            </div>
+                            <button class="add-attachment-btn">
+                                <i class="fas fa-plus"></i> افزودن فایل پیوست
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- ===== SECTION 2 (with add lesson button) ===== -->
+    <div class="section-card" data-section-id="2">
+        <div class="section-header">
+            <div class="section-info">
+                <h3><i class="fas fa-folder-open" style="color: var(--primary);"></i> بخش دوم: مدل‌ها</h3>
+                <span class="lesson-count">۰ درس</span>
+                <span class="section-duration">۰۰:۰۰</span>
+            </div>
+            <div class="section-actions">
+                <button class="action-btn edit-section-btn" title="ویرایش فصل">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="action-btn add-lesson-btn" title="افزودن درس">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="action-btn delete-section-btn danger" title="حذف فصل">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="lessons-list">
+            <div class="empty-lessons">
+                <i class="fas fa-video" style="font-size: 2rem; color: var(--text-muted);"></i>
+                <p>هنوز درسی به این فصل اضافه نشده است</p>
+                <button class="btn-sm add-lesson-empty-btn">
+                    <i class="fas fa-plus"></i> افزودن اولین درس
+                </button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- ===== ADD SECTION BOTTOM ===== -->
+<div class="add-section-bottom">
+    <button class="btn-secondary" id="addSectionBottomBtn">
+        <i class="fas fa-plus-circle"></i> افزودن فصل جدید
+    </button>
+</div>
+
+<style>
+    /* ===== INLINE STYLES FOR LESSON DETAILS ===== */
+    .lesson-main {
+        width: 100%;
+    }
+    
+    .lesson-header-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.6rem 0;
+    }
+    
+    .lesson-title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+    
+    .lesson-details {
+        padding: 0.8rem 0 0.8rem 2rem;
+        border-top: 1px dashed var(--border-color);
+        margin-top: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .lesson-details label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+    
+    .lesson-description p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        background: var(--bg-main);
+        padding: 0.5rem 0.8rem;
+        border-radius: 6px;
+    }
+    
+    .file-upload-wrapper {
+        position: relative;
+    }
+    
+    .file-input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    .file-upload-area {
+        background: var(--bg-main);
+        border: 2px dashed var(--border-color);
+        border-radius: 8px;
+        padding: 0.8rem;
+        text-align: center;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        cursor: pointer;
+    }
+    
+    .file-upload-area:hover {
+        border-color: var(--primary);
+        background: rgba(255, 107, 53, 0.05);
+    }
+    
+    .file-upload-area i {
+        font-size: 1.5rem;
+        color: var(--primary);
+    }
+    
+    .file-upload-area .file-name {
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+    }
+    
+    .video-preview {
+        margin-top: 0.5rem;
+        display: none;
+    }
+    
+    .video-preview.active {
+        display: block;
+    }
+    
+    .attachment-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .attachment-item {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: var(--bg-main);
+        padding: 0.3rem 0.8rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+    }
+    
+    .attachment-item i {
+        color: var(--primary);
+    }
+    
+    .attachment-item .remove-attachment {
+        background: none;
+        border: none;
+        color: #ff4444;
+        cursor: pointer;
+        font-size: 1.2rem;
+        margin-right: auto;
+        padding: 0 0.3rem;
+    }
+    
+    .add-attachment-btn {
+        background: none;
+        border: 1px dashed var(--border-color);
+        color: var(--text-secondary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: var(--transition);
+        font-size: 0.85rem;
+    }
+    
+    .add-attachment-btn:hover {
+        border-color: var(--primary);
+        color: var(--text-primary);
+    }
+    
+    @media (max-width: 768px) {
+        .lesson-header-info {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .lesson-details {
+            padding-left: 0;
+        }
+        
+        .file-upload-area {
+            flex-direction: column;
+        }
+    }
+</style>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/instructor/instructor-sections.js' %}"></script>
+{% endblock %}

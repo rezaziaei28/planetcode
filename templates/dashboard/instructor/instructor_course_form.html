@@ -1,0 +1,133 @@
+{% extends "dashboard/instructor/base_instructor.html" %}
+{% load static %}
+
+{% block title %}افزودن دوره جدید | PlanetCode{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'style css/instructor_css/instructor_course_form.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="form-page">
+    
+    <!-- ===== HEADER ===== -->
+    <div class="form-header">
+        <div>
+            <h1>دوره جدید</h1>
+            <p>اطلاعات دوره را وارد کنید</p>
+        </div>
+        <button class="btn-ghost" id="backBtn">
+            <i class="fas fa-arrow-right"></i> بازگشت
+        </button>
+    </div>
+    
+    <!-- ===== FORM ===== -->
+    <form class="form-container" id="courseForm">
+        
+        <!-- ===== ROW 1: Title ===== -->
+        <div class="form-field">
+            <label>عنوان دوره <span class="req">*</span></label>
+            <input type="text" placeholder="مثال: دوره جامع Django" id="courseTitle">
+            <p class="hint">عنوانی جذاب و واضح برای دوره انتخاب کنید</p>
+        </div>
+        
+        <!-- ===== ROW 2: Description ===== -->
+        <div class="form-field">
+            <label>توضیحات <span class="req">*</span></label>
+            <textarea rows="5" placeholder="دوره درباره چیه؟ چه چیزی یاد میگیرن؟" id="courseDesc"></textarea>
+        </div>
+        
+        <!-- ===== ROW 3: Category + Level ===== -->
+        <div class="form-row-2">
+            <div class="form-field">
+                <label>دسته‌بندی <span class="req">*</span></label>
+                <select id="courseCategory">
+                    <option value="">انتخاب...</option>
+                    <option>برنامه‌نویسی</option>
+                    <option>توسعه وب</option>
+                    <option>رباتیک</option>
+                    <option>هوش مصنوعی</option>
+                    <option>طراحی</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>سطح <span class="req">*</span></label>
+                <select id="courseLevel">
+                    <option value="">انتخاب...</option>
+                    <option>مقدماتی</option>
+                    <option>متوسط</option>
+                    <option>پیشرفته</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- ===== ROW 4: Price + Discount ===== -->
+        <div class="form-row-2">
+            <div class="form-field">
+                <label>قیمت (تومان) <span class="req">*</span></label>
+                <input type="number" placeholder="۲۹۹۰۰۰" id="coursePrice">
+            </div>
+            <div class="form-field">
+                <label>تخفیف (%)</label>
+                <input type="number" placeholder="۲۰" value="۰" id="courseDiscount" min="0" max="100">
+            </div>
+        </div>
+        
+        <!-- ===== ROW 5: Status ===== -->
+        <div class="form-field">
+            <label>وضعیت</label>
+            <div class="status-group">
+                <label class="status-option">
+                    <input type="radio" name="status" value="active" checked>
+                    <span class="badge active">فعال</span>
+                </label>
+                <label class="status-option">
+                    <input type="radio" name="status" value="draft">
+                    <span class="badge draft">پیش‌نویس</span>
+                </label>
+                <label class="status-option">
+                    <input type="radio" name="status" value="archived">
+                    <span class="badge archived">بایگانی</span>
+                </label>
+            </div>
+        </div>
+        
+        <!-- ===== ROW 6: Image ===== -->
+        <div class="form-field">
+            <label>تصویر دوره <span class="req">*</span></label>
+            <div class="upload-box" id="uploadBox">
+                <input type="file" accept="image/*" id="imageInput">
+                <div class="upload-content">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>برای آپلود کلیک کنید</p>
+                    <span>JPG, PNG, WEBP | حداکثر ۲MB</span>
+                </div>
+                <div class="upload-preview" id="imagePreview">
+                    <img src="#" alt="preview">
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== BUTTONS ===== -->
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">
+                <i class="fas fa-check"></i> ذخیره دوره
+            </button>
+            <button type="button" class="btn-secondary" id="previewBtn">
+                <i class="fas fa-eye"></i> پیش‌نمایش
+            </button>
+            <button type="reset" class="btn-danger">
+                <i class="fas fa-times"></i> انصراف
+            </button>
+        </div>
+        
+    </form>
+    
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/instructor/instructor-course-form.js' %}"></script>
+{% endblock %}

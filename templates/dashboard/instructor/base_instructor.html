@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل استاد | PlanetCode</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="{% static 'style css/instructor_css/instructor_base.css' %}">
+
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+    
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+        <!-- Header -->
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap" style="color: #ff6b35;"></i>
+                <span>Planet<span style="color: #ff6b35;">Code</span></span>
+            </div>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>داشبورد</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-book-open"></i>
+                        <span>دوره‌های من</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-video"></i>
+                        <span>درس‌ها</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        <span>دانشجویان</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span>تنظیمات</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Footer -->
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="https://ui-avatars.com/api/?name=Reza+Ziaei&background=ff6b35&color=fff&size=40" alt="avatar">
+                <div>
+                    <p class="name">رضا ضیایی</p>
+                    <p class="role">استاد</p>
+                </div>
+            </div>
+            <button class="logout-btn" title="خروج">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content" id="mainContent">
+        
+        <!-- Top Navbar -->
+        <header class="topbar">
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="topbar-right">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="notif-btn" id="notifBtn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notif-badge">3</span>
+                </button>
+                <img src="https://ui-avatars.com/api/?name=Reza+Ziaei&background=ff6b35&color=fff&size=32" alt="avatar" class="mobile-avatar">
+            </div>
+        </header>
+        
+        <!-- Page Content -->
+        <main class="page-content">
+            
+            {% block content %}
+
+            {% endblock %}
+            
+        </main>
+        
+    </div>
+    
+    <!-- ===== SCRIPTS ===== -->
+    <script src="{% static 'js/instructor/instructor-common.js' %}"></script>
+    {% block extra_js %}
+    {% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,184 @@
+{% extends "dashboard/instructor/base_instructor.html" %}
+{% load static %}
+
+{% block title %}داشبورد | PlanetCode{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'style css/instructor_css/instructor_dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+    <div>
+        <h1>داشبورد</h1>
+        <p class="breadcrumb">داشبورد / خانه</p>
+    </div>
+    <button class="btn-primary" id="newCourseBtn">
+        <i class="fas fa-plus-circle"></i> دوره جدید
+    </button>
+</div>
+
+<!-- ===== STATS CARDS ===== -->
+<section class="stats-grid">
+    <div class="stat-card" style="border-right: 4px solid #ff6b35;">
+        <div class="stat-icon" style="background: rgba(255, 107, 53, 0.15); color: #ff6b35;">
+            <i class="fas fa-book-open"></i>
+        </div>
+        <div class="stat-info">
+            <span class="stat-value" id="totalCourses">12</span>
+            <span class="stat-label">مجموع دوره‌ها</span>
+        </div>
+    </div>
+    
+    <div class="stat-card" style="border-right: 4px solid #4ecdc4;">
+        <div class="stat-icon" style="background: rgba(78, 205, 196, 0.15); color: #4ecdc4;">
+            <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="stat-info">
+            <span class="stat-value" id="totalStudents">1,284</span>
+            <span class="stat-label">مجموع دانشجویان</span>
+        </div>
+    </div>
+    
+    <div class="stat-card" style="border-right: 4px solid #ffe66d;">
+        <div class="stat-icon" style="background: rgba(255, 230, 109, 0.15); color: #ffe66d;">
+            <i class="fas fa-dollar-sign"></i>
+        </div>
+        <div class="stat-info">
+            <span class="stat-value" id="totalRevenue">$8,420</span>
+            <span class="stat-label">درآمد کل</span>
+        </div>
+    </div>
+    
+    <div class="stat-card" style="border-right: 4px solid #a78bfa;">
+        <div class="stat-icon" style="background: rgba(167, 139, 250, 0.15); color: #a78bfa;">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="stat-info">
+            <span class="stat-value" id="avgRating">4.8</span>
+            <span class="stat-label">میانگین امتیاز</span>
+        </div>
+    </div>
+</section>
+
+<!-- ===== DASHBOARD GRID ===== -->
+<section class="dashboard-grid">
+    
+    <!-- ===== RECENT COURSES ===== -->
+    <div class="card recent-courses">
+        <div class="card-header">
+            <h3><i class="fas fa-clock" style="color: #ff6b35;"></i> دوره‌های اخیر</h3>
+            <a href="#" class="view-all">مشاهده همه</a>
+        </div>
+        <div class="card-body">
+            
+            <div class="course-item">
+                <div class="course-info">
+                    <img src="https://placehold.co/48x48/2d2d2d/ff6b35?text=Django" alt="Django">
+                    <div>
+                        <h4>دوره جامع Django</h4>
+                        <p class="meta">۱۲ درس · ۸۴ دانشجو</p>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <button class="action-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+                    <button class="action-btn" title="مدیریت درس‌ها"><i class="fas fa-list"></i></button>
+                    <button class="action-btn danger" title="حذف"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            
+            <div class="course-item">
+                <div class="course-info">
+                    <img src="https://placehold.co/48x48/2d2d2d/ff6b35?text=React" alt="React">
+                    <div>
+                        <h4>React &amp; Tailwind CSS</h4>
+                        <p class="meta">۸ درس · ۵۶ دانشجو</p>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <button class="action-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+                    <button class="action-btn" title="مدیریت درس‌ها"><i class="fas fa-list"></i></button>
+                    <button class="action-btn danger" title="حذف"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            
+            <div class="course-item">
+                <div class="course-info">
+                    <img src="https://placehold.co/48x48/2d2d2d/ff6b35?text=Arduino" alt="Arduino">
+                    <div>
+                        <h4>رباتیک با Arduino</h4>
+                        <p class="meta">۶ درس · ۳۲ دانشجو</p>
+                    </div>
+                </div>
+                <div class="course-actions">
+                    <button class="action-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+                    <button class="action-btn" title="مدیریت درس‌ها"><i class="fas fa-list"></i></button>
+                    <button class="action-btn danger" title="حذف"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- ===== RECENT FEEDBACK ===== -->
+    <div class="card recent-feedback">
+        <div class="card-header">
+            <h3><i class="fas fa-comment" style="color: #ff6b35;"></i> نظرات اخیر</h3>
+            <span class="badge">۵ جدید</span>
+        </div>
+        <div class="card-body">
+            
+            <div class="feedback-item">
+                <div class="user-avatar">
+                    <img src="https://ui-avatars.com/api/?name=Alice+Johnson&background=4ecdc4&color=fff&size=32" alt="user">
+                </div>
+                <div class="feedback-content">
+                    <p class="feedback-text">"دوره Django عالی بود! خیلی چیزها یاد گرفتم."</p>
+                    <div class="feedback-meta">
+                        <span class="course-name">Django جامع</span>
+                        <span class="rating"><i class="fas fa-star" style="color: #ffe66d;"></i> ۵.۰</span>
+                        <span class="time">۲ ساعت پیش</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feedback-item">
+                <div class="user-avatar">
+                    <img src="https://ui-avatars.com/api/?name=Bob+Smith&background=a78bfa&color=fff&size=32" alt="user">
+                </div>
+                <div class="feedback-content">
+                    <p class="feedback-text">"محتوای عالی، ولی کاش پروژه‌های عملی بیشتری داشت."</p>
+                    <div class="feedback-meta">
+                        <span class="course-name">React &amp; Tailwind</span>
+                        <span class="rating"><i class="fas fa-star" style="color: #ffe66d;"></i> ۴.۵</span>
+                        <span class="time">۵ ساعت پیش</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feedback-item">
+                <div class="user-avatar">
+                    <img src="https://ui-avatars.com/api/?name=Carol+Davis&background=ff6b35&color=fff&size=32" alt="user">
+                </div>
+                <div class="feedback-content">
+                    <p class="feedback-text">"بسیار کاربردی و جذاب. منتظر دوره‌های بعدی هستم."</p>
+                    <div class="feedback-meta">
+                        <span class="course-name">رباتیک با Arduino</span>
+                        <span class="rating"><i class="fas fa-star" style="color: #ffe66d;"></i> ۴.۸</span>
+                        <span class="time">۱ روز پیش</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/instructor/instructor-dashboard.js' %}"></script>
+{% endblock %}

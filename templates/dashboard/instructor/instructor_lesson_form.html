@@ -1,0 +1,153 @@
+{% extends "dashboard/instructor/base_instructor.html" %}
+{% load static %}
+
+{% block title %}افزودن درس جدید | PlanetCode{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'style css/instructor_css/instructor_lesson_form.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="form-page">
+    
+    <!-- ===== HEADER ===== -->
+    <div class="form-header">
+        <div>
+            <h1>درس جدید</h1>
+            <p>اطلاعات درس را وارد کنید</p>
+        </div>
+        <button class="btn-ghost" id="backBtn">
+            <i class="fas fa-arrow-right"></i> بازگشت
+        </button>
+    </div>
+    
+    <!-- ===== FORM ===== -->
+    <form class="form-container" id="lessonForm">
+        
+        <!-- ===== ROW 1: Title ===== -->
+        <div class="form-field">
+            <label>عنوان درس <span class="req">*</span></label>
+            <input type="text" placeholder="مثال: مقدمه بر Django" id="lessonTitle">
+        </div>
+        
+        <!-- ===== ROW 2: Course + Section ===== -->
+        <div class="form-row-2">
+            <div class="form-field">
+                <label>دوره <span class="req">*</span></label>
+                <select id="lessonCourse">
+                    <option value="">انتخاب دوره...</option>
+                    <option>دوره جامع Django</option>
+                    <option>React &amp; Tailwind CSS</option>
+                    <option>رباتیک با Arduino</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>فصل <span class="req">*</span></label>
+                <select id="lessonSection">
+                    <option value="">انتخاب فصل...</option>
+                    <option>بخش اول: مقدمه</option>
+                    <option>بخش دوم: مدل‌ها</option>
+                    <option>بخش سوم: ویوها</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- ===== ROW 3: Duration + Status ===== -->
+        <div class="form-row-2">
+            <div class="form-field">
+                <label>مدت زمان (دقیقه) <span class="req">*</span></label>
+                <input type="text" placeholder="مثال: ۱۵:۳۰" id="lessonDuration">
+            </div>
+            <div class="form-field">
+                <label>وضعیت</label>
+                <div class="status-group">
+                    <label class="status-option">
+                        <input type="radio" name="lessonStatus" value="free" checked>
+                        <span class="badge free">رایگان</span>
+                    </label>
+                    <label class="status-option">
+                        <input type="radio" name="lessonStatus" value="paid">
+                        <span class="badge paid">پولی</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== ROW 4: Description ===== -->
+        <div class="form-field">
+            <label>توضیحات درس</label>
+            <textarea rows="4" placeholder="توضیحات این درس را بنویسید..." id="lessonDesc"></textarea>
+        </div>
+        
+        <!-- ===== ROW 5: Video Upload ===== -->
+        <div class="form-field">
+            <label>فایل ویدیو <span class="req">*</span></label>
+            <div class="upload-box" id="videoUploadBox">
+                <input type="file" accept="video/*" id="videoInput">
+                <div class="upload-content">
+                    <i class="fas fa-video"></i>
+                    <p>برای آپلود ویدیو کلیک کنید</p>
+                    <span>MP4, MOV, AVI | حداکثر ۵۰۰MB</span>
+                </div>
+                <div class="upload-preview" id="videoPreview">
+                    <video controls>
+                        <source src="#" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== ROW 6: Thumbnail ===== -->
+        <div class="form-field">
+            <label>تصویر بند انگشتی (Thumbnail)</label>
+            <div class="upload-box small" id="thumbUploadBox">
+                <input type="file" accept="image/*" id="thumbInput">
+                <div class="upload-content">
+                    <i class="fas fa-image"></i>
+                    <p>آپلود تصویر</p>
+                    <span>JPG, PNG, WEBP</span>
+                </div>
+                <div class="upload-preview" id="thumbPreview">
+                    <img src="#" alt="thumbnail">
+                </div>
+            </div>
+        </div>
+        
+        <!-- ===== ROW 7: Attachments ===== -->
+        <div class="form-field">
+            <label>فایل‌های پیوست</label>
+            <div class="attachment-area" id="attachmentArea">
+                <div class="attachment-list" id="attachmentList">
+                    <!-- فایل‌های اضافه شده اینجا می‌آیند -->
+                </div>
+                <button type="button" class="add-attachment-btn" id="addAttachmentBtn">
+                    <i class="fas fa-plus"></i> افزودن فایل پیوست
+                </button>
+                <input type="file" multiple id="attachmentInput" style="display:none">
+            </div>
+            <p class="hint">PDF, ZIP, DOC, XLS, PPT | حداکثر ۵ فایل</p>
+        </div>
+        
+        <!-- ===== BUTTONS ===== -->
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">
+                <i class="fas fa-check"></i> ذخیره درس
+            </button>
+            <button type="button" class="btn-secondary" id="previewBtn">
+                <i class="fas fa-eye"></i> پیش‌نمایش
+            </button>
+            <button type="reset" class="btn-danger">
+                <i class="fas fa-times"></i> انصراف
+            </button>
+        </div>
+        
+    </form>
+    
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/instructor/instructor-lesson-form.js' %}"></script>
+{% endblock %}

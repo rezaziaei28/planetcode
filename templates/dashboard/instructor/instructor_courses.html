@@ -1,0 +1,191 @@
+{% extends "dashboard/instructor/base_instructor.html" %}
+{% load static %}
+
+{% block title %}دوره‌های من | PlanetCode{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'style css/instructor_css/instructor_courses.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+    <div>
+        <h1>دوره‌های من</h1>
+        <p class="breadcrumb">داشبورد / دوره‌های من</p>
+    </div>
+    <button class="btn-primary" id="addCourseBtn">
+        <i class="fas fa-plus-circle"></i> دوره جدید
+    </button>
+</div>
+
+<!-- ===== SEARCH & FILTER ===== -->
+<div class="filter-bar">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="جستجوی دوره...">
+    </div>
+    <div class="filter-options">
+        <select id="statusFilter">
+            <option value="all">همه وضعیت‌ها</option>
+            <option value="active">فعال</option>
+            <option value="draft">پیش‌نویس</option>
+            <option value="archived">بایگانی</option>
+        </select>
+        <select id="sortFilter">
+            <option value="newest">جدیدترین</option>
+            <option value="oldest">قدیمی‌ترین</option>
+            <option value="popular">محبوب‌ترین</option>
+            <option value="students">بیشترین دانشجو</option>
+        </select>
+    </div>
+</div>
+
+<!-- ===== COURSES TABLE ===== -->
+<div class="table-container">
+    <table class="courses-table">
+        <thead>
+            <tr>
+                <th>دوره</th>
+                <th>وضعیت</th>
+                <th>درس‌ها</th>
+                <th>دانشجویان</th>
+                <th>امتیاز</th>
+                <th>عملیات</th>
+            </tr>
+        </thead>
+        <tbody id="coursesTableBody">
+            <!-- Course 1 -->
+            <tr>
+                <td>
+                    <div class="course-info-cell">
+                        <img src="https://placehold.co/40x40/2d2d2d/ff6b35?text=Django" alt="Django">
+                        <div>
+                            <h4>دوره جامع Django</h4>
+                            <p class="price">$49.99</p>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-badge active">فعال</span></td>
+                <td>۱۲</td>
+                <td>۸۴</td>
+                <td>
+                    <div class="rating">
+                        <i class="fas fa-star" style="color: #ffe66d;"></i>
+                        <span>4.8</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="action-buttons">
+                        <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn lessons-btn" title="مدیریت درس‌ها"><i class="fas fa-list"></i></button>
+                        <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash"></i></button>
+                    </div>
+                </td>
+            </tr>
+            
+            <!-- Course 2 -->
+            <tr>
+                <td>
+                    <div class="course-info-cell">
+                        <img src="https://placehold.co/40x40/2d2d2d/ff6b35?text=React" alt="React">
+                        <div>
+                            <h4>React &amp; Tailwind CSS</h4>
+                            <p class="price">$39.99</p>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-badge draft">پیش‌نویس</span></td>
+                <td>۸</td>
+                <td>۵۶</td>
+                <td>
+                    <div class="rating">
+                        <i class="fas fa-star" style="color: #ffe66d;"></i>
+                        <span>4.5</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="action-buttons">
+                        <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn lessons-btn" title="مدیریت درس‌ها"><i class="fas fa-list"></i></button>
+                        <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash"></i></button>
+                    </div>
+                </td>
+            </tr>
+            
+            <!-- Course 3 -->
+            <tr>
+                <td>
+                    <div class="course-info-cell">
+                        <img src="https://placehold.co/40x40/2d2d2d/ff6b35?text=Arduino" alt="Arduino">
+                        <div>
+                            <h4>رباتیک با Arduino</h4>
+                            <p class="price">$29.99</p>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-badge active">فعال</span></td>
+                <td>۶</td>
+                <td>۳۲</td>
+                <td>
+                    <div class="rating">
+                        <i class="fas fa-star" style="color: #ffe66d;"></i>
+                        <span>4.9</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="action-buttons">
+                        <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn lessons-btn" title="مدیریت درس‌ها"><i class="fas fa-list"></i></button>
+                        <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash"></i></button>
+                    </div>
+                </td>
+            </tr>
+            
+            <!-- Course 4 -->
+            <tr>
+                <td>
+                    <div class="course-info-cell">
+                        <img src="https://placehold.co/40x40/2d2d2d/ff6b35?text=Python" alt="Python">
+                        <div>
+                            <h4>Python پیشرفته</h4>
+                            <p class="price">$44.99</p>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-badge archived">بایگانی</span></td>
+                <td>۱۰</td>
+                <td>۴۵</td>
+                <td>
+                    <div class="rating">
+                        <i class="fas fa-star" style="color: #ffe66d;"></i>
+                        <span>4.7</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="action-buttons">
+                        <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn lessons-btn" title="مدیریت درس‌ها"><i class="fas fa-list"></i></button>
+                        <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash"></i></button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ===== PAGINATION ===== -->
+<div class="pagination">
+    <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+    <button class="page-btn active">۱</button>
+    <button class="page-btn">۲</button>
+    <button class="page-btn">۳</button>
+    <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/instructor/instructor-courses.js' %}"></script>
+{% endblock %}
