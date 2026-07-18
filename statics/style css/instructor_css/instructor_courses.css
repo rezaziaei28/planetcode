@@ -1,4 +1,16 @@
-/* ===== PAGE HEADER ===== */
+/* ============================================
+   FILE: static/style/css/instructor_css/instructor_courses.css
+   DESCRIPTION: طراحی حرفه‌ای مدیریت دوره‌ها
+   ============================================ */
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --card-radius: 16px;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== HEADER ===== */
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -12,6 +24,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-primary);
+    letter-spacing: -0.5px;
 }
 
 .page-header .breadcrumb {
@@ -25,24 +38,62 @@
 }
 
 .btn-primary {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: #fff;
     border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: var(--radius);
+    padding: 0.7rem 1.8rem;
+    border-radius: 12px;
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition-smooth);
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* ===== STATS ROW ===== */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-item {
+    background: var(--bg-card);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.stat-item:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
 }
 
 /* ===== FILTER BAR ===== */
@@ -55,7 +106,7 @@
     margin-bottom: 1.5rem;
     background: var(--bg-card);
     padding: 1rem 1.5rem;
-    border-radius: var(--radius);
+    border-radius: 12px;
     border: 1px solid var(--border-color);
 }
 
@@ -63,11 +114,17 @@
     display: flex;
     align-items: center;
     background: var(--bg-main);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 0.4rem 0.8rem;
     border: 1px solid var(--border-color);
     flex: 1;
     min-width: 200px;
+    transition: var(--transition-smooth);
+}
+
+.search-box:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
 }
 
 .search-box i {
@@ -88,174 +145,271 @@
     color: var(--text-muted);
 }
 
-.filter-options {
+.search-clear {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 0.3rem;
+}
+
+.filter-group {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.6rem;
     flex-wrap: wrap;
 }
 
-.filter-options select {
+.filter-select {
     background: var(--bg-main);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 0.5rem 1rem;
     color: var(--text-primary);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     cursor: pointer;
     outline: none;
+    transition: var(--transition-smooth);
 }
 
-.filter-options select:focus {
+.filter-select:focus {
     border-color: var(--primary);
 }
 
-/* ===== TABLE CONTAINER ===== */
-.table-container {
+/* ===== COURSE GRID ===== */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== COURSE CARD ===== */
+.course-card {
     background: var(--bg-card);
-    border-radius: var(--radius);
+    border-radius: var(--card-radius);
     border: 1px solid var(--border-color);
-    overflow-x: auto;
-    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
 }
 
-.courses-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 700px;
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow);
+    border-color: var(--primary);
 }
 
-.courses-table thead {
+/* ===== Card Image - 16:9 ===== */
+.card-image {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    overflow: hidden;
     background: var(--bg-main);
 }
 
-.courses-table th {
-    padding: 1rem 1.5rem;
-    text-align: right;
+.card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.course-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 0.25rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(4px);
+}
+
+.card-badge.active {
+    background: rgba(78, 205, 196, 0.9);
+    color: #fff;
+    border: 1px solid rgba(78, 205, 196, 0.3);
+}
+
+.card-badge.draft {
+    background: rgba(255, 230, 109, 0.9);
+    color: #1a1a1a;
+    border: 1px solid rgba(255, 230, 109, 0.3);
+}
+
+.card-badge.archived {
+    background: rgba(160, 160, 160, 0.9);
+    color: #fff;
+    border: 1px solid rgba(160, 160, 160, 0.3);
+}
+
+/* ===== Card Content ===== */
+.card-content {
+    padding: 1.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+
+.card-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.card-header .price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.card-desc {
     font-size: 0.85rem;
     color: var(--text-secondary);
-    border-bottom: 1px solid var(--border-color);
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
 }
 
-.courses-table td {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--border-color);
-    color: var(--text-primary);
+.card-stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--border-color);
 }
 
-.courses-table tbody tr:hover {
-    background: rgba(255, 255, 255, 0.02);
-}
-
-/* ===== COURSE INFO CELL ===== */
-.course-info-cell {
+.card-stats span {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.3rem;
 }
 
-.course-info-cell img {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.course-info-cell h4 {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 0.1rem;
-}
-
-.course-info-cell .price {
-    font-size: 0.85rem;
+.card-stats i {
     color: var(--primary);
-    font-weight: 600;
-}
-
-/* ===== STATUS BADGE ===== */
-.status-badge {
-    display: inline-block;
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
     font-size: 0.75rem;
-    font-weight: 600;
 }
 
-.status-badge.active {
-    background: rgba(78, 205, 196, 0.15);
-    color: #4ecdc4;
-}
-
-.status-badge.draft {
-    background: rgba(255, 230, 109, 0.15);
+.card-stats .fa-star {
     color: #ffe66d;
 }
 
-.status-badge.archived {
-    background: rgba(160, 160, 160, 0.15);
-    color: #a0a0a0;
-}
-
-/* ===== RATING ===== */
-.rating {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.rating span {
-    font-weight: 600;
-}
-
-/* ===== ACTION BUTTONS ===== */
-.action-buttons {
+/* ===== Card Actions ===== */
+.card-actions {
     display: flex;
     gap: 0.3rem;
+    padding: 0.8rem 1.2rem 1.2rem;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-main);
 }
 
 .action-btn {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition-smooth);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
 }
 
-.edit-btn {
+.action-btn.edit-btn {
     background: rgba(255, 107, 53, 0.1);
     color: var(--primary);
 }
 
-.edit-btn:hover {
+.action-btn.edit-btn:hover {
     background: var(--primary);
     color: #fff;
+    transform: scale(1.05);
 }
 
-.lessons-btn {
+.action-btn.lessons-btn {
     background: rgba(167, 139, 250, 0.1);
     color: #a78bfa;
 }
 
-.lessons-btn:hover {
+.action-btn.lessons-btn:hover {
     background: #a78bfa;
     color: #fff;
+    transform: scale(1.05);
 }
 
-.delete-btn {
+.action-btn.delete-btn {
     background: rgba(255, 68, 68, 0.1);
     color: #ff4444;
 }
 
-.delete-btn:hover {
+.action-btn.delete-btn:hover {
     background: #ff4444;
     color: #fff;
+    transform: scale(1.05);
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: var(--bg-card);
+    border-radius: var(--card-radius);
+    border: 2px dashed var(--border-color);
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: rgba(255, 107, 53, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-icon i {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.empty-state h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
 }
 
 /* ===== PAGINATION ===== */
@@ -263,20 +417,22 @@
     display: flex;
     justify-content: center;
     gap: 0.4rem;
+    flex-wrap: wrap;
 }
 
 .page-btn {
-    min-width: 36px;
-    height: 36px;
+    min-width: 40px;
+    height: 40px;
     border: 1px solid var(--border-color);
     background: var(--bg-card);
     color: var(--text-secondary);
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition-smooth);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
 }
 
 .page-btn:hover {
@@ -290,34 +446,199 @@
     color: #fff;
 }
 
-/* ===== RESPONSIVE ===== */
+.page-btn.prev,
+.page-btn.next {
+    background: transparent;
+    border: none;
+}
+
+/* ============================================
+   ===== RESPONSIVE =====
+   ============================================ */
+
+/* ===== Tablet ===== */
 @media (max-width: 992px) {
     .filter-bar {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.8rem;
     }
     
-    .filter-options {
+    .search-box {
+        min-width: auto;
+    }
+    
+    .filter-group {
         justify-content: flex-start;
+    }
+    
+    .filter-select {
+        flex: 1;
+        min-width: 0;
     }
 }
 
-@media (max-width: 576px) {
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
     .page-header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.4rem;
     }
     
     .btn-primary {
         width: 100%;
         justify-content: center;
+        padding: 0.6rem 1rem;
     }
     
-    .filter-options {
+    .stats-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+    }
+    
+    .stat-item {
+        padding: 0.7rem 0.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.3rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    
+    .filter-bar {
+        padding: 0.8rem 1rem;
+        gap: 0.6rem;
+    }
+    
+    .filter-group {
         flex-direction: column;
+        width: 100%;
+        gap: 0.4rem;
     }
     
-    .filter-options select {
+    .filter-select {
         width: 100%;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .card-image {
+        padding-bottom: 56.25%; /* 16:9 */
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .card-header h3 {
+        font-size: 0.95rem;
+    }
+    
+    .card-stats {
+        font-size: 0.75rem;
+        gap: 0.6rem;
+    }
+    
+    .card-actions {
+        padding: 0.6rem 1rem 1rem;
+    }
+    
+    .action-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+        flex: 1;
+    }
+    
+    .pagination {
+        gap: 0.3rem;
+    }
+    
+    .page-btn {
+        min-width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+    
+    .empty-state {
+        padding: 2.5rem 1rem;
+    }
+    
+    .empty-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .empty-icon i {
+        font-size: 2rem;
+    }
+    
+    .empty-state h3 {
+        font-size: 1rem;
+    }
+}
+
+/* ===== Mobile Small ===== */
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .page-header .breadcrumb {
+        font-size: 0.75rem;
+    }
+    
+    .btn-primary {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .stats-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.4rem;
+    }
+    
+    .stat-item {
+        padding: 0.5rem 0.3rem;
+    }
+    
+    .stat-number {
+        font-size: 1.1rem;
+    }
+    
+    .stat-label {
+        font-size: 0.6rem;
+    }
+    
+    .card-badge {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.6rem;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .action-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+    
+    .page-btn {
+        min-width: 32px;
+        height: 32px;
+        font-size: 0.75rem;
     }
 }
