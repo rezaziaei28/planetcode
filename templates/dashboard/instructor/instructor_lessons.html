@@ -9,7 +9,7 @@
 
 {% block content %}
 
-<!-- ===== PAGE HEADER ===== -->
+<!-- ===== HEADER ===== -->
 <div class="page-header">
     <div>
         <h1>مدیریت درس‌ها</h1>
@@ -20,20 +20,37 @@
     </button>
 </div>
 
-<!-- ===== FILTER BAR ===== -->
+<!-- ===== STATS ROW ===== -->
+<div class="stats-row">
+    <div class="stat-item">
+        <span class="stat-number" id="totalLessons">۵</span>
+        <span class="stat-label">مجموع درس‌ها</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" id="freeLessons">۲</span>
+        <span class="stat-label">رایگان</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number" id="paidLessons">۳</span>
+        <span class="stat-label">پولی</span>
+    </div>
+</div>
+
+<!-- ===== FILTERS ===== -->
 <div class="filter-bar">
     <div class="search-box">
         <i class="fas fa-search"></i>
         <input type="text" id="searchInput" placeholder="جستجوی درس...">
+        <button class="search-clear" id="searchClear" style="display:none;">×</button>
     </div>
-    <div class="filter-options">
-        <select id="courseFilter">
+    <div class="filter-group">
+        <select id="courseFilter" class="filter-select">
             <option value="all">همه دوره‌ها</option>
             <option value="django">دوره جامع Django</option>
-            <option value="react">React &amp; Tailwind CSS</option>
+            <option value="react">React &amp; Tailwind</option>
             <option value="arduino">رباتیک با Arduino</option>
         </select>
-        <select id="statusFilter">
+        <select id="statusFilter" class="filter-select">
             <option value="all">همه وضعیت‌ها</option>
             <option value="free">رایگان</option>
             <option value="paid">پولی</option>
@@ -41,130 +58,150 @@
     </div>
 </div>
 
-<!-- ===== LESSONS TABLE ===== -->
-<div class="table-container">
-    <table class="lessons-table">
-        <thead>
-            <tr>
-                <th>عنوان درس</th>
-                <th>دوره</th>
-                <th>بخش</th>
-                <th>مدت زمان</th>
-                <th>وضعیت</th>
-                <th>عملیات</th>
-            </tr>
-        </thead>
-        <tbody id="lessonsTableBody">
-            <!-- Lesson 1 -->
-            <tr>
-                <td>
-                    <div class="lesson-info">
-                        <i class="fas fa-play-circle" style="color: var(--primary);"></i>
-                        <span>مقدمه بر Django</span>
-                    </div>
-                </td>
-                <td>دوره جامع Django</td>
-                <td>بخش اول</td>
-                <td>۱۵:۳۰</td>
-                <td><span class="status-badge free">رایگان</span></td>
-                <td>
-                    <div class="action-buttons">
-                        <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
-                        <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash"></i></button>
-                    </div>
-                </td>
-            </tr>
-            
-            <!-- Lesson 2 -->
-            <tr>
-                <td>
-                    <div class="lesson-info">
-                        <i class="fas fa-play-circle" style="color: var(--primary);"></i>
-                        <span>نصب و راه‌اندازی</span>
-                    </div>
-                </td>
-                <td>دوره جامع Django</td>
-                <td>بخش اول</td>
-                <td>۲۲:۴۵</td>
-                <td><span class="status-badge paid">پولی</span></td>
-                <td>
-                    <div class="action-buttons">
-                        <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
-                        <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash"></i></button>
-                    </div>
-                </td>
-            </tr>
-            
-            <!-- Lesson 3 -->
-            <tr>
-                <td>
-                    <div class="lesson-info">
-                        <i class="fas fa-play-circle" style="color: var(--primary);"></i>
-                        <span>مدل‌ها در Django</span>
-                    </div>
-                </td>
-                <td>دوره جامع Django</td>
-                <td>بخش دوم</td>
-                <td>۱۸:۲۰</td>
-                <td><span class="status-badge paid">پولی</span></td>
-                <td>
-                    <div class="action-buttons">
-                        <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
-                        <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash"></i></button>
-                    </div>
-                </td>
-            </tr>
-            
-            <!-- Lesson 4 -->
-            <tr>
-                <td>
-                    <div class="lesson-info">
-                        <i class="fas fa-play-circle" style="color: var(--primary);"></i>
-                        <span>کامپوننت‌ها در React</span>
-                    </div>
-                </td>
-                <td>React &amp; Tailwind CSS</td>
-                <td>بخش اول</td>
-                <td>۲۵:۱۰</td>
-                <td><span class="status-badge free">رایگان</span></td>
-                <td>
-                    <div class="action-buttons">
-                        <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
-                        <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash"></i></button>
-                    </div>
-                </td>
-            </tr>
-            
-            <!-- Lesson 5 -->
-            <tr>
-                <td>
-                    <div class="lesson-info">
-                        <i class="fas fa-play-circle" style="color: var(--primary);"></i>
-                        <span>آشنایی با Arduino</span>
-                    </div>
-                </td>
-                <td>رباتیک با Arduino</td>
-                <td>بخش اول</td>
-                <td>۱۲:۴۵</td>
-                <td><span class="status-badge free">رایگان</span></td>
-                <td>
-                    <div class="action-buttons">
-                        <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
-                        <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash"></i></button>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<!-- ===== LESSONS GRID (موبایل) ===== -->
+<div class="lessons-grid" id="lessonsGrid">
+    
+    <!-- Lesson Card 1 -->
+    <div class="lesson-card">
+        <div class="card-top">
+            <div class="card-icon">
+                <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="card-title">
+                <h4>مقدمه بر Django</h4>
+                <span class="meta">دوره جامع Django</span>
+            </div>
+            <span class="status-badge free">رایگان</span>
+        </div>
+        <div class="card-body">
+            <div class="card-info">
+                <span><i class="fas fa-folder"></i> بخش اول</span>
+                <span><i class="fas fa-clock"></i> ۱۵:۳۰</span>
+            </div>
+        </div>
+        <div class="card-actions">
+            <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+            <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+    
+    <!-- Lesson Card 2 -->
+    <div class="lesson-card">
+        <div class="card-top">
+            <div class="card-icon">
+                <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="card-title">
+                <h4>نصب و راه‌اندازی</h4>
+                <span class="meta">دوره جامع Django</span>
+            </div>
+            <span class="status-badge paid">پولی</span>
+        </div>
+        <div class="card-body">
+            <div class="card-info">
+                <span><i class="fas fa-folder"></i> بخش اول</span>
+                <span><i class="fas fa-clock"></i> ۲۲:۴۵</span>
+            </div>
+        </div>
+        <div class="card-actions">
+            <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+            <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+    
+    <!-- Lesson Card 3 -->
+    <div class="lesson-card">
+        <div class="card-top">
+            <div class="card-icon">
+                <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="card-title">
+                <h4>مدل‌ها در Django</h4>
+                <span class="meta">دوره جامع Django</span>
+            </div>
+            <span class="status-badge paid">پولی</span>
+        </div>
+        <div class="card-body">
+            <div class="card-info">
+                <span><i class="fas fa-folder"></i> بخش دوم</span>
+                <span><i class="fas fa-clock"></i> ۱۸:۲۰</span>
+            </div>
+        </div>
+        <div class="card-actions">
+            <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+            <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+    
+    <!-- Lesson Card 4 -->
+    <div class="lesson-card">
+        <div class="card-top">
+            <div class="card-icon">
+                <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="card-title">
+                <h4>کامپوننت‌ها در React</h4>
+                <span class="meta">React &amp; Tailwind</span>
+            </div>
+            <span class="status-badge free">رایگان</span>
+        </div>
+        <div class="card-body">
+            <div class="card-info">
+                <span><i class="fas fa-folder"></i> بخش اول</span>
+                <span><i class="fas fa-clock"></i> ۲۵:۱۰</span>
+            </div>
+        </div>
+        <div class="card-actions">
+            <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+            <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+    
+    <!-- Lesson Card 5 -->
+    <div class="lesson-card">
+        <div class="card-top">
+            <div class="card-icon">
+                <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="card-title">
+                <h4>آشنایی با Arduino</h4>
+                <span class="meta">رباتیک با Arduino</span>
+            </div>
+            <span class="status-badge free">رایگان</span>
+        </div>
+        <div class="card-body">
+            <div class="card-info">
+                <span><i class="fas fa-folder"></i> بخش اول</span>
+                <span><i class="fas fa-clock"></i> ۱۲:۴۵</span>
+            </div>
+        </div>
+        <div class="card-actions">
+            <button class="action-btn edit-btn" title="ویرایش"><i class="fas fa-edit"></i></button>
+            <button class="action-btn delete-btn" title="حذف"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+    
+</div>
+
+<!-- ===== EMPTY STATE ===== -->
+<div class="empty-state" style="display:none;">
+    <div class="empty-icon">
+        <i class="fas fa-video"></i>
+    </div>
+    <h3>هیچ درسی وجود ندارد</h3>
+    <p>اولین درس خود را ایجاد کنید</p>
+    <button class="btn-primary" id="emptyAddLessonBtn">
+        <i class="fas fa-plus-circle"></i> ایجاد درس جدید
+    </button>
 </div>
 
 <!-- ===== PAGINATION ===== -->
 <div class="pagination">
-    <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+    <button class="page-btn prev"><i class="fas fa-chevron-right"></i></button>
     <button class="page-btn active">۱</button>
     <button class="page-btn">۲</button>
     <button class="page-btn">۳</button>
-    <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+    <button class="page-btn next"><i class="fas fa-chevron-left"></i></button>
 </div>
 
 {% endblock %}
