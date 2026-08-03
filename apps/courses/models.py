@@ -253,3 +253,208 @@ class Course(models.Model):
             course=self,
             is_active=True
         ).exists()
+
+class Section(models.Model):
+    """
+    Section model for organizing lessons within a course.
+    """
+    course = models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        related_name='sections'
+    )
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    order = models.PositiveIntegerField(default=0)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = "Section"
+        verbose_name_plural = "Sections"
+        ordering = ['order', 'created_at']
+        unique_together = ['course', 'order']
+    
+    def __str__(self):
+        return f"{self.course.title} - {self.title}"
+    
+    def get_lessons_count(self):
+        """Get total active lessons in this section."""
+        return self.lessons.filter(is_active=True).count()
+    
+    def get_total_duration(self):
+        """Get total duration of all lessons in this section."""
+        total = self.lessons.filter(is_active=True).aggregate(
+            total=models.Sum('duration_minutes')
+        )['total'] or 0
+        return total
+    
+    def get_lessons(self):
+        """Get all active lessons ordered by order."""
+        return self.lessons.filter(is_active=True).order_by('order')
+
+
+class Lesson(models.Model):
+    """
+    Lesson model representing individual lessons within a section.
+    """
+    LESSON_TYPES = (
+        ('free', 'Free'),
+        ('paid', 'Paid'),
+    )
+    
+    section = models.ForeignKey(
+        Section,
+        on_delete=models.CASCADE,
+        related_name='lessons'
+    )
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
+    description = models.TextField(blank=True)
+    
+    # Video content (upload directly)
+    video_file = models.FileField(
+        upload_to='lessons/videos/%Y/%m/%d/',
+        blank=True,
+        null=True,
+        help_text="Upload video file (MP4, MOV, AVI - max 500MB)"
+    )
+    video_duration = models.PositiveIntegerField(
+        default=0,
+        help_text="Duration in seconds (auto-calculated)"
+    )
+    thumbnail = models.ImageField(
+        upload_to='lessons/thumbnails/%Y/%m/%d/',
+        blank=True,
+        null=True,
+        help_text="Video thumbnail image"
+    )
+    
+    # Attachments
+    attachments = models.FileField(
+        upload_to='lessons/attachments/%Y/%m/%d/',
+        blank=True,
+        null=True,
+        help_text="PDF, ZIP, DOC, etc."
+    )
+    
+    # Type and order
+    lesson_type = models.CharField(max_length=10, choices=LESSON_TYPES, default='free')
+    order = models.PositiveIntegerField(default=0)
+    duration_minutes = models.PositiveIntegerField(default=0, help_text="Duration in minutes")
+    
+    # Status
+    is_active = models.BooleanField(default=True)
+    is_preview = models.BooleanField(default=False, help_text="Allow preview for non-enrolled users")
+    
+    # Timestamps
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = "Lesson"
+        verbose_name_plural = "Lessons"
+        ordering = ['order', 'created_at']
+        unique_together = ['section', 'order']
+        indexes = [
+            models.Index(fields=['section', 'order']),
+            models.Index(fields=['lesson_type']),
+        ]
+    
+    def __str__(self):
+        return f"{self.section.title} - {self.title}"
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+    
+    @property
+    def is_free(self):
+        """Check if the lesson is free."""
+        return self.lesson_type == 'free'
+    
+    @property
+    def formatted_duration(self):
+        """Get human-readable duration."""
+        if self.duration_minutes:
+            hours = self.duration_minutes // 60
+            minutes = self.duration_minutes % 60
+            if hours > 0:
+                return f"{hours}h {minutes}min"
+            return f"{minutes}min"
+        return "Not specified"
+
+
+class LessonAttachment(models.Model):
+    """
+    Additional attachments for a lesson (multiple files).
+    """
+    lesson = models.ForeignKey(
+        Lesson,
+        on_delete=models.CASCADE,
+        related_name='additional_attachments'
+    )
+    file = models.FileField(upload_to='lessons/attachments/%Y/%m/%d/')
+    title = models.CharField(max_length=255, blank=True)
+    file_size = models.PositiveIntegerField(default=0, help_text="File size in bytes")
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        verbose_name = "Lesson Attachment"
+        verbose_name_plural = "Lesson Attachments"
+        ordering = ['uploaded_at']
+    
+    def __str__(self):
+        return f"{self.lesson.title} - {self.file.name}"
+    
+    def save(self, *args, **kwargs):
+        if not self.title:
+            self.title = self.file.name.split('/')[-1]
+        super().save(*args, **kwargs)
+    
+    @property
+    def file_size_mb(self):
+        """Get file size in MB."""
+        return round(self.file_size / (1024 * 1024), 2)
+
+
+class UserProgress(models.Model):
+    """
+    Track user progress through lessons.
+    """
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='lesson_progress'
+    )
+    lesson = models.ForeignKey(
+        Lesson,
+        on_delete=models.CASCADE,
+        related_name='user_progress'
+    )
+    is_completed = models.BooleanField(default=False)
+    watched_duration = models.PositiveIntegerField(default=0, help_text="Watched duration in seconds")
+    last_position = models.PositiveIntegerField(default=0, help_text="Last position in seconds")
+    completed_at = models.DateTimeField(blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name = "User Progress"
+        verbose_name_plural = "User Progress"
+        unique_together = ['user', 'lesson']
+        indexes = [
+            models.Index(fields=['user', 'lesson']),
+        ]
+    
+    def __str__(self):
+        status = "✅" if self.is_completed else "🔄"
+        return f"{status} {self.user.username} - {self.lesson.title}"
+    
+    def mark_completed(self):
+        """Mark lesson as completed."""
+        if not self.is_completed:
+            self.is_completed = True
+            self.completed_at = models.DateTimeField.now()
+            self.save()

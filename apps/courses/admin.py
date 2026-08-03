@@ -214,3 +214,52 @@ class CourseAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
         obj.update_statistics()
     
+
+    def get_sections(self):
+        """ Get all active sections ordered by order. """
+        return self.sections.filter(is_active=True).order_by('order')
+    
+    def get_total_duration(self):
+        """Get total course duration from all lessons."""
+        total = 0
+        for section in self.get_sections():
+            total += section.get_total_duration()
+        return total
+    
+    def get_lessons_count(self):
+        """Get total number of lessons."""
+        total = 0
+        for section in self.get_sections():
+            total += section.get_lessons_count()
+        return total
+    
+    def get_free_lessons(self):
+        """Get all free lessons."""
+        lessons = []
+        for section in self.get_sections():
+            lessons.extend(section.get_lessons().filter(lesson_type='free'))
+        return lessons
+    
+    def get_paid_lessons(self):
+        """Get all paid lessons."""
+        lessons = []
+        for section in self.get_sections():
+            lessons.extend(section.get_lessons().filter(lesson_type='paid'))
+        return lessons
+    
+    def get_user_progress(self, user):
+        """Get user's progress in this course."""
+        if not user or not user.is_authenticated:
+            return 0
+        
+        total_lessons = self.get_lessons_count()
+        if total_lessons == 0:
+            return 0
+            
+        completed = UserProgress.objects.filter(
+            user=user,
+            lesson__section__course=self,
+            is_completed=True
+        ).count()
+        
+        return int((completed / total_lessons) * 100)
