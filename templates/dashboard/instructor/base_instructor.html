@@ -33,35 +33,35 @@
             </button>
         </div>
         
-        <!-- Navigation -->
+       <!-- Navigation -->
         <nav class="sidebar-nav">
             <ul>
                 <li>
-                    <a href="#" class="active">
+                    <a href="{% url 'dashboard:instructor_dashboard' %}" class="nav-link {% if request.resolver_match.url_name == 'instructor_dashboard' %}active{% endif %}">
                         <i class="fas fa-chart-pie"></i>
                         <span>داشبورد</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{% url 'dashboard:instructor_courses' %}" class="nav-link {% if request.resolver_match.url_name == 'instructor_courses' %}active{% endif %}">
                         <i class="fas fa-book-open"></i>
                         <span>دوره‌های من</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{% url 'dashboard:instructor_lessons' %}" class="nav-link {% if request.resolver_match.url_name == 'instructor_lessons' %}active{% endif %}">
                         <i class="fas fa-video"></i>
                         <span>درس‌ها</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="nav-link">
                         <i class="fas fa-users"></i>
                         <span>دانشجویان</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="nav-link">
                         <i class="fas fa-cog"></i>
                         <span>تنظیمات</span>
                     </a>
